@@ -259,95 +259,73 @@
 
       <div class="w-full h-full flex flex-col">
         <ul class="flex flex-row items-center justify-between">
-          <li
-            class="inline-block h-full w-full rounded-full ring-2"
-            data-wow-delay="0.50s"
-          >
-            <figure class="flex justify-center">
-              <img class="h-1/2 w-1/2" :src="logos.vue" />
+          <li class="h-40 w-40 p-1" data-wow-delay="0.50s">
+            <figure class="flex justify-center w-full rounded-full">
+              <img class="h-20 w-20" :src="logos.vue" />
             </figure>
           </li>
 
-          <li
-            class="inline-block h-full w-full rounded-full ring-2"
-            data-wow-delay="0.60s"
-          >
-            <figure class="flex justify-center">
-              <img class="h-1/2 w-1/2" :src="logos.react" />
+          <li class="h-40 w-40 p-1" data-wow-delay="0.60s">
+            <figure class="flex justify-center w-full rounded-full">
+              <img class="h-20 w-20" :src="logos.react" />
             </figure>
           </li>
 
-          <li
-            class="inline-block h-full w-full rounded-full ring-2"
-            data-wow-delay="0.70s"
-          >
-            <figure class="mb-10 items-center">
-              <img class="h-1/2 w-1/2" :src="logos.mongo" />
+          <li class="h-40 w-40 p-1" data-wow-delay="0.70s">
+            <figure class="flex justify-center w-full rounded-full">
+              <img class="h-20 w-20" :src="logos.mongo" />
             </figure>
           </li>
 
-          <li
-            class="inline-block h-full w-full rounded-full ring-2"
-            data-wow-delay="0.80s"
-          >
-            <figure class="mb-10 items-center">
-              <img class="h-1/2 w-1/2" :src="logos.express" />
+          <li class="h-40 w-40 p-1" data-wow-delay="0.80s">
+            <figure class="flex justify-center w-full rounded-full">
+              <img class="h-20 w-20" :src="logos.express" />
             </figure>
           </li>
 
-          <li
-            class="inline-block h-full w-full rounded-full ring-2"
-            data-wow-delay="0.90s"
-          >
-            <figure class="mb-10 items-center">
-              <img class="h-1/2 w-1/2" :src="logos.node" />
+          <li class="h-40 w-40 p-1" data-wow-delay="0.90s">
+            <figure class="flex justify-center w-full rounded-full">
+              <img class="h-20 w-20" :src="logos.node" />
             </figure>
           </li>
         </ul>
 
         <ul class="flex flex-row items-center justify-between">
-          <li
-            class="h-40 w-40 list-none inline-block h-full w-full rounded-full ring-2"
-            data-wow-delay="1s"
-          >
-            <figure class="mb-10 items-center p-1 sm:p-3 md:p-4">
-              <img class="" :src="logos.nuxt" />
+          <li class="h-40 w-40 p-1" data-wow-delay="1s">
+            <figure class="flex justify-center w-full rounded-full">
+              <img class="h-20 w-20" :src="logos.nuxt" />
             </figure>
           </li>
 
-          <li
-            class="h-40 w-40 list-none inline-block h-full w-full rounded-full ring-2"
-            data-wow-delay="1.1s"
-          >
-            <figure class="mb-10 items-center p-1 sm:p-3 md:p-4">
-              <img class="" :src="logos.next" />
+          <li class="h-40 w-40 p-1" data-wow-delay="1.1s">
+            <figure
+              class="flex justify-center list-none h-full w-full rounded-full"
+            >
+              <img class="h-20 w-20" :src="logos.next" />
             </figure>
           </li>
 
-          <li
-            class="h-40 w-40 list-none inline-block h-full w-full rounded-full ring-2"
-            data-wow-delay="1.2s"
-          >
-            <figure class="mb-10 items-center p-1 sm:p-3 md:p-4">
-              <img class="coder" :src="images.imageFour" />
+          <li class="h-40 w-40 p-1" data-wow-delay="1.2s">
+            <figure
+              class="flex justify-center list-none h-full w-full rounded-full"
+            >
+              <img class="h-20 w-20" :src="images.imageFour" />
             </figure>
           </li>
 
-          <li
-            class="h-40 w-40 list-none inline-block h-full w-full rounded-full ring-2"
-            data-wow-delay="1.3s"
-          >
-            <figure class="mb-10 items-center p-1 sm:p-3 md:p-4">
-              <img class="" :src="logos.graphQl" />
+          <li class="h-40 w-40 p-1" data-wow-delay="1.3s">
+            <figure
+              class="flex justify-center list-none h-full w-full rounded-full"
+            >
+              <img class="h-20 w-20" :src="logos.graphQl" />
             </figure>
           </li>
 
-          <li
-            class="h-40 w-40 list-none inline-block h-full w-full rounded-full ring-2"
-            data-wow-delay="1.4s"
-          >
-            <figure class="mb-10 items-center p-1 sm:p-3 md:p-4">
-              <img class="" :src="logos.aws" />
+          <li class="h-40 w-40 p-1" data-wow-delay="1.4s">
+            <figure
+              class="flex justify-center list-none h-full w-full rounded-full"
+            >
+              <img class="h-20 w-20" :src="logos.aws" />
             </figure>
           </li>
         </ul>

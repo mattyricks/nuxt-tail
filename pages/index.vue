@@ -154,7 +154,7 @@
         <!-- Image -->
         <div class="flex-none w-48 relative">
           <img
-            :src="images.imageOne"
+            :src="images.imageSix"
             alt=""
             class="absolute inset-0 w-full h-full object-cover rounded-lg"
           />
@@ -220,7 +220,7 @@
         <!-- Image -->
         <div class="flex-none w-48 relative">
           <img
-            :src="images.imageOne"
+            :src="images.imageSix"
             alt=""
             class="absolute inset-0 w-full h-full object-cover rounded-lg"
           />
@@ -353,6 +353,7 @@ export default {
         imageOne: require('../assets/images/matty4.jpeg'),
         imageTwo: require('../assets/images/code.jpeg'),
         imageThree: require('../assets/logo.png'),
+        imageSix: require('../assets/images/matty3.png'),
       },
     }
   },

@@ -95,7 +95,7 @@
           <!-- Location -->
           <div class="flex flex-col items-start justify-end wow fadeInUp">
             <h5
-              class="flex font-medium tracking-normal uppercase text-lg sm:text-xl"
+              class="flex font-thin tracking-normal uppercase text-lg sm:text-xl"
             >
               LOCATION
             </h5>
@@ -103,10 +103,11 @@
               Brooklyn, New York &nbsp;
             </address>
           </div>
+
           <!-- Reach Me -->
           <div class="flex flex-col items-start justify-end wow fadeInUp">
             <h5
-              class="flex font-extralight tracking-normal uppercase text-lg sm:text-xl"
+              class="flex font-thin tracking-normal uppercase text-lg sm:text-xl"
             >
               REACH ME
             </h5>
@@ -114,9 +115,10 @@
               class="tracking-wide mb-10 font-light text-sm sm:text-md"
               data-clipboard-text="ricklefsmatthew1003@gmail.com"
             >
-              <span>Click</span> to copy my email address to your clipboard.
+              Click to copy my email address to your clipboard.
             </a>
           </div>
+
           <!-- TODO: Implement Responsive Clean Form Submit -->
           <!-- Form -->
           <div class="wow fadeInUp p-4">
