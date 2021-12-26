@@ -1,85 +1,14 @@
 <template>
   <div
-    class="theme-switch-wrapper xl:p-40 lg:pl-36 md:pl-32 sm:pl-24 pl-14 h-full w-full"
+    class="theme-switch-wrapper xl:p-40 lg:pl-36 md:pl-32 sm:pl-24 pl-14 h-screen w-screen overflow-scroll"
     data-theme="light"
   >
-    <!-- Sidebar -->
-    <aside
-      class="h-screen fixed left-0 top-0 flex items-center xl:w-36 lg:w-32 md:w-24 sm:w-16 w-12"
-    >
-      <a
-        href=""
-        class="w-full block h-10 text-center mt-8 transition-all ease-in-out opacity-0 transform translate-y-7"
-      >
-        <img
-          class="h-10"
-          :src="images.imageThree"
-          alt="Matthew Ricklefs Logo"
-        />
-      </a>
-
-      <ul
-        class="flex flex-row justify-center items-center w-full block leading-normal m-0 mt-36 -ml-2 p-0 transform -rotate-90 origin-center left-1/2 top-1/2 text-center"
-      >
-        <li class="text-sm p-2">
-          <a href="https://www.linkedin.com/in/matthew-ricklefs-13284a1b9/">
-            LINKEDIN
-          </a>
-        </li>
-
-        <li class="text-sm p-2">
-          <a href="https://github.com/matthewricklefs">GITHUB</a>
-        </li>
-      </ul>
-    </aside>
-
-    <!-- Header -->
-    <header class="w-full">
-      <nav class="w-full mb-0">
-        <!-- Main Menu -->
-        <div class="main-menu">
-          <ul class="flex flex-row place-content-end">
-            <li class="text-sm p-2">
-              <a>
-                <router-link to="/">Home</router-link>
-              </a>
-            </li>
-            <li class="text-sm p-2">
-              <a>
-                <router-link to="/about">About</router-link>
-              </a>
-            </li>
-            <li class="text-sm p-2">
-              <a>
-                <router-link to="/contact">Contact</router-link>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Theme Switch -->
-        <label class="theme-switch pl-5 h-9 relative w-17" for="checkbox">
-          <input id="checkbox" class="invisible" type="checkbox" />
-          <div class="slider round" @click="toggleSwitch"></div>
-        </label>
-      </nav>
-
-      <!-- Page Title -->
-      <div class="w-full mt-12">
-        <h1
-          class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-none m-0 pb-1"
-        >
-          About
-        </h1>
-      </div>
-    </header>
-
     <!-- Page Title -->
-    <section class="g-section w-full flex flex-wrap wave-section p-6">
-      <svg
-        class="pl-6 pr-6 pb-6 wave-top"
+    <section class="g-section h-screen">
+      <!-- <svg
+        class=""
         width="100%"
-        height="175"
+        height="100%"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -99,16 +28,16 @@
                      "
           ></animate>
         </path>
-      </svg>
+      </svg> -->
 
       <figure class="">
-        <img class="p-12 mb-2" :src="images.imageTwo" alt="" />
+        <img class="" :src="images.imageTwo" alt="" />
       </figure>
 
-      <svg
-        class="pl-6 pr-6 pb-6"
+      <!-- <svg
+        class=""
         width="100%"
-        height="249"
+        height="100%"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -128,45 +57,47 @@
                      "
           ></animate>
         </path>
-      </svg>
+      </svg> -->
     </section>
 
     <!-- About Intro -->
     <section class="g-section w-full h-full flex-wrap pl-12 pr-12">
-      <div class="">
-        <div class="flex flex-row justify-center items-center md:flex-row">
-          <div class="basis-2/3 max-w-2/3">
-            <h3
-              class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-none pb-2 md:pb-6"
-            >
-              Hello, I'm Matthew. I design and code for the web.
-            </h3>
+      <div class="flex flex-row justify-center items-center md:flex-row">
+        <div class="basis-2/3 max-w-2/3">
+          <h3
+            class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-none pb-2 md:pb-6"
+          >
+            Hello, I'm Matthew. I design and code for the web.
+          </h3>
 
-            <div class="custom-link">
-              <a
-                href="https://www.linkedin.com/in/matthew-ricklefs-13284a1b9/"
-                target="_blank"
-                rel="noopener"
-                >More about that here</a
-              >
-              <span></span> <i></i>
-            </div>
+          <div class="custom-link form-group">
+            <button id="submit" class="rounded-lg" type="submit" name="submit">
+              <strong class="rounded-lg">
+                <a
+                  href="https://www.linkedin.com/in/matthew-ricklefs-13284a1b9/"
+                  ><p>Let's Connect</p></a
+                >
 
-            <p class="text-sm sm:text-lg pt-3">
-              I'm a Full Stack Developer with a passion for developing beautiful
-              applications. I have 2 years of experience designing for web but
-              am most passionate about solving real-world problems utilizing
-              technology at the intersection of design and code.
-            </p>
+                <b></b>
+                <i></i>
+              </strong>
+            </button>
           </div>
 
-          <div class="flex items-center justify-center basis-1/3">
-            <img
-              class="bg-emerald-50 shadow-md object-contain rounded-full pb-32 mb-12"
-              :src="images.imageSix"
-              alt="picture of Matthew"
-            />
-          </div>
+          <p class="text-sm sm:text-lg pt-3">
+            I'm a Full Stack Developer with a passion for developing beautiful
+            applications. I have 2 years of experience designing for web but am
+            most passionate about solving real-world problems utilizing
+            technology at the intersection of design and code.
+          </p>
+        </div>
+
+        <div class="flex items-center justify-center basis-1/3">
+          <img
+            class="bg-emerald-50 shadow-md object-contain rounded-full pb-32 mb-12"
+            :src="images.imageSix"
+            alt="picture of Matthew"
+          />
         </div>
       </div>
     </section>
@@ -257,35 +188,46 @@
         </p>
       </div>
 
-      <div class="w-full h-full flex flex-col">
+      <ul class="w-full h-full flex flex-row items-center space-between">
+        <li
+          v-for="(icon, index) in logos"
+          :key="icon.key"
+          :data-index="index"
+          class="list-none p-0 m-0"
+        >
+          <img class="h-20 w-20" :src="icon" />
+        </li>
+      </ul>
+
+      <!-- <div class="w-full h-full flex flex-col">
         <ul class="flex flex-row items-center justify-between">
           <li class="h-40 w-40 p-1" data-wow-delay="0.50s">
             <figure class="flex justify-center w-full rounded-full">
-              <img class="h-20 w-20" :src="logos.vue" />
+              <img class="h-20 w-20" :src="icon.vue" />
             </figure>
           </li>
 
           <li class="h-40 w-40 p-1" data-wow-delay="0.60s">
             <figure class="flex justify-center w-full rounded-full">
-              <img class="h-20 w-20" :src="logos.react" />
+              <img class="h-20 w-20" :src="icon.react" />
             </figure>
           </li>
 
           <li class="h-40 w-40 p-1" data-wow-delay="0.70s">
             <figure class="flex justify-center w-full rounded-full">
-              <img class="h-20 w-20" :src="logos.mongo" />
+              <img class="h-20 w-20" :src="icon.mongo" />
             </figure>
           </li>
 
           <li class="h-40 w-40 p-1" data-wow-delay="0.80s">
             <figure class="flex justify-center w-full rounded-full">
-              <img class="h-20 w-20" :src="logos.express" />
+              <img class="h-20 w-20" :src="icon.express" />
             </figure>
           </li>
 
           <li class="h-40 w-40 p-1" data-wow-delay="0.90s">
             <figure class="flex justify-center w-full rounded-full">
-              <img class="h-20 w-20" :src="logos.node" />
+              <img class="h-20 w-20" :src="icon.node" />
             </figure>
           </li>
         </ul>
@@ -293,7 +235,7 @@
         <ul class="flex flex-row items-center justify-between">
           <li class="h-40 w-40 p-1" data-wow-delay="1s">
             <figure class="flex justify-center w-full rounded-full">
-              <img class="h-20 w-20" :src="logos.nuxt" />
+              <img class="h-20 w-20" :src="icon.nuxt" />
             </figure>
           </li>
 
@@ -301,7 +243,7 @@
             <figure
               class="flex justify-center list-none h-full w-full rounded-full"
             >
-              <img class="h-20 w-20" :src="logos.next" />
+              <img class="h-20 w-20" :src="icon.next" />
             </figure>
           </li>
 
@@ -317,7 +259,7 @@
             <figure
               class="flex justify-center list-none h-full w-full rounded-full"
             >
-              <img class="h-20 w-20" :src="logos.graphQl" />
+              <img class="h-20 w-20" :src="icon.graphQl" />
             </figure>
           </li>
 
@@ -325,16 +267,16 @@
             <figure
               class="flex justify-center list-none h-full w-full rounded-full"
             >
-              <img class="h-20 w-20" :src="logos.aws" />
+              <img class="h-20 w-20" :src="icon.aws" />
             </figure>
           </li>
         </ul>
-      </div>
+      </div> -->
     </section>
 
     <!-- Explore Ideas -->
     <section class="g-section p-12">
-      <div class="container wow fadeInUp">
+      <div class="">
         <h2 class="flex font-thin tracking-normal uppercase text-lg sm:text-xl">
           EXPLORE IDEAS
         </h2>
@@ -355,54 +297,36 @@
         </div>
       </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="g-section w-full md:p-24 sm:p-6 p-1">
-      <div class="flex flex-col justify-around items-center">
-        <div class="w-full flex flex-row sm:flex-row sm:justify-between">
-          <div
-            class="w-full flex flex-col place-items-start"
-            style="visibility: visible; animation-name: fadeInUp"
-          >
-            <h5 class="sm:text-md text-sm">Location</h5>
-
-            <address class="sm:text-sm text-xs">
-              Brooklyn, NY<br />
-              USA
-            </address>
-          </div>
-
-          <div
-            class="w-full flex flex-col place-items-end"
-            style="visibility: visible; animation-name: fadeInUp"
-          >
-            <h5 class="sm:text-md text-sm">Say Hello</h5>
-
-            <a class="sm:text-sm text-xs">
-              <router-link to="/contact">Contact</router-link>
-            </a>
-          </div>
-        </div>
-
-        <div
-          class="w-full flex flex-row basis-1/3 flex-wrap sm:flex-col"
-          style="visibility: visible; animation-name: fadeInUp"
-        >
-          <div>
-            <address>© 2021 Matthew Ricklefs - All Rights Reserved.</address>
-          </div>
-        </div>
-      </div>
-    </footer>
   </div>
 </template>
 
 <script>
-// import gsap from 'gsap'
+import { gsap } from 'gsap'
 // import ScrollTrigger from 'gsap/ScrollTrigger'
 
 export default {
   name: 'About',
+  transition: {
+    appear: true,
+    css: false,
+    beforeEnter(el) {
+      gsap.set(el.children, {
+        scale: 0.6,
+        opacity: 0,
+      })
+    },
+    enter(el, done) {
+      gsap.to(el.children, {
+        scale: 1,
+        opacity: 1,
+        duration: 0.3,
+        ease: 'bounce.inOut',
+        stagger: 0.3,
+        onComplete: done,
+      })
+    },
+    afterEnter(el) {},
+  },
   data() {
     return {
       images: {
@@ -433,6 +357,9 @@ export default {
       },
     }
   },
+  mounted: () => {
+    // this.startAnimations()
+  },
   methods: {
     toggleSwitch() {
       const toggleSwitch = document.querySelector(
@@ -448,6 +375,21 @@ export default {
       }
 
       toggleSwitch.addEventListener('change', switchTheme, false)
+    },
+    startAnimations: () => {
+      // const tl = new Timeline({ onUpdate: updatePercentage })
+      // const scene = this.$scrollmagic
+      //   .scene({
+      //     triggerElement: '.theme-switch-wrapper',
+      //     triggerHook: 0,
+      //     duration: 1,
+      //   })
+      //   .setPin('.theme-switch-wrapper')
+      //   .setTween(tl)
+      // this.$scrollmagic.addScene(scene)
+      // const updatePercentage = () => {
+      //   tl.progress()
+      // }
     },
   },
 }
