@@ -37,9 +37,7 @@
           name="angle-left"
           scale="4"
           class="text-indigo-600 hover:text-orange-500"
-        >
-          hello
-        </div>
+        ></div>
         <!-- Prev -->
       </div>
     </nuxt-link>
@@ -52,10 +50,12 @@
           name="angle-right"
           scale="4"
           class="text-indigo-600 hover:text-orange-500"
-        />
+        ></div>
+
         <!-- Next -->
       </div>
     </nuxt-link>
+
     <span v-else>&nbsp;</span>
   </div>
 </template>
@@ -96,6 +96,22 @@ export default {
           params: { id: this.next.slug },
         })
       }
+    },
+
+    toggleSwitch() {
+      const toggleSwitch = document.querySelector(
+        '.theme-switch input[type="checkbox"]'
+      )
+
+      function switchTheme(e) {
+        if (e.target.checked) {
+          document.documentElement.setAttribute('data-theme', 'dark')
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light')
+        }
+      }
+
+      toggleSwitch.addEventListener('change', switchTheme, false)
     },
   },
 }

@@ -19,14 +19,17 @@
     </div>
   </div>
 </template>
+
 <script>
 import { mapGetters } from 'vuex'
+
 export default {
   computed: {
     ...mapGetters({ activePage: 'getActivePage' }),
   },
 }
 </script>
+
 <style>
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',

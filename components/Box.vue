@@ -1,14 +1,24 @@
 <template>
-  <div :class="`p-2 border-2 rounded-lg h-16 w-16 ${color}`">
-    <slot />
-  </div>
+  <div :class="`p-2 border-2 rounded-lg h-16 w-16`"></div>
 </template>
+
 <script>
+import { gsap } from 'gsap'
+
 export default {
-  props: {
-    color: {
-      type: String,
-      default: 'bg-gray-700',
+  data() {
+    return {
+      panelTimeline: gsap.timeline(),
+    }
+  },
+
+  mounted() {
+    // [... animations defined here]
+  },
+
+  methods: {
+    playAnim() {
+      this.panelTimeline.play(0)
     },
   },
 }
