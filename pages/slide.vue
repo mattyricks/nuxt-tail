@@ -25,10 +25,6 @@
 </template>
 
 <script>
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { Draggable } from 'gsap/Draggable'
-
 export default {
   data() {
     return {
@@ -46,14 +42,15 @@ export default {
       },
     }
   },
-  mounted: () => {
-    gsap.registerPlugin(ScrollTrigger)
-    gsap.registerPlugin(Draggable)
+  mounted() {
+    const gsap = this.$gsap
+    gsap.registerPlugin(this.$ScrollTrigger)
+    gsap.registerPlugin(this.$Draggable)
 
     let iteration = 0 // gets iterated when we scroll all the way to the end or start and wraps around - allows us to smoothly continue the playhead scrubbing in the correct direction.
 
     // set initial state of items
-    gsap.set('.panel-tech li', { xPercent: 400, opacity: 0, scale: 0 })
+    gsap.set('.panel li', { xPercent: 400, opacity: 0, scale: 0 })
 
     const spacing = 0.1 // spacing of the cards (stagger)
     const snapTime = gsap.utils.snap(spacing) // we'll use this to snapTime the playhead on the seamlessLoop
@@ -99,7 +96,27 @@ export default {
       paused: true,
     })
 
-    const trigger = ScrollTrigger.create({
+    // gsap.to(cards, {
+    //   scrollTrigger: {
+    //     start: 0,
+    //     onUpdate(self) {
+    //       const scroll = self.scroll()
+    //       if (scroll > self.end - 1) {
+    //         wrap(1, 1)
+    //       } else if (scroll < 1 && self.direction < 0) {
+    //         wrap(-1, self.end - 1)
+    //       } else {
+    //         scrub.vars.offset =
+    //           (iteration + self.progress) * seamlessLoop.duration()
+    //         scrub.invalidate().restart() // to improve performance, we just invalidate and restart the same tween. No need for overwrites or creating a new tween on each update.
+    //       }
+    //     },
+    //     end: '+=3000',
+    //     pin: '.gallery',
+    //   },
+    // })
+
+    const trigger = this.$ScrollTrigger.create({
       start: 0,
       onUpdate(self) {
         const scroll = self.scroll()
@@ -132,7 +149,7 @@ export default {
     }
 
     // when the user stops scrolling, snap to the closest item.
-    ScrollTrigger.addEventListener('scrollEnd', () =>
+    this.$ScrollTrigger.addEventListener('scrollEnd', () =>
       scrollToOffset(scrub.vars.offset)
     )
 
@@ -206,7 +223,7 @@ export default {
     }
 
     // below is the dragging functionality (mobile-friendly too)...
-    Draggable.create('.drag-proxy', {
+    this.$Draggable.create('.drag-proxy', {
       type: 'x',
       trigger: '.cards',
       onPress() {

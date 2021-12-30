@@ -1,11 +1,11 @@
 <template>
   <div
-    class="contain flex flex-col flex-wrap min-h-screen overflow-x-scroll contain"
+    class="contain flex flex-col flex-nowrap min-h-screen"
     data-theme="light"
   >
     <!-- About Intro -->
     <section
-      class="h-screen w-screen flex items-center justify-center bg-emerald-50 panel"
+      class="h-screen w-screen bg-emerald-50 panel flex items-center justify-center"
     >
       <div class="flex p-16 m-16">
         <!-- Crappy Selfie -->
@@ -72,7 +72,7 @@
 
     <!-- Skills ----------------------------- -->
     <section
-      class="h-screen w-screen flex items-center justify-center bg-emerald-100 panel"
+      class="h-screen w-screen bg-emerald-100 panel flex items-center justify-center"
     >
       <div class="p-16 m-16">
         <div class="flex flex-col p-16 m-16">
@@ -149,7 +149,7 @@
 
     <!-- Technologies ------------------- -->
     <section
-      class="h-screen w-screen flex items-center justify-center bg-emerald-200 panel"
+      class="h-screen w-screen bg-emerald-200 panel flex items-center justify-center"
     >
       <div class="p-16 m-16">
         <div class="flex flex-col p-16 m-16">
@@ -179,7 +179,7 @@
 
     <!-- Ideas Section -->
     <section
-      class="h-screen w-screen flex items-center justify-center bg-emerald-300 panel"
+      class="h-screen w-screen bg-emerald-300 panel flex items-center justify-center"
     >
       <div class="p-16 m-16">
         <div class="flex flex-col space-between p-16 m-16">
@@ -272,10 +272,10 @@ export default {
         yPercent: -100 * (sections.length - 1),
         ease: 'none',
         scrollTrigger: {
-          trigger: '.container',
+          trigger: '.contain',
           pin: true,
           scrub: 1,
-          snap: 1 / 1 / 4,
+          snap: 1 / (sections.length - 1),
           // base vertical scrolling on how wide the container is so it feels more natural.
           end: '+=3500',
         },
@@ -285,29 +285,4 @@ export default {
 }
 </script>
 
-<style scoped>
-/* .ml9 {
-  position: relative;
-  font-weight: 200;
-  font-size: 4em;
-}
-
-.ml9 .text-wrapper {
-  position: relative;
-  display: inline-block;
-  padding-top: 0.2em;
-  padding-right: 0.05em;
-  padding-bottom: 0.1em;
-  overflow: hidden;
-}
-
-.ml9 .letter {
-  transform-origin: 50% 100%;
-  display: inline-block;
-  line-height: 1em;
-} */
-
-.contain {
-  width: 600%;
-}
-</style>
+<style scoped></style>

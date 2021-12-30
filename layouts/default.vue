@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen">
+  <div class="h-screen w-screen">
     <!-- Aside -->
     <Aside />
 
@@ -20,14 +20,6 @@
 import { mapGetters } from 'vuex'
 
 export default {
-  data() {
-    return {
-      images: {
-        imageThree: require('../assets/logo.png'),
-        imageSix: require('../assets/images/matty3.png'),
-      },
-    }
-  },
   computed: {
     ...mapGetters({ activePage: 'getActivePage' }),
   },
