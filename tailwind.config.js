@@ -7,7 +7,11 @@ module.exports = {
     './nuxt.config.{js,ts}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'hero-pattern': "url('/assets/images/matty-3.png')",
+      },
+    },
     FontFamily: {
       sans: ['Mont', 'sans-serif'],
       serif: ['Merriweather', 'serif'],

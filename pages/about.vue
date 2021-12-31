@@ -1,88 +1,110 @@
 <template>
   <div
-    class="contain flex flex-col flex-nowrap min-h-screen"
+    class="contain flex flex-col items-end flex-nowrap min-h-screen bg-offwhite"
     data-theme="light"
   >
     <!-- About Intro -->
-    <section
-      class="h-screen w-screen bg-emerald-50 panel flex items-center justify-center"
-    >
-      <div class="flex p-16 m-16">
-        <!-- Crappy Selfie -->
-        <img
-          class="h-2/5 w-2/5 max-w-screen-sm mx-auto object-cover object-top rounded-full bg-slate-200 shadow-md"
-          :src="images.imageSix"
-          alt="picture of Matthew"
-        />
+    <section class="h-screen w-screen panel">
+      <!-- Blob -->
+      <div class="blob"></div>
+
+      <div class="flex flex-col items-center justify-between p-16 m-16">
+        <!-- Heading -->
+        <h1
+          split-by="letter"
+          letter-animation="hover"
+          class="font-light text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-none pb-6"
+        >
+          Hello, I'm Matthew
+
+          <br />
+        </h1>
 
         <!-- Header -->
-        <div class="h-full flex flex-col p-6 shadow-md rounded-2xl m-6">
-          <!-- Heading -->
-          <h1
-            class="ml9 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-none"
-          >
-            <span class="text-wrapper">
-              <span class="letters">
-                Hello, I'm Matthew. I design and code for the web.</span
-              >
-            </span>
-            <br />
-          </h1>
+        <div
+          class="h-full w-full flex flex-col items-center space-between p-6 m-3 rounded-2xl"
+        >
+          <!-- Crappy Selfie -->
+          <!-- <img
+            class="h-1/4 w-1/4 mx-auto object-cover object-top"
+            :src="images.imageSix"
+            alt="picture of Matthew"
+          /> -->
 
-          <!-- SubHeading -->
-          <p
-            class="text-slate-400 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-none p-1"
+          <!-- Quotes -->
+          <div
+            class="flex flex-col items-center justify-center basis-3/5 p-12 mx-auto"
           >
-            I design and code for the web.
-            <br />
-          </p>
+            <img class="h-8 w-10" :src="images.quoteLeft" alt="" />
 
-          <!-- Connect Link -->
-          <div class="">
-            <button
-              id="submit"
-              class="rounded-lg bg-slate-100"
-              type="submit"
-              name="submit"
+            <h3
+              split-by="letter"
+              letter-animation="hover"
+              class="text-2xl leading-relaxed p-4"
             >
-              <strong class="rounded-lg">
-                <a
-                  href="https://www.linkedin.com/in/matthew-ricklefs-13284a1b9/"
-                  ><p>Let's Connect</p></a
-                >
+              I develop and design for the web.
+              <br />
+            </h3>
 
-                <b></b>
-                <i></i>
-              </strong>
-            </button>
+            <img class="h-10 w-10" :src="images.quoteRight" alt="" />
           </div>
 
           <!-- Paragraph -->
-          <p
-            class="text-slate-800 font-extralight text-sm sm:text-lg p-3 m-2 w-3/4"
+          <div class="self-center max-w-md flex-wrap">
+            <p
+              split-by="letter"
+              letter-animation="hover"
+              class="text-slate-800 font-light p-10 whitespace-normal"
+            >
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio,
+              nam, debitis asperiores libero eius labore porro maxime aliquam
+              ipsum minus eum dolores deserunt mollitia cupiditate doloremque
+              suscipit error corrupti voluptates?
+            </p>
+          </div>
+        </div>
+
+        <!-- Connect Link -->
+        <div class="">
+          <button
+            id="submit"
+            class="rounded-lg bg-slate-100"
+            type="submit"
+            name="submit"
           >
-            I'm a software developer with a passion for developing beautiful
-            applications. I have two years of experience designing for web but
-            am most passionate about solving real-world problems utilizing
-            technology at the intersection of design and code.
-          </p>
+            <strong class="rounded-lg">
+              <a href="https://www.linkedin.com/in/matthew-ricklefs-13284a1b9/"
+                ><p>Let's Connect</p></a
+              >
+
+              <b></b>
+              <i></i>
+            </strong>
+          </button>
         </div>
       </div>
     </section>
 
     <!-- Skills ----------------------------- -->
     <section
-      class="h-screen w-screen bg-emerald-100 panel flex items-center justify-center"
+      class="h-screen w-screen panel flex items-center justify-center snap-center"
     >
+      <!-- Blob -->
+      <div class="blob-two"></div>
+
       <div class="p-16 m-16">
         <div class="flex flex-col p-16 m-16">
           <!-- Heading -->
-          <h6 class="flex font-thin tracking-normal uppercase text-5xl">
+          <h6
+            split-by="letter"
+            letter-animation="breath"
+            class="flex font-thin tracking-normal uppercase text-2xl"
+          >
             SKILLS
           </h6>
 
           <!-- Sub Heading -->
-          <p class="tracking-wide mb-10 font-light text-3xl">
+          <p class="tracking-wide mb-10 font-light text-xl">
             I like learning new things. Here are a few topics I am proficient
             with.
           </p>
@@ -149,11 +171,18 @@
 
     <!-- Technologies ------------------- -->
     <section
-      class="h-screen w-screen bg-emerald-200 panel flex items-center justify-center"
+      class="h-screen w-screen panel flex items-center justify-center snap-center"
     >
+      <!-- Blob -->
+      <div class="blob"></div>
+
       <div class="p-16 m-16">
         <div class="flex flex-col p-16 m-16">
-          <h6 class="font-thin tracking-normal uppercase text-5xl">
+          <h6
+            split-by="letter"
+            letter-animation="breath"
+            class="font-thin tracking-normal uppercase text-5xl"
+          >
             TECHNOLOGIES
           </h6>
 
@@ -179,11 +208,18 @@
 
     <!-- Ideas Section -->
     <section
-      class="h-screen w-screen bg-emerald-300 panel flex items-center justify-center"
+      class="h-screen w-screen panel flex items-center justify-center snap-center"
     >
+      <!-- Blob -->
+      <div class="blob-two"></div>
+
       <div class="p-16 m-16">
         <div class="flex flex-col space-between p-16 m-16">
-          <h2 class="self-start font-thin tracking-normal uppercase text-5xl">
+          <h2
+            split-by="letter"
+            letter-animation="breath"
+            class="self-start font-thin tracking-normal uppercase text-5xl"
+          >
             EXPLORE IDEAS
           </h2>
 
@@ -208,28 +244,32 @@
 </template>
 
 <script>
+import { byLetter, byWord } from '../utils/splitting'
+
 export default {
   name: 'About',
-  // transition: {
-  //   appear: true,
-  //   css: false,
-  //   beforeEnter(el) {
-  //     gsap.set(el.children, {
-  //       scale: 0.1,
-  //       opacity: 0,
-  //     })
-  //   },
-  //   enter(el, done) {
-  //     gsap.to(el.children, {
-  //       scale: 1,
-  //       opacity: 1,
-  //       duration: 0.7,
-  //       ease: 'power2.inOut',
-  //       onComplete: done,
-  //       stagger: 0.3,
-  //     })
-  //   },
-  // },
+  transition: {
+    appear: true,
+    css: false,
+    beforeEnter(el) {
+      this.$gsap.set(el.children, {
+        scale: 0.1,
+        opacity: 0,
+        duration: 1,
+      })
+    },
+    enter(el, done) {
+      this.$gsap.to(el.children, {
+        scale: 1,
+        opacity: 1,
+        duration: 1.5,
+        delay: el.dataset.index * 0.2,
+        ease: 'power2.inOut',
+        onComplete: done,
+        stagger: 0.5,
+      })
+    },
+  },
   data() {
     return {
       images: {
@@ -239,6 +279,8 @@ export default {
         imageFour: require('../assets/images/coder-zen.png'),
         imageFive: require('../assets/images/matty-2.png'),
         imageSix: require('../assets/images/matty3.png'),
+        quoteLeft: require('../assets/images/quote-l.png'),
+        quoteRight: require('../assets/images/quote-r.png'),
       },
       logos: {
         vue: require('../assets/logo.png'),
@@ -262,8 +304,10 @@ export default {
   },
   mounted() {
     this.horizontalSnap()
+    this.splitting()
   },
   methods: {
+    // Section Snapping
     horizontalSnap() {
       const gsap = this.$gsap
       const sections = gsap.utils.toArray('.panel')
@@ -281,8 +325,63 @@ export default {
         },
       })
     },
+    // Text Splitting
+    splitting() {
+      const splitTargets = document.querySelectorAll('[split-by]')
+
+      splitTargets.forEach((node) => {
+        const type = node.getAttribute('split-by')
+        let nodes = null
+
+        if (type === 'letter') {
+          nodes = byLetter(node.innerText)
+        } else if (type === 'word') {
+          nodes = byWord(node.innerText)
+        }
+
+        if (nodes) {
+          node.firstChild.replaceWith(...nodes)
+        }
+      })
+    },
+    // Tween Timelines
+    tweenLine() {},
+    // iterating blobs
+    iterativeBlobTrajectory() {
+      
+    }
   },
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.letter-animation {
+  display: inline-block;
+  white-space: normal;
+}
+
+.letter-animation:hover > span {
+  transform: scale(0.75) perspective(1px);
+}
+
+.letter-animation > span {
+  transition: transform 0.6s ease;
+  cursor: pointer;
+  will-change: transform;
+}
+
+.letter-animation > span:hover {
+  transform: scale(1.25) perspective(1px);
+}
+
+@keyframes breath {
+  from {
+    animation-timing-function: ease-out;
+  }
+  to {
+    transform: scale(1.25) (translateY(-5px)) perspective(1px);
+    text-shadow: 0 0 40px offwhite;
+    animation-timing-function: ease-in-out;
+  }
+}
+</style>

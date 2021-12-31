@@ -42,7 +42,7 @@ export default {
     extraPlugins: {
       scrollTo: true,
       scrollTrigger: true,
-      Draggable: true,
+      draggable: true,
     },
     extraEases: {
       expoScaleEase: true,
