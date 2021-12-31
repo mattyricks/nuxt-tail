@@ -1,240 +1,340 @@
 <template>
-  <!-- TODO: Can you apply transition to entire template? -->
-
   <div
-    class="theme-switch-wrapper xl:p-40 lg:pl-36 md:pl-32 sm:pl-24 pl-14 h-screen w-screen overflow-scroll"
+    class="contain flex flex-col items-end flex-nowrap min-h-screen bg-offwhite"
     data-theme="light"
   >
-    <!-- Page Title -->
-    <div class="panel h-screen w-full mt-12">
-      <h1
-        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-none m-0 pb-1"
-      >
-        Hello, I'm Matthew.
-        <br />
-        Full Stack Developer
-        <br />
-        based in New York
-      </h1>
-    </div>
+    <!-- About Intro -->
+    <section class="h-screen w-screen panel px-auto">
+      <!-- Blob -->
+      <div class="blob flex items-center"></div>
 
-    <!-- Projects Section -->
-    <section class="panel h-screen w-full p-12 pb-7">
-      <!-- See All Projects.. -->
-      <div class="flex flex-col items-start justify-end">
-        <h2 class="flex font-thin tracking-normal uppercase text-lg sm:text-xl">
-          Explore Projects
-        </h2>
+      <div class="flex flex-col items-center justify-between p-16 m-16">
+        <!-- Heading -->
+        <h1
+          split-by="letter"
+          letter-animation="hover"
+          class="font-light text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl px-26"
+        >
+          Hello, I'm Matthew
 
-        <p class="tracking-wide mb-10 font-light text-lg">
-          Check out some of my recent work.
+          <br />
+        </h1>
+
+        <!-- Header -->
+        <div
+          class="h-full w-full flex flex-col items-center space-between p-6 m-3 rounded-2xl"
+        >
+          <!-- Crappy Selfie -->
+          <!-- <img
+            class="h-1/4 w-1/4 mx-auto object-cover object-top"
+            :src="images.imageSix"
+            alt="picture of Matthew"
+          /> -->
+
+          <!-- Quotes -->
+          <div
+            class="flex flex-col items-center justify-center basis-3/5 p-12 mx-auto"
+          >
+            <img class="h-4 w-6" :src="images.quoteLeft" alt="" />
+
+            <h3
+              split-by="letter"
+              letter-animation="hover"
+              class="text-2xl leading-relaxed px-26"
+            >
+              I develop and design for the web.
+              <br />
+            </h3>
+
+            <img class="h-8 w-8" :src="images.quoteRight" alt="" />
+          </div>
+
+          <!-- Paragraph -->
+          <div class="self-center max-w-md flex-wrap">
+            <p
+              split-by="letter"
+              letter-animation="hover"
+              class="text-slate-800 font-light p-10 whitespace-normal"
+            >
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio,
+              nam, debitis asperiores libero eius labore porro maxime aliquam
+              ipsum minus eum dolores deserunt mollitia cupiditate doloremque
+              suscipit error corrupti voluptates?
+            </p>
+          </div>
+        </div>
+
+        <!-- Connect Link -->
+        <div class="relative">
+          <button
+            id="submit"
+            class="rounded-lg bg-transparent p-6 m-3 hover:scale-y-125 ease-in-out duration-200 z-50 border-green-100"
+            type="submit"
+            name="submit"
+          >
+            <a href="https://www.linkedin.com/in/matthew-ricklefs-13284a1b9/">
+              <p>Let's Connect</p>
+            </a>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills ----------------------------- -->
+    <section class="h-screen w-screen panel flex items-center justify-center">
+      <!-- Blob -->
+      <div class="blob-two"></div>
+
+      <div class="p-16 m-16">
+        <div class="flex flex-col p-16 m-16">
+          <!-- Heading -->
+          <h6
+            split-by="letter"
+            letter-animation="breath"
+            class="flex font-thin tracking-normal uppercase text-2xl"
+          >
+            SKILLS
+          </h6>
+
+          <!-- Sub Heading -->
+          <p class="tracking-wide mb-10 font-light text-xl">
+            I like learning new things. Here are a few topics I am proficient
+            with.
+          </p>
+        </div>
+
+        <!-- Icons -->
+        <div
+          class="flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row items-center justify-between"
+        >
+          <figure
+            class="p-3 flex flex-col items-start justify-between rounded-2xl m-3 flex flex-row w-full h-full hover:bg-emerald-100 transition-all delay-75"
+          >
+            <img
+              class="h-15 w-12 object-contain relative basis-1/4 self-center"
+              :src="icons.ui"
+            />
+            <figcaption class="self-center">
+              <span class="text-sm font-light mb-3">01</span>
+              <h4 class="text-md font-thin">UI DESIGN</h4>
+            </figcaption>
+          </figure>
+
+          <figure
+            class="p-3 flex flex-col items-start justify-between rounded-2xl m-3 flex flex-row w-full h-full hover:bg-emerald-200 transition-all delay-75"
+          >
+            <img
+              class="h-15 w-12 object-contain basis-1/4 self-center"
+              :src="icons.front"
+            />
+            <figcaption class="self-center">
+              <span class="text-sm font-light">02</span>
+              <h4 class="text-md font-thin">FRONT END</h4>
+            </figcaption>
+          </figure>
+
+          <figure
+            class="p-3 flex flex-col items-start justify-between rounded-2xl m-3 flex flex-row w-full h-full hover:bg-emerald-300 transition-all delay-75"
+          >
+            <img
+              class="h-15 w-12 object-contain basis-1/4 self-center"
+              :src="icons.back"
+            />
+            <figcaption class="self-center">
+              <span class="text-sm font-light">03</span>
+              <h4 class="text-md font-thin">BACK END</h4>
+            </figcaption>
+          </figure>
+
+          <figure
+            class="p-3 flex flex-col items-start justify-between rounded-2xl m-3 flex flex-row w-full h-full hover:bg-emerald-400 transition-all delay-75"
+          >
+            <img
+              class="h-15 w-12 object-contain relative basis-1/4 self-center"
+              :src="icons.ux"
+            />
+            <figcaption class="self-center">
+              <span class="text-sm font-light">04</span>
+              <h4 class="text-md font-thin">UX DESIGN</h4>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technologies ------------------- -->
+    <section
+      class="h-screen w-screen panel flex flex-col items-center justify-center"
+    >
+      <!-- Blob -->
+      <!-- <div class="blob"></div> -->
+
+      <div class="flex flex-col items-center justify-center">
+        <h6
+          split-by="letter"
+          letter-animation="breath"
+          class="font-thin tracking-normal uppercase text-2xl px-3"
+        >
+          TECHNOLOGIES
+        </h6>
+
+        <p class="tracking-wide mb-10 font-light text-xl">
+          Some tech I'm currently working with.
         </p>
-      </div>
 
-      <!-- Project Card -->
-      <div
-        class="p-6 m-6 flex flex-row-reverse font-sans rounded-3xl shadow-2xl hover:shadow-zinc-500"
-      >
-        <!-- Image -->
-        <div class="flex-none w-48 relative">
-          <img
-            :src="images.imageSix"
-            alt=""
-            class="absolute inset-0 w-full h-full object-cover rounded-lg"
-          />
-        </div>
-
-        <form class="flex-auto p-6">
-          <div class="flex flex-wrap">
-            <!-- Header -->
-            <h1 class="flex-auto text-lg font-semibold text-gray-900 font-sans">
-              Classic Spotify Example
-            </h1>
-            <!-- Body -->
-            <div class="text-lg font-thin text-gray-400 sans-serif">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis
-              laborum perspiciatis odit, pariatur alias architecto impedit odio
-              dicta fugit explicabo labore voluptas libero delectus quo nihil
-              vel iste laboriosam natus!
-            </div>
-            <!-- Tags -->
-            <div
-              class="w-full flex-none text-sm font-medium text-gray-700 mt-2"
-            >
-              Next.js
-            </div>
-          </div>
-
-          <div
-            class="flex items-baseline mt-4 mb-6 pb-6 border-b border-gray-200"
-          ></div>
-          <!-- Routing Links -->
-          <div class="flex space-x-4 mb-6 text-sm font-medium">
-            <div class="flex-auto flex space-x-4">
-              <!-- View Project -->
-              <button
-                class="h-10 px-6 font-semibold rounded-md bg-black text-white"
-                type="submit"
-              >
-                View Project
-              </button>
-              <!-- View Source -->
-              <button
-                class="h-10 px-6 font-semibold rounded-md border border-gray-200 text-gray-900"
-                type="button"
-              >
-                View Source
-              </button>
-            </div>
-          </div>
-          <!-- Subtext -->
-          <p class="text-sm text-gray-700">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,
-            perferendis. Tempora at, accusamus aut et qui ea dolores itaque
-            velit nisi. Mollitia sapiente voluptate incidunt consectetur est
-            libero dolorum magni.
-          </p>
-        </form>
-      </div>
-
-      <!-- Project Card -->
-      <div
-        class="p-6 m-6 flex flex-row-reverse font-sans rounded-3xl shadow-2xl hover:shadow-zinc-500"
-      >
-        <!-- Image -->
-        <div class="flex-none w-48 relative">
-          <img
-            :src="images.imageSix"
-            alt=""
-            class="absolute inset-0 w-full h-full object-cover rounded-lg"
-          />
-        </div>
-
-        <form class="flex-auto p-6">
-          <div class="flex flex-wrap">
-            <!-- Header -->
-            <h1 class="flex-auto text-lg font-semibold text-gray-900">
-              Classic Spotify Example
-            </h1>
-            <!-- Body -->
-            <div class="text-lg font-thin text-gray-400">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis
-              laborum perspiciatis odit, pariatur alias architecto impedit odio
-              dicta fugit explicabo labore voluptas libero delectus quo nihil
-              vel iste laboriosam natus!
-            </div>
-            <!-- Tags -->
-            <div
-              class="w-full flex-none text-sm font-medium text-gray-700 mt-2"
-            >
-              Next.js
-            </div>
-          </div>
-
-          <div
-            class="flex items-baseline mt-4 mb-6 pb-6 border-b border-gray-200"
-          ></div>
-          <!-- Routing Links -->
-          <div class="flex space-x-4 mb-6 text-sm font-medium">
-            <div class="flex-auto flex space-x-4">
-              <!-- View Project -->
-              <button
-                class="h-10 px-6 font-semibold rounded-md bg-black text-white"
-                type="submit"
-              >
-                View Project
-              </button>
-              <!-- View Source -->
-              <button
-                class="h-10 px-6 font-semibold rounded-md border border-gray-200 text-gray-900"
-                type="button"
-              >
-                View Source
-              </button>
-            </div>
-          </div>
-          <!-- Subtext -->
-          <p class="text-sm text-gray-700">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,
-            perferendis. Tempora at, accusamus aut et qui ea dolores itaque
-            velit nisi. Mollitia sapiente voluptate incidunt consectetur est
-            libero dolorum magni.
-          </p>
-        </form>
+        <!-- Icons -->
+        <ul class="flex items-center justify-center">
+          <li v-for="icon in logos" :key="icon.key" class="list-none">
+            <img class="h-36 w-36" :src="icon" />
+            <br />
+          </li>
+        </ul>
       </div>
     </section>
 
     <!-- Ideas Section -->
     <section
-      class="panel h-screen w-full p-12 flex flex-col justify-around items-center"
+      class="h-screen w-screen panel flex items-center justify-center snap-center"
     >
-      <div class="">
-        <h2 class="flex font-thin tracking-normal uppercase text-lg sm:text-xl">
-          EXPLORE IDEAS
-        </h2>
-        <p class="tracking-wide mb-10 font-light text-sm sm:text-lg">
-          Need a developer for your next project? Let's work together.
-        </p>
-      </div>
+      <!-- Blob -->
+      <div class="blob-two"></div>
 
-      <div class="custom-link form-group">
-        <button id="submit" class="rounded-lg" type="submit" name="submit">
-          <strong class="rounded-lg">
-            <router-link to="/contact"><p>Contact Me</p></router-link>
+      <div class="p-16 m-16">
+        <div class="flex flex-col space-between p-16 m-16">
+          <h2
+            split-by="letter"
+            letter-animation="breath"
+            class="self-start font-thin tracking-normal uppercase text-5xl"
+          >
+            EXPLORE IDEAS
+          </h2>
 
-            <b></b>
-            <i></i>
-          </strong>
-        </button>
+          <p class="tracking-wide mb-10 font-light text-3xl">
+            Need a developer for your next project? Let's work together.
+          </p>
+
+          <div class="custom-link form-group flex">
+            <button id="submit" class="rounded-lg" type="submit" name="submit">
+              <strong class="rounded-lg">
+                <router-link to="/contact"><p>Contact Me</p></router-link>
+
+                <b></b>
+                <i></i>
+              </strong>
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   </div>
 </template>
 
 <script>
+import { byLetter, byWord } from '../utils/splitting'
+
 export default {
-  name: 'Home',
+  name: 'About',
+  transition: {
+    appear: true,
+    css: false,
+    beforeEnter(el) {
+      this.$gsap.set(el.children, {
+        scale: 0.1,
+        opacity: 0,
+        duration: 1,
+      })
+    },
+    enter(el, done) {
+      this.$gsap.to(el.children, {
+        scale: 1,
+        opacity: 1,
+        duration: 1.5,
+        delay: el.dataset.index * 0.2,
+        ease: 'power2.inOut',
+        onComplete: done,
+        stagger: 0.5,
+      })
+    },
+  },
   data() {
     return {
       images: {
-        imageOne: require('../assets/images/matty4.jpeg'),
-        imageTwo: require('../assets/images/code.jpeg'),
-        imageThree: require('../assets/logo.png'),
+        imageOne: require('../assets/images/matty6.jpeg'),
+        imageThree: require('../assets/images/logos/logo.png'),
+        imageFour: require('../assets/images/logos/coder-zen.png'),
+        imageFive: require('../assets/images/matty-2.png'),
         imageSix: require('../assets/images/matty3.png'),
+        quoteLeft: require('../assets/images/tween/quote-l.png'),
+        quoteRight: require('../assets/images/tween/quote-r.png'),
+      },
+      logos: {
+        vue: require('../assets/images/logos/logo.png'),
+        react: require('../assets/images/logos/react-logo.svg'),
+        aws: require('../assets/images/logos/aws-logo.png'),
+        graphQl: require('../assets/images/logos/graphql-logo.svg'),
+        express: require('../assets/images/logos/express-logo.png'),
+        nuxt: require('../assets/images/logos/nuxt.png'),
+        next: require('../assets/images/logos/next-logo.svg'),
+        mongo: require('../assets/images/logos/mongodb-logo.svg'),
+        redux: require('../assets/images/logos/redux-logo.svg'),
+        node: require('../assets/images/logos/node-logo.svg'),
+      },
+      icons: {
+        ui: require('../assets/images/icons/icon01.svg'),
+        front: require('../assets/images/icons/icon02.svg'),
+        back: require('../assets/images/icons/icon03.svg'),
+        ux: require('../assets/images/icons/icon04.svg'),
       },
     }
   },
-  // mounted() {
-  //   const sections = gsap.utils.toArray('.panel')
-
-  //   sections.forEach((panel, i) => {
-  //     this.$ScrollTrigger.create({
-  //       trigger: panel,
-  //       start: 0,
-  //       scrub: true,
-  //       pinSpacing: false,
-  //     })
-
-  //     this.$ScrollTrigger.create({
-  //       snap: 1 / 3,
-  //     })
-  //   })
-  // },
-
+  mounted() {
+    this.horizontalSnap()
+    this.splitting()
+  },
   methods: {
-    toggleSwitch() {
-      const toggleSwitch = document.querySelector(
-        '.theme-switch input[type="checkbox"]'
-      )
-      function switchTheme(e) {
-        if (e.target.checked) {
-          document.documentElement.setAttribute('data-theme', 'dark')
-        } else {
-          document.documentElement.setAttribute('data-theme', 'light')
-        }
-      }
-      toggleSwitch.addEventListener('change', switchTheme, false)
+    // Section Snapping
+    horizontalSnap() {
+      const gsap = this.$gsap
+      const sections = gsap.utils.toArray('.panel')
+
+      gsap.to(sections, {
+        yPercent: -100 * (sections.length - 1),
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.contain',
+          pin: true,
+          scrub: 1,
+          snap: 1 / (sections.length - 1),
+          // base vertical scrolling on how wide the container is so it feels more natural.
+          end: '+=3500',
+        },
+      })
     },
+    // Text Splitting
+    splitting() {
+      const splitTargets = document.querySelectorAll('[split-by]')
+
+      splitTargets.forEach((node) => {
+        const type = node.getAttribute('split-by')
+        let nodes = null
+
+        if (type === 'letter') {
+          nodes = byLetter(node.innerText)
+        } else if (type === 'word') {
+          nodes = byWord(node.innerText)
+        }
+
+        if (nodes) {
+          node.firstChild.replaceWith(...nodes)
+        }
+      })
+    },
+    // Tween Timelines
+    tweenLine() {},
+    // iterating blobs
+    iterativeBlobTrajectory() {},
   },
 }
 </script>
+
+<style scoped></style>

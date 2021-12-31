@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="gallery">
-      <ul class="neu circle cards flex">
+      <ul class="blob-two cards flex">
         <li
           v-for="(icon, index) in logos"
           :key="icon.key"
@@ -26,7 +26,6 @@
 
 <script>
 export default {
-  name: 'Slide',
   data() {
     return {
       logos: {

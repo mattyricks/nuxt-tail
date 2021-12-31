@@ -170,11 +170,6 @@ export default {
   name: 'Home',
   data() {
     return {
-      images: {
-        imageOne: require('../assets/images/matty6.jpeg'),
-        imageTwo: require('../assets/images/code.jpeg'),
-        imageThree: require('../assets/logo.png'),
-      },
       name: null,
       email: null,
       body: null,

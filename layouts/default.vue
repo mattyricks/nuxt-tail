@@ -1,7 +1,5 @@
 <template>
-  <div class="h-screen w-screen">
-
-
+  <div>
     <!-- Aside -->
     <Aside />
 

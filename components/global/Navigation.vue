@@ -10,11 +10,7 @@
                 <router-link to="/">HOME</router-link>
               </a>
             </li>
-            <li class="text-sm p-2">
-              <a class="">
-                <router-link to="/about">ABOUT</router-link>
-              </a>
-            </li>
+
             <li class="text-sm p-2">
               <a class="">
                 <router-link to="/contact">CONTACT</router-link>
