@@ -24,14 +24,6 @@
         <div
           class="h-full w-full flex flex-col items-center space-between p-6 m-3 rounded-2xl"
         >
-          <!-- Crappy Selfie -->
-          <!-- <img
-            class="h-1/4 w-1/4 mx-auto object-cover object-top"
-            :src="images.imageSix"
-            alt="picture of Matthew"
-          /> -->
-
-          <!-- Quotes -->
           <div
             class="flex flex-col items-center justify-center basis-3/5 p-12 mx-auto"
           >
@@ -82,12 +74,9 @@
 
     <!-- Skills ----------------------------- -->
     <section class="h-screen w-screen panel flex items-center justify-center">
-      <!-- Blob -->
-      <div class="blob-two"></div>
-
       <div class="p-16 m-16">
+        <!-- Heading -->
         <div class="flex flex-col p-16 m-16">
-          <!-- Heading -->
           <h6
             split-by="letter"
             letter-animation="breath"
@@ -107,57 +96,57 @@
         <div
           class="flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row items-center justify-between"
         >
-          <figure
-            class="p-3 flex flex-col items-start justify-between rounded-2xl m-3 flex flex-row w-full h-full hover:bg-emerald-100 transition-all delay-75"
-          >
-            <img
-              class="h-15 w-12 object-contain relative basis-1/4 self-center"
-              :src="icons.ui"
-            />
+          <div class="left">
             <figcaption class="self-center">
               <span class="text-sm font-light mb-3">01</span>
               <h4 class="text-md font-thin">UI DESIGN</h4>
             </figcaption>
-          </figure>
 
-          <figure
-            class="p-3 flex flex-col items-start justify-between rounded-2xl m-3 flex flex-row w-full h-full hover:bg-emerald-200 transition-all delay-75"
-          >
-            <img
-              class="h-15 w-12 object-contain basis-1/4 self-center"
-              :src="icons.front"
-            />
+            <figure class="still-blob flex items-center justify-center">
+              <img
+                class="h-15 w-12 object-contain relative basis-1/4 self-center"
+                :src="icons.ui"
+              />
+            </figure>
+
             <figcaption class="self-center">
               <span class="text-sm font-light">02</span>
               <h4 class="text-md font-thin">FRONT END</h4>
             </figcaption>
-          </figure>
 
-          <figure
-            class="p-3 flex flex-col items-start justify-between rounded-2xl m-3 flex flex-row w-full h-full hover:bg-emerald-300 transition-all delay-75"
-          >
-            <img
-              class="h-15 w-12 object-contain basis-1/4 self-center"
-              :src="icons.back"
-            />
+            <figure class="still-blob flex items-center justify-center">
+              <img
+                class="h-15 w-12 object-contain basis-1/4 self-center"
+                :src="icons.front"
+              />
+            </figure>
+          </div>
+
+          <div class="right">
             <figcaption class="self-center">
               <span class="text-sm font-light">03</span>
               <h4 class="text-md font-thin">BACK END</h4>
             </figcaption>
-          </figure>
 
-          <figure
-            class="p-3 flex flex-col items-start justify-between rounded-2xl m-3 flex flex-row w-full h-full hover:bg-emerald-400 transition-all delay-75"
-          >
-            <img
-              class="h-15 w-12 object-contain relative basis-1/4 self-center"
-              :src="icons.ux"
-            />
+            <figure class="still-blob p-3 flex items-center justify-center">
+              <img
+                class="h-15 w-12 object-contain basis-1/4 self-center"
+                :src="icons.back"
+              />
+            </figure>
+
             <figcaption class="self-center">
               <span class="text-sm font-light">04</span>
               <h4 class="text-md font-thin">UX DESIGN</h4>
             </figcaption>
-          </figure>
+
+            <figure class="still-blob flex items-center justify-center">
+              <img
+                class="h-15 w-12 object-contain relative basis-1/4 self-center"
+                :src="icons.ux"
+              />
+            </figure>
+          </div>
         </div>
       </div>
     </section>
@@ -167,7 +156,7 @@
       class="h-screen w-screen panel flex flex-col items-center justify-center"
     >
       <!-- Blob -->
-      <!-- <div class="blob"></div> -->
+      <div class="blob-two"></div>
 
       <div class="flex flex-col items-center justify-center">
         <h6
@@ -290,6 +279,7 @@ export default {
   mounted() {
     this.horizontalSnap()
     this.splitting()
+    this.drawing()
   },
   methods: {
     // Section Snapping
@@ -331,8 +321,23 @@ export default {
     },
     // Tween Timelines
     tweenLine() {},
-    // iterating blobs
+    // Iterating Blobs
     iterativeBlobTrajectory() {},
+    // SVG Path Drawing
+    drawing() {
+      const paths = document.querySelectorAll('svg path')
+
+      paths.forEach((path, index) => {
+        if (index) {
+          path.setAttribute('stroke-dasharray', path.getTotalLength(index))
+          path.setAttribute('stroke-dashoffset', path.getTotalLength(index))
+          path.innerHTML =
+            `<animate id="a` +
+            index +
+            `" attributeName="stroke-dashoffset" begin="0s" dur="5s" to="0" fill="freeze" />`
+        }
+      })
+    },
   },
 }
 </script>
