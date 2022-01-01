@@ -160,7 +160,7 @@ word-animation {
 
 @keyframes trampoline {
   0% {
-    transform: translateY(100%) rotate(-30deg);
+    transform: translateY(-100%) rotate(-30deg);
     animation-timing-function: ease;
     border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
   }
@@ -176,13 +176,12 @@ word-animation {
 /* Glassmorphism */
 @keyframes move {
   from {
-    transform: translate(0, 0) rotate(-90deg);
-    /* border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%; */
-    border-radius: 24% 100% 35% 100% / 27% 100% 64% 100%;
+    transform: translate(-100px, -50px) rotate(-90deg);
+    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
   }
 
   to {
-    transform: translate(1000px, 300px) rotate(-10deg);
+    transform: translate(500px, 100px) rotate(-10deg);
     border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
   }
 }

@@ -1,18 +1,8 @@
 <template>
   <div>
-    <!-- Aside -->
-    <Aside />
-
-    <!-- Navbar -->
-    <Navigation />
-
-    <!-- Body -->
     <div>
       <nuxt />
     </div>
-
-    <!-- Footer -->
-    <!-- <Footer /> -->
   </div>
 </template>
 

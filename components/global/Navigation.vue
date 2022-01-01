@@ -1,5 +1,8 @@
 <template>
-  <div class="flex justify-between p-5 text-sm" style="bottom: 0">
+  <div
+    class="flex justify-between p-5 text-sm bg-transparent"
+    style="bottom: 0"
+  >
     <header class="w-full">
       <nav class="w-full mb-0">
         <!-- Main Menu -->

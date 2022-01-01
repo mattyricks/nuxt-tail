@@ -1,12 +1,14 @@
 <template>
   <div
-    class="contain flex flex-col items-end flex-nowrap min-h-screen bg-offwhite"
+    class="contain flex flex-col items-end flex-nowrap min-h-screen bg-offwhite overflow-y-hidden"
     data-theme="light"
   >
     <!-- About Intro -->
-    <section class="h-screen w-screen panel px-auto flex flex-col">
+    <section
+      class="h-screen w-screen panel px-auto flex flex-col items-center justify-around"
+    >
       <!-- Blob -->
-      <div class="blob flex items-center"></div>
+      <!-- <div class="blob flex items-center"></div> -->
       <!-- Panel 1 -->
       <div class="flex flex-col items-center justify-between">
         <!-- Heading -->
@@ -42,40 +44,11 @@
           </div>
 
           <!-- Paragraph -->
-          <div class="self-center max-w-md flex-wrap">
-            <p
-              split-by="letter"
-              letter-animation="hover"
-              class="text-slate-800 font-light whitespace-normal"
-            >
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio,
-              nam, debitis asperiores libero eius labore porro maxime aliquam
-              ipsum minus eum dolores deserunt mollitia cupiditate doloremque
-              suscipit error corrupti voluptates?
-            </p>
+          <div class="flex items-center justify-center max-w-md flex-wrap">
+            <p class="text-slate-800 font-light whitespace-normal"></p>
           </div>
         </div>
-
-        <!-- Connect Link -->
-        <div class="relative">
-          <button
-            id="submit"
-            class="rounded-lg bg-transparent p-6 m-3 hover:scale-y-125 ease-in-out duration-200 z-50 border-green-100"
-            type="submit"
-            name="submit"
-          >
-            <a href="https://www.linkedin.com/in/matthew-ricklefs-13284a1b9/">
-              <p>Let's Connect</p>
-            </a>
-          </button>
-        </div>
       </div>
-    </section>
-
-    <!-- Skills ----------------------------- -->
-    <section
-      class="h-screen w-screen panel flex flex-col items-center justify-center"
-    >
       <!-- Panel 2 -->
       <div class="left">
         <!-- Heading -->
@@ -89,74 +62,75 @@
           </h6>
 
           <!-- Sub Heading -->
-          <p class="tracking-wide mb-2 font-light text-xl">
+          <!-- <p class="tracking-wide mb-2 font-light text-xl">
             I like learning new things. Here are a few topics I am proficient
             with.
           </p>
-        </div>
+        </div> -->
 
-        <!-- Icons -->
-        <div class="flex items-center justify-center">
-          <div class="left flex flex-row">
-            <figcaption class="self-center">
-              <span class="text-sm font-light mb-3">01</span>
-            </figcaption>
+          <!-- Icons -->
+          <div class="flex items-center justify-center">
+            <div class="left flex flex-row">
+              <figcaption class="self-center">
+                <span class="text-sm font-light mb-3">01</span>
+              </figcaption>
 
-            <figure
-              class="still-blob flex flex-col items-center justify-center self-end"
-            >
-              <h4 class="text-md font-thin">UI DESIGN</h4>
-              <img
-                class="h-15 w-12 object-contain relative basis-1/4 self-center"
-                :src="icons.ui"
-              />
-            </figure>
+              <figure
+                class="still-blob flex flex-col items-center justify-center self-end"
+              >
+                <h4 class="text-md font-thin">UI DESIGN</h4>
+                <img
+                  class="h-15 w-12 object-contain relative basis-1/4 self-center"
+                  :src="icons.ui"
+                />
+              </figure>
 
-            <figcaption class="self-center">
-              <span class="text-sm font-light">02</span>
-            </figcaption>
+              <figcaption class="self-center">
+                <span class="text-sm font-light">02</span>
+              </figcaption>
 
-            <figure
-              class="still-blob flex flex-col items-center justify-center"
-            >
-              <h4 class="text-md font-thin">FRONT END</h4>
+              <figure
+                class="still-blob flex flex-col items-center justify-center"
+              >
+                <h4 class="text-md font-thin">FRONT END</h4>
 
-              <img
-                class="h-15 w-12 object-contain basis-1/4 self-center"
-                :src="icons.front"
-              />
-            </figure>
-          </div>
+                <img
+                  class="h-15 w-12 object-contain basis-1/4 self-center"
+                  :src="icons.front"
+                />
+              </figure>
+            </div>
 
-          <div class="right flex flex-row">
-            <figcaption class="self-center">
-              <span class="text-sm font-light">03</span>
-            </figcaption>
+            <div class="right flex flex-row">
+              <figcaption class="self-center">
+                <span class="text-sm font-light">03</span>
+              </figcaption>
 
-            <figure
-              class="still-blob p-3 flex flex-col items-center justify-center"
-            >
-              <h4 class="text-md font-thin">BACK END</h4>
+              <figure
+                class="still-blob p-3 flex flex-col items-center justify-center"
+              >
+                <h4 class="text-md font-thin">BACK END</h4>
 
-              <img
-                class="h-15 w-12 object-contain basis-1/4 self-center"
-                :src="icons.back"
-              />
-            </figure>
+                <img
+                  class="h-15 w-12 object-contain basis-1/4 self-center"
+                  :src="icons.back"
+                />
+              </figure>
 
-            <figcaption class="self-center">
-              <span class="text-sm font-light">04</span>
-            </figcaption>
+              <figcaption class="self-center">
+                <span class="text-sm font-light">04</span>
+              </figcaption>
 
-            <figure
-              class="still-blob flex flex-col items-center justify-center"
-            >
-              <h4 class="text-md font-thin">UX DESIGN</h4>
-              <img
-                class="h-15 w-12 object-contain relative basis-1/4 self-center"
-                :src="icons.ux"
-              />
-            </figure>
+              <figure
+                class="still-blob flex flex-col items-center justify-center"
+              >
+                <h4 class="text-md font-thin">UX DESIGN</h4>
+                <img
+                  class="h-15 w-12 object-contain relative basis-1/4 self-center"
+                  :src="icons.ux"
+                />
+              </figure>
+            </div>
           </div>
         </div>
       </div>
@@ -172,9 +146,9 @@
             TECHNOLOGIES
           </h6>
 
-          <p class="tracking-wide mb-10 font-light text-xl">
+          <!-- <p class="tracking-wide mb-10 font-light text-xl">
             Some tech I'm currently working with.
-          </p>
+          </p> -->
         </div>
 
         <!-- Icons -->
@@ -214,47 +188,20 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Ideas Section -->
-    <section
-      class="h-screen w-screen panel flex items-center justify-center snap-center"
-    >
-      <!-- Blob -->
-      <div class="blob-two"></div>
-
-      <div class="p-16 m-16">
-        <div class="flex flex-col space-between p-16 m-16">
-          <h2
-            split-by="letter"
-            letter-animation="breath"
-            class="self-start font-thin tracking-normal uppercase text-5xl"
-          >
-            EXPLORE IDEAS
-          </h2>
-
-          <p class="tracking-wide mb-10 font-light text-3xl">
-            Need a developer for your next project? Let's work together.
-          </p>
-
-          <div class="custom-link form-group flex">
-            <button id="submit" class="rounded-lg" type="submit" name="submit">
-              <strong class="rounded-lg">
-                <router-link to="/contact"><p>Contact Me</p></router-link>
-
-                <b></b>
-                <i></i>
-              </strong>
-            </button>
-          </div>
-        </div>
+      <!-- Connect -->
+      <div class="relative">
+        <button
+          id="submit"
+          class="rounded-lg bg-transparent p-6 m-3 hover:scale-y-125 ease-in-out duration-200 z-50 border-green-100"
+          type="submit"
+          name="submit"
+        >
+          <a href="https://www.linkedin.com/in/matthew-ricklefs-13284a1b9/">
+            <p>Let's Connect</p>
+          </a>
+        </button>
       </div>
     </section>
-
-    <!-- Technologies ------------------- -->
-    <section
-      class="h-screen w-screen panel flex flex-col items-center justify-center"
-    ></section>
   </div>
 </template>
 
@@ -321,29 +268,10 @@ export default {
     }
   },
   mounted() {
-    this.horizontalSnap()
     this.splitting()
     this.drawing()
   },
   methods: {
-    // Section Snapping
-    horizontalSnap() {
-      const gsap = this.$gsap
-      const sections = gsap.utils.toArray('.panel')
-
-      gsap.to(sections, {
-        yPercent: -100 * (sections.length - 1),
-        ease: 'none',
-        scrollTrigger: {
-          trigger: '.contain',
-          pin: true,
-          scrub: 1,
-          snap: 1 / (sections.length - 1),
-          // base vertical scrolling on how wide the container is so it feels more natural.
-          end: '+=3500',
-        },
-      })
-    },
     // Text Splitting
     splitting() {
       const splitTargets = document.querySelectorAll('[split-by]')
