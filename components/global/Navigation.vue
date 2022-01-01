@@ -1,5 +1,8 @@
 <template>
-  <div class="flex justify-between p-5 text-sm" style="bottom: 0">
+  <div
+    class="flex justify-between p-5 text-sm bg-transparent"
+    style="bottom: 0"
+  >
     <header class="w-full">
       <nav class="w-full mb-0">
         <!-- Main Menu -->
@@ -10,11 +13,7 @@
                 <router-link to="/">HOME</router-link>
               </a>
             </li>
-            <li class="text-sm p-2">
-              <a class="">
-                <router-link to="/about">ABOUT</router-link>
-              </a>
-            </li>
+
             <li class="text-sm p-2">
               <a class="">
                 <router-link to="/contact">CONTACT</router-link>
@@ -37,9 +36,7 @@
           name="angle-left"
           scale="4"
           class="text-indigo-600 hover:text-orange-500"
-        >
-          hello
-        </div>
+        ></div>
         <!-- Prev -->
       </div>
     </nuxt-link>
@@ -52,10 +49,12 @@
           name="angle-right"
           scale="4"
           class="text-indigo-600 hover:text-orange-500"
-        />
+        ></div>
+
         <!-- Next -->
       </div>
     </nuxt-link>
+
     <span v-else>&nbsp;</span>
   </div>
 </template>
@@ -96,6 +95,22 @@ export default {
           params: { id: this.next.slug },
         })
       }
+    },
+
+    toggleSwitch() {
+      const toggleSwitch = document.querySelector(
+        '.theme-switch input[type="checkbox"]'
+      )
+
+      function switchTheme(e) {
+        if (e.target.checked) {
+          document.documentElement.setAttribute('data-theme', 'dark')
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light')
+        }
+      }
+
+      toggleSwitch.addEventListener('change', switchTheme, false)
     },
   },
 }
