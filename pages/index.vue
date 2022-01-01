@@ -4,11 +4,11 @@
     data-theme="light"
   >
     <!-- About Intro -->
-    <section class="h-screen w-screen panel px-auto">
+    <section class="h-screen w-screen panel px-auto flex flex-col">
       <!-- Blob -->
       <div class="blob flex items-center"></div>
-
-      <div class="flex flex-col items-center justify-between p-16 m-16">
+      <!-- Panel 1 -->
+      <div class="flex flex-col items-center justify-between">
         <!-- Heading -->
         <h1
           split-by="letter"
@@ -46,7 +46,7 @@
             <p
               split-by="letter"
               letter-animation="hover"
-              class="text-slate-800 font-light p-10 whitespace-normal"
+              class="text-slate-800 font-light whitespace-normal"
             >
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio,
               nam, debitis asperiores libero eius labore porro maxime aliquam
@@ -73,10 +73,13 @@
     </section>
 
     <!-- Skills ----------------------------- -->
-    <section class="h-screen w-screen panel flex items-center justify-center">
-      <div class="p-16 m-16">
+    <section
+      class="h-screen w-screen panel flex flex-col items-center justify-center"
+    >
+      <!-- Panel 2 -->
+      <div class="left">
         <!-- Heading -->
-        <div class="flex flex-col p-16 m-16">
+        <div class="flex flex-col items-center justify-center">
           <h6
             split-by="letter"
             letter-animation="breath"
@@ -86,23 +89,23 @@
           </h6>
 
           <!-- Sub Heading -->
-          <p class="tracking-wide mb-10 font-light text-xl">
+          <p class="tracking-wide mb-2 font-light text-xl">
             I like learning new things. Here are a few topics I am proficient
             with.
           </p>
         </div>
 
         <!-- Icons -->
-        <div
-          class="flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row items-center justify-between"
-        >
-          <div class="left">
+        <div class="flex items-center justify-center">
+          <div class="left flex flex-row">
             <figcaption class="self-center">
               <span class="text-sm font-light mb-3">01</span>
-              <h4 class="text-md font-thin">UI DESIGN</h4>
             </figcaption>
 
-            <figure class="still-blob flex items-center justify-center">
+            <figure
+              class="still-blob flex flex-col items-center justify-center self-end"
+            >
+              <h4 class="text-md font-thin">UI DESIGN</h4>
               <img
                 class="h-15 w-12 object-contain relative basis-1/4 self-center"
                 :src="icons.ui"
@@ -111,10 +114,13 @@
 
             <figcaption class="self-center">
               <span class="text-sm font-light">02</span>
-              <h4 class="text-md font-thin">FRONT END</h4>
             </figcaption>
 
-            <figure class="still-blob flex items-center justify-center">
+            <figure
+              class="still-blob flex flex-col items-center justify-center"
+            >
+              <h4 class="text-md font-thin">FRONT END</h4>
+
               <img
                 class="h-15 w-12 object-contain basis-1/4 self-center"
                 :src="icons.front"
@@ -122,13 +128,16 @@
             </figure>
           </div>
 
-          <div class="right">
+          <div class="right flex flex-row">
             <figcaption class="self-center">
               <span class="text-sm font-light">03</span>
-              <h4 class="text-md font-thin">BACK END</h4>
             </figcaption>
 
-            <figure class="still-blob p-3 flex items-center justify-center">
+            <figure
+              class="still-blob p-3 flex flex-col items-center justify-center"
+            >
+              <h4 class="text-md font-thin">BACK END</h4>
+
               <img
                 class="h-15 w-12 object-contain basis-1/4 self-center"
                 :src="icons.back"
@@ -137,10 +146,12 @@
 
             <figcaption class="self-center">
               <span class="text-sm font-light">04</span>
-              <h4 class="text-md font-thin">UX DESIGN</h4>
             </figcaption>
 
-            <figure class="still-blob flex items-center justify-center">
+            <figure
+              class="still-blob flex flex-col items-center justify-center"
+            >
+              <h4 class="text-md font-thin">UX DESIGN</h4>
               <img
                 class="h-15 w-12 object-contain relative basis-1/4 self-center"
                 :src="icons.ux"
@@ -149,35 +160,59 @@
           </div>
         </div>
       </div>
-    </section>
+      <!-- Panel 3 -->
+      <div class="right">
+        <!-- Heading -->
+        <div class="flex flex-col items-center justify-center">
+          <h6
+            split-by="letter"
+            letter-animation="breath"
+            class="font-thin tracking-normal uppercase text-2xl"
+          >
+            TECHNOLOGIES
+          </h6>
 
-    <!-- Technologies ------------------- -->
-    <section
-      class="h-screen w-screen panel flex flex-col items-center justify-center"
-    >
-      <!-- Blob -->
-      <div class="blob-two"></div>
-
-      <div class="flex flex-col items-center justify-center">
-        <h6
-          split-by="letter"
-          letter-animation="breath"
-          class="font-thin tracking-normal uppercase text-2xl px-3"
-        >
-          TECHNOLOGIES
-        </h6>
-
-        <p class="tracking-wide mb-10 font-light text-xl">
-          Some tech I'm currently working with.
-        </p>
+          <p class="tracking-wide mb-10 font-light text-xl">
+            Some tech I'm currently working with.
+          </p>
+        </div>
 
         <!-- Icons -->
-        <ul class="flex items-center justify-center">
-          <li v-for="icon in logos" :key="icon.key" class="list-none">
-            <img class="h-36 w-36" :src="icon" />
-            <br />
-          </li>
-        </ul>
+        <div class="flex flex-col items-center justify-center">
+          <div class="left flex justify-between">
+            <ul v-for="(icon, i) in logos.left" :key="i" class="">
+              <figcaption class="self-center">
+                <span class="text-sm font-light mb-3">{{ i }}</span>
+              </figcaption>
+
+              <figure
+                class="still-blob flex flex-col items-center justify-center self-end"
+              >
+                <img
+                  class="h-32 w-32 object-contain relative basis-1/4 self-center"
+                  :src="icon"
+                />
+              </figure>
+            </ul>
+          </div>
+
+          <div class="right flex justify-between">
+            <ul v-for="(icon, i) in logos.right" :key="i" class="">
+              <figcaption class="self-center">
+                <span class="text-sm font-light mb-3">{{ i }}</span>
+              </figcaption>
+
+              <figure
+                class="still-blob flex flex-col items-center justify-center self-end"
+              >
+                <img
+                  class="h-32 w-32 object-contain relative basis-1/4 self-center"
+                  :src="icon"
+                />
+              </figure>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -215,6 +250,11 @@
         </div>
       </div>
     </section>
+
+    <!-- Technologies ------------------- -->
+    <section
+      class="h-screen w-screen panel flex flex-col items-center justify-center"
+    ></section>
   </div>
 </template>
 
@@ -257,16 +297,20 @@ export default {
         quoteRight: require('../assets/images/tween/quote-r.png'),
       },
       logos: {
-        vue: require('../assets/images/logos/logo.png'),
-        react: require('../assets/images/logos/react-logo.svg'),
-        aws: require('../assets/images/logos/aws-logo.png'),
-        graphQl: require('../assets/images/logos/graphql-logo.svg'),
-        express: require('../assets/images/logos/express-logo.png'),
-        nuxt: require('../assets/images/logos/nuxt.png'),
-        next: require('../assets/images/logos/next-logo.svg'),
-        mongo: require('../assets/images/logos/mongodb-logo.svg'),
-        redux: require('../assets/images/logos/redux-logo.svg'),
-        node: require('../assets/images/logos/node-logo.svg'),
+        left: {
+          vue: require('../assets/images/logos/logo.png'),
+          react: require('../assets/images/logos/react-logo.svg'),
+          aws: require('../assets/images/logos/aws-logo.png'),
+          graphQl: require('../assets/images/logos/graphql-logo.svg'),
+          express: require('../assets/images/logos/express-logo.png'),
+        },
+        right: {
+          nuxt: require('../assets/images/logos/nuxt.png'),
+          next: require('../assets/images/logos/next-logo.svg'),
+          mongo: require('../assets/images/logos/mongodb-logo.svg'),
+          redux: require('../assets/images/logos/redux-logo.svg'),
+          node: require('../assets/images/logos/node-logo.svg'),
+        },
       },
       icons: {
         ui: require('../assets/images/icons/icon01.svg'),
@@ -319,18 +363,20 @@ export default {
         }
       })
     },
-    // Tween Timelines
-    tweenLine() {},
-    // Iterating Blobs
-    iterativeBlobTrajectory() {},
     // SVG Path Drawing
     drawing() {
       const paths = document.querySelectorAll('svg path')
 
       paths.forEach((path, index) => {
-        if (index) {
-          path.setAttribute('stroke-dasharray', path.getTotalLength(index))
-          path.setAttribute('stroke-dashoffset', path.getTotalLength(index))
+        path.setAttribute('stroke-dasharray', path.getTotalLength(index))
+        path.setAttribute('stroke-dashoffset', path.getTotalLength(index))
+
+        if (index === 0) {
+          path.innerHTML =
+            `<animate id="a` +
+            index +
+            `" attributeName="stroke-dashoffset" begin="0s" dur="5s" to="0" fill="freeze" />`
+        } else {
           path.innerHTML =
             `<animate id="a` +
             index +
@@ -338,6 +384,10 @@ export default {
         }
       })
     },
+    blobbing() {},
+    // Tween Timelines
+    tweening() {},
+    // Iterating Blobs
   },
 }
 </script>

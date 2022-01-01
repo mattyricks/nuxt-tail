@@ -128,6 +128,21 @@ word-animation {
   }
 }
 
+@keyframes blobBreath {
+  from {
+    animation-timing-function: ease-out;
+    filter: blur(30px);
+    opacity: 0.2;
+  }
+  to {
+    animation-timing-function: ease-in-out;
+    filter: blur(0);
+    opacity: 1;
+    transform: scale(1.25) translateY(-20px) perspective(1px);
+    text-shadow: 0 0 40px var(--glow-color);
+  }
+}
+
 @keyframes octocat-wave {
   0%,
   100% {
@@ -161,25 +176,20 @@ word-animation {
 /* Glassmorphism */
 @keyframes move {
   from {
-    transform: translate(-100px, -50px) rotate(-90deg);
-    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+    transform: translate(0, 0) rotate(-90deg);
+    /* border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%; */
+    border-radius: 24% 100% 35% 100% / 27% 100% 64% 100%;
   }
 
   to {
-    transform: translate(500px, 100px) rotate(-10deg);
+    transform: translate(1000px, 300px) rotate(-10deg);
     border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
   }
 }
 
-@keyframes moving {
-  from {
-    transform: rotate(-90deg);
-    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
-  }
-
-  to {
-    transform: rotate(-10deg);
-    border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+@keyframes moves {
+  100% {
+    offset-path: path('M 0 100 Q 100 200 200 100 Q 300 0 400 100');
   }
 }
 
@@ -209,22 +219,22 @@ word-animation {
 }
 
 .still-blob {
-  width: 200px;
-  height: 200px;
+  height: 100px;
+  width: 100px;
   background: linear-gradient(
     180deg,
     rgba(47, 184, 255, 0.42) 31.77%,
     #5c9df1 100%
   );
   mix-blend-mode: color-dodge;
-  animation: moving 5s infinite alternate;
+  /* animation: move ease-in 5s infinite alternate; */
   transition: 0.2s ease-in cubic-bezier(0.07, 0.8, 0.16, 1);
+  border-radius: 100%;
   filter: blur(30px);
 }
-
 .still-blob:hover {
-  width: 200px;
-  height: 200px;
+  height: 100px;
+  width: 100px;
   background: transparent;
   box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.6),
     inset 100px 100px 0 0px #fa709a, inset 200px 200px 0 0px #784ba8,
@@ -254,26 +264,4 @@ word-animation {
   box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.6),
     inset 100px 100px 0 0px #fa709a, inset 200px 200px 0 0px #784ba8,
     inset 300px 300px 0 0px #2b86c5;
-}
-
-.blob-three {
-  height: 300px;
-  width: 300px;
-  background: linear-gradient(
-    180deg,
-    rgba(47, 184, 255, 0.42) 31.77%,
-    #5c9df1 100%
-  );
-  mix-blend-mode: color-dodge;
-  animation: trampoline 10s infinite alternate;
-  transition: 1s cubic-bezier(0.07, 0.8, 0.16, 1);
-}
-.blob-three:hover {
-  /* filter: blur(0); */
-  filter: blur(30px);
-
-  transition: 0.2s ease-in-out;
-  box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.6),
-    inset 100px 100px 0 0px #fa709a,
-    inset 200px 200px 0 0px #784ba8 inset 30px 30px 0 0px #2b86c5;
 }
