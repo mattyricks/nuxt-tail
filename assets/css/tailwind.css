@@ -16,6 +16,12 @@
 html {
   block-size: 100%;
   inline-size: 100%;
+  overflow: hidden auto;
+  scroll-snap-type: y;
+
+  & > body > section {
+    scroll-snap-align: center;
+  }
 }
 
 section {
@@ -42,6 +48,15 @@ h1 {
 
 span {
   white-space: normal;
+}
+
+.github-corner {
+  fill: CanvasText;
+  color: Canvas;
+  height: 100%;
+  &:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
 }
 
 /* Dataset Manipulation */
