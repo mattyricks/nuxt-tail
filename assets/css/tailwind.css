@@ -2,46 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --color-light: #fff;
-  --color-dark: #babecc;
-  --color-bg: #ebecf0;
-}
+@media (min-width: 45em) {
+  main {
+    display: flex;
+    flex-direction: row;
+  }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-}
+  main section {
+    flex: 2;
+  }
 
-html {
-  block-size: 100%;
-  inline-size: 100%;
-}
-
-section {
-  block-size: 70vh;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-h1 {
-  font-weight: 100;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-
-  --scalar: 2vw;
-  font-size: clamp(1.5rem, calc(1rem + var(--scalar)), 8rem);
-
-  @media (width > 480px) {
-    & {
-      --scalar: 4vw;
-    }
+  main aside {
+    flex: 1;
   }
 }
-
-span {
-  white-space: normal;
+:root {
+  --font-size-body: 16px;
+  --font-family: 'Open Sans', sans-serif;
+  --font-weight-normal: 300;
+  --font-family-secondary: 'Jost', sans-serif;
 }
 
 /* Dataset Manipulation */
@@ -190,6 +169,16 @@ word-animation {
 @keyframes moves {
   100% {
     offset-path: path('M 0 100 Q 100 200 200 100 Q 300 0 400 100');
+  }
+}
+
+/* Gitty Kitty */
+.github-corner {
+  fill: CanvasText;
+  color: Canvas;
+  height: 100%;
+  &:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
   }
 }
 

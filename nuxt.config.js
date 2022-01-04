@@ -19,7 +19,12 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['~/assets/css/tailwind.css'],
+  css: [
+    '~/assets/css/tailwind',
+    '~assets/scss/global',
+    '~assets/scss/variables',
+    '~assets/scss/mixins',
+  ],
 
   // Global route middleware
   router: {
@@ -43,9 +48,11 @@ export default {
       scrollTo: true,
       scrollTrigger: true,
       draggable: true,
+      text: true,
     },
     extraEases: {
       expoScaleEase: true,
+      roughEase: true,
     },
   },
 
@@ -53,6 +60,7 @@ export default {
   buildModules: [
     '@nuxtjs/eslint-module',
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode',
     'nuxt-gsap-module',
   ],
 

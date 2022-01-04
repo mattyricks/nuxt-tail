@@ -1,18 +1,10 @@
 <template>
   <div>
-    <!-- Aside -->
-    <Aside />
-
-    <!-- Navbar -->
     <Navigation />
 
-    <!-- Body -->
     <div>
       <nuxt />
     </div>
-
-    <!-- Footer -->
-    <!-- <Footer /> -->
   </div>
 </template>
 
@@ -37,5 +29,18 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.8);
+}
+.dark-mode body {
+  background-color: #091a28;
+  color: #ebf4f1;
+}
+.sepia-mode body {
+  background-color: #f1e7d0;
+  color: #433422;
 }
 </style>

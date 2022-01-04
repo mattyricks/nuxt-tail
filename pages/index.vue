@@ -1,260 +1,270 @@
 <template>
-  <div
-    class="contain flex flex-col items-end flex-nowrap min-h-screen bg-offwhite"
-    data-theme="light"
-  >
+  <div class="">
     <!-- About Intro -->
-    <section class="h-screen w-screen panel px-auto flex flex-col">
+    <section class="flex flex-col items-center">
       <!-- Blob -->
-      <div class="blob flex items-center"></div>
+      <div class="blob"></div>
+
       <!-- Panel 1 -->
-      <div class="flex flex-col items-center justify-between">
+      <div class="flex flex-col">
         <!-- Heading -->
-        <h1
-          split-by="letter"
-          letter-animation="hover"
-          class="font-light text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl px-26"
-        >
-          Hello, I'm Matthew
-
-          <br />
-        </h1>
-
-        <!-- Header -->
-        <div
-          class="h-full w-full flex flex-col items-center space-between p-6 m-3 rounded-2xl"
-        >
-          <div
-            class="flex flex-col items-center justify-center basis-3/5 p-12 mx-auto"
+        <div class="flex flex-col text-left space-x-24 rounded-2xl">
+          <h3
+            class="from-neutral-500 text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl py-3"
           >
-            <img class="h-4 w-6" :src="images.quoteLeft" alt="" />
+            Hello, my name is
+          </h3>
 
-            <h3
-              split-by="letter"
-              letter-animation="hover"
-              class="text-2xl leading-relaxed px-26"
-            >
-              I develop and design for the web.
-              <br />
-            </h3>
+          <h1
+            split-by="letter"
+            letter-animation="hover"
+            class="font-semibold text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl py-3"
+          >
+            Matthew Ricklefs
+            <br />
+          </h1>
 
-            <img class="h-8 w-8" :src="images.quoteRight" alt="" />
-          </div>
+          <h3
+            class="from-neutral-500 text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl py-3"
+          >
+            I produce content for the web.
+            <br />
+          </h3>
 
           <!-- Paragraph -->
-          <div class="self-center max-w-md flex-wrap">
-            <p
-              split-by="letter"
-              letter-animation="hover"
-              class="text-slate-800 font-light whitespace-normal"
-            >
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio,
-              nam, debitis asperiores libero eius labore porro maxime aliquam
-              ipsum minus eum dolores deserunt mollitia cupiditate doloremque
-              suscipit error corrupti voluptates?
-            </p>
-          </div>
-        </div>
+          <p class="font-light whitespace-normal py-3 basis-3/5">
+            I’m a software engineer specializing in building (and occasionally
+            designing) exceptional digital experiences. Currently, I’m focused
+            on building accessible, human-centered products at Upstatement.
+          </p>
 
-        <!-- Connect Link -->
-        <div class="relative">
-          <button
-            id="submit"
-            class="rounded-lg bg-transparent p-6 m-3 hover:scale-y-125 ease-in-out duration-200 z-50 border-green-100"
-            type="submit"
-            name="submit"
+          <!-- Connect Link -->
+
+          <a
+            class="text-sm p-2"
+            href="https://www.linkedin.com/in/matthew-ricklefs-13284a1b9/"
           >
-            <a href="https://www.linkedin.com/in/matthew-ricklefs-13284a1b9/">
-              <p>Let's Connect</p>
-            </a>
-          </button>
+            connect
+          </a>
         </div>
       </div>
     </section>
 
     <!-- Skills ----------------------------- -->
-    <section
-      class="h-screen w-screen panel flex flex-col items-center justify-center"
-    >
-      <!-- Panel 2 -->
-      <div class="left">
-        <!-- Heading -->
-        <div class="flex flex-col items-center justify-center">
-          <h6
-            split-by="letter"
-            letter-animation="breath"
-            class="flex font-thin tracking-normal uppercase text-2xl"
-          >
-            SKILLS
-          </h6>
+    <section class="flex flex-col items-center">
+      <!-- Heading -->
+      <div class="self-start">
+        <h6 split-by="letter" letter-animation="breath" class="">skills</h6>
 
-          <!-- Sub Heading -->
-          <p class="tracking-wide mb-2 font-light text-xl">
-            I like learning new things. Here are a few topics I am proficient
-            with.
-          </p>
-        </div>
+        <!-- Sub Heading -->
+        <p class="font-light text-sm">
+          I like learning new things. Here are a few topics I am proficient
+          with.
+        </p>
+      </div>
 
-        <!-- Icons -->
-        <div class="flex items-center justify-center">
-          <div class="left flex flex-row">
+      <!-- Icons -->
+      <div class="self-start flex">
+        <figcaption class="self-center">
+          <span class="text-sm font-light mb-3">01</span>
+        </figcaption>
+
+        <figure
+          class="gsap-figure still-blob flex flex-col items-center justify-center self-end"
+        >
+          <h4 class="text-sm font-thin">UI DESIGN</h4>
+          <img
+            class="h-15 w-12 object-contain relative basis-1/4 self-center"
+            :src="icons.ui"
+          />
+        </figure>
+
+        <figcaption class="self-center">
+          <span class="text-sm font-light">02</span>
+        </figcaption>
+
+        <figure
+          class="gsap-figure still-blob flex flex-col items-center justify-center"
+        >
+          <h4 class="text-sm font-thin">FRONT END</h4>
+
+          <img
+            class="h-15 w-12 object-contain basis-1/4 self-center"
+            :src="icons.front"
+          />
+        </figure>
+
+        <figcaption class="self-center">
+          <span class="text-sm font-light">03</span>
+        </figcaption>
+
+        <figure
+          class="gsap-figure still-blob p-3 flex flex-col items-center justify-center"
+        >
+          <h4 class="text-sm font-thin">BACK END</h4>
+
+          <img
+            class="h-15 w-12 object-contain basis-1/4 self-center"
+            :src="icons.back"
+          />
+        </figure>
+
+        <figcaption class="self-center">
+          <span class="text-sm font-light">04</span>
+        </figcaption>
+
+        <figure
+          class="gsap-figure still-blob flex flex-col items-center justify-center"
+        >
+          <h4 class="text-sm font-thin">UX DESIGN</h4>
+          <img
+            class="h-15 w-12 object-contain relative basis-1/4 self-center"
+            :src="icons.ux"
+          />
+        </figure>
+      </div>
+    </section>
+
+    <!-- Technology -->
+    <section class="flex flex-col items-center">
+      <!-- Heading -->
+      <div class="self-start">
+        <h6 split-by="letter" letter-animation="breath" class="">
+          technologies
+        </h6>
+
+        <p class="font-light text-sm">Some tech I'm currently working with.</p>
+      </div>
+
+      <!-- Icons -->
+      <div class="self-start">
+        <div class="flex justify-between">
+          <ul v-for="(icon, i) in logos.left" :key="i" class="">
             <figcaption class="self-center">
-              <span class="text-sm font-light mb-3">01</span>
+              <span class="text-sm font-light mb-3">{{ i }}</span>
             </figcaption>
 
             <figure
               class="still-blob flex flex-col items-center justify-center self-end"
             >
-              <h4 class="text-md font-thin">UI DESIGN</h4>
               <img
-                class="h-15 w-12 object-contain relative basis-1/4 self-center"
-                :src="icons.ui"
+                class="h-32 w-32 object-contain relative basis-1/4 self-center"
+                :src="icon"
               />
             </figure>
+          </ul>
+        </div>
 
+        <div class="flex justify-between">
+          <ul v-for="(icon, i) in logos.right" :key="i" class="">
             <figcaption class="self-center">
-              <span class="text-sm font-light">02</span>
+              <span class="text-sm font-light mb-3">{{ i }}</span>
             </figcaption>
 
             <figure
-              class="still-blob flex flex-col items-center justify-center"
+              class="still-blob flex flex-col items-center justify-center self-end"
             >
-              <h4 class="text-md font-thin">FRONT END</h4>
-
               <img
-                class="h-15 w-12 object-contain basis-1/4 self-center"
-                :src="icons.front"
+                class="h-32 w-32 object-contain relative basis-1/4 self-center"
+                :src="icon"
               />
             </figure>
-          </div>
-
-          <div class="right flex flex-row">
-            <figcaption class="self-center">
-              <span class="text-sm font-light">03</span>
-            </figcaption>
-
-            <figure
-              class="still-blob p-3 flex flex-col items-center justify-center"
-            >
-              <h4 class="text-md font-thin">BACK END</h4>
-
-              <img
-                class="h-15 w-12 object-contain basis-1/4 self-center"
-                :src="icons.back"
-              />
-            </figure>
-
-            <figcaption class="self-center">
-              <span class="text-sm font-light">04</span>
-            </figcaption>
-
-            <figure
-              class="still-blob flex flex-col items-center justify-center"
-            >
-              <h4 class="text-md font-thin">UX DESIGN</h4>
-              <img
-                class="h-15 w-12 object-contain relative basis-1/4 self-center"
-                :src="icons.ux"
-              />
-            </figure>
-          </div>
+          </ul>
         </div>
       </div>
-      <!-- Panel 3 -->
-      <div class="right">
-        <!-- Heading -->
-        <div class="flex flex-col items-center justify-center">
-          <h6
-            split-by="letter"
-            letter-animation="breath"
-            class="font-thin tracking-normal uppercase text-2xl"
-          >
-            TECHNOLOGIES
-          </h6>
+    </section>
 
-          <p class="tracking-wide mb-10 font-light text-xl">
-            Some tech I'm currently working with.
-          </p>
-        </div>
+    <!-- Projects ------------------- -->
+    <section class="flex flex-col items-center">
+      <!-- Heading -->
+      <div class="self-start">
+        <h6 split-by="letter" letter-animation="breath" class="">projects</h6>
 
-        <!-- Icons -->
-        <div class="flex flex-col items-center justify-center">
-          <div class="left flex justify-between">
-            <ul v-for="(icon, i) in logos.left" :key="i" class="">
-              <figcaption class="self-center">
-                <span class="text-sm font-light mb-3">{{ i }}</span>
-              </figcaption>
+        <!-- Sub Heading -->
+        <p class="font-light text-sm">
+          If you need a developer for your next project, let's work together.
+        </p>
+      </div>
 
-              <figure
-                class="still-blob flex flex-col items-center justify-center self-end"
-              >
-                <img
-                  class="h-32 w-32 object-contain relative basis-1/4 self-center"
-                  :src="icon"
-                />
-              </figure>
+      <div class="project">
+        <div className="project-inner">
+          <header>
+            <div className="project-top">
+              <div className="folder">
+                <button>Folder Icon Button</button>
+              </div>
+              <div className="project-links">
+                <!-- Github Link -->
+                <a
+                  href="{github}"
+                  aria-label="GitHub Link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <button>Github Icon Button</button>
+                </a>
+
+                <!-- External Link -->
+                <a
+                  href="{external}"
+                  aria-label="External Link"
+                  className="external"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <button>External Icon Button</button>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project Title -->
+            <h3 className="project-title">
+              <a href="{external}" target="_blank" rel="noreferrer">
+                Project Title
+              </a>
+            </h3>
+
+            <!-- Project Description -->
+            <div className="project-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nulla
+              harum dolores ut architecto pariatur, illo placeat molestiae
+              animi, praesentium saepe voluptas numquam alias explicabo
+              asperiores ea officiis quia. Dolores.
+            </div>
+          </header>
+          <footer>
+            <ul className="project-tech-list">
+              <li key="{i}">Project Technology Used</li>
             </ul>
-          </div>
-
-          <div class="right flex justify-between">
-            <ul v-for="(icon, i) in logos.right" :key="i" class="">
-              <figcaption class="self-center">
-                <span class="text-sm font-light mb-3">{{ i }}</span>
-              </figcaption>
-
-              <figure
-                class="still-blob flex flex-col items-center justify-center self-end"
-              >
-                <img
-                  class="h-32 w-32 object-contain relative basis-1/4 self-center"
-                  :src="icon"
-                />
-              </figure>
-            </ul>
-          </div>
+          </footer>
         </div>
       </div>
     </section>
 
     <!-- Ideas Section -->
-    <section
-      class="h-screen w-screen panel flex items-center justify-center snap-center"
-    >
+    <section class="flex flex-col items-center">
       <!-- Blob -->
       <div class="blob-two"></div>
 
-      <div class="p-16 m-16">
-        <div class="flex flex-col space-between p-16 m-16">
-          <h2
-            split-by="letter"
-            letter-animation="breath"
-            class="self-start font-thin tracking-normal uppercase text-5xl"
-          >
-            EXPLORE IDEAS
-          </h2>
+      <!-- Heading -->
+      <div class="self-start">
+        <h6 split-by="letter" letter-animation="breath" class="">ideas</h6>
 
-          <p class="tracking-wide mb-10 font-light text-3xl">
-            Need a developer for your next project? Let's work together.
-          </p>
+        <!-- Sub Heading -->
+        <p class="font-light text-sm">
+          If you need a developer for your next project, let's work together.
+        </p>
 
-          <div class="custom-link form-group flex">
-            <button id="submit" class="rounded-lg" type="submit" name="submit">
-              <strong class="rounded-lg">
-                <router-link to="/contact"><p>Contact Me</p></router-link>
+        <!-- Connect Link -->
 
-                <b></b>
-                <i></i>
-              </strong>
-            </button>
-          </div>
-        </div>
+        <a
+          class="text-sm p-2"
+          href="https://www.linkedin.com/in/matthew-ricklefs-13284a1b9/"
+        >
+          <nuxt-link to="/contact">contact</nuxt-link>
+        </a>
       </div>
     </section>
-
-    <!-- Technologies ------------------- -->
-    <section
-      class="h-screen w-screen panel flex flex-col items-center justify-center"
-    ></section>
   </div>
 </template>
 
@@ -268,6 +278,7 @@ export default {
     css: false,
     beforeEnter(el) {
       this.$gsap.set(el.children, {
+        y: -100,
         scale: 0.1,
         opacity: 0,
         duration: 1,
@@ -275,10 +286,10 @@ export default {
     },
     enter(el, done) {
       this.$gsap.to(el.children, {
+        y: 0,
         scale: 1,
         opacity: 1,
         duration: 1.5,
-        delay: el.dataset.index * 0.2,
         ease: 'power2.inOut',
         onComplete: done,
         stagger: 0.5,
@@ -318,12 +329,14 @@ export default {
         back: require('../assets/images/icons/icon03.svg'),
         ux: require('../assets/images/icons/icon04.svg'),
       },
+      words: ['design', 'develop', 'innovate', 'create'],
     }
   },
   mounted() {
-    this.horizontalSnap()
-    this.splitting()
-    this.drawing()
+    // this.horizontalSnap()
+    // this.splitting()
+    // this.typing()
+    // this.drawing()
   },
   methods: {
     // Section Snapping
@@ -388,8 +401,59 @@ export default {
     // Tween Timelines
     tweening() {},
     // Iterating Blobs
+    typing() {
+      this.$gsap.to('.cursor', {
+        opacity: 0,
+        ease: 'power2.inOut',
+        repeat: -1,
+      })
+
+      const boxTl = this.$gsap.timeline()
+
+      boxTl
+        .to('.box', {
+          duration: 1,
+          width: '17vw',
+          delay: 0.5,
+          ease: 'power4.inOut',
+        })
+        .from('.hi', {
+          duration: 1,
+          y: '7vw',
+          ease: 'power3.out',
+          onComplete: () => masterTl.play(),
+        })
+        .to('.box', {
+          duration: 1,
+          height: '7vw',
+          ease: 'elastic.out',
+        })
+        .to('.box', {
+          duration: 2,
+          autoAlpha: 0.5,
+          yoyo: true,
+          repeat: -1,
+        })
+
+      const masterTl = this.$gsap
+        .timeline({
+          repeat: -1,
+        })
+        .pause()
+
+      this.words.forEach((word) => {
+        const tl = this.$gsap.timeline({
+          repeat: 1,
+          yoyo: true,
+          repeatDelay: 1,
+        })
+        tl.to('.text', {
+          duration: 1,
+          text: word,
+        })
+        masterTl.add(tl)
+      })
+    },
   },
 }
 </script>
-
-<style scoped></style>
