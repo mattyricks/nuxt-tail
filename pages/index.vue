@@ -11,7 +11,7 @@
           <h3
             class="from-neutral-500 font-light text-sm sm:text-sm md:text-sm lg:text-sm xl:text-sm"
           >
-            Hello, my name is
+            hello, my name is
           </h3>
           <h1
             split-by="letter"
@@ -47,7 +47,7 @@
     <section class="flex flex-col px-8">
       <!-- Heading -->
       <div class="self-start">
-        <h6 class="font-light tracking-wide">skills</h6>
+        <h6 class="font-light tracking-wide">skill</h6>
 
         <!-- Sub Heading -->
         <p class="font-light text-sm py-3">
@@ -130,7 +130,7 @@
     <section class="flex flex-col px-8">
       <!-- Heading -->
       <div class="self-start">
-        <h6 class="font-light tracking-wide">technologies</h6>
+        <h6 class="font-light tracking-wide">technology</h6>
 
         <p class="font-light text-sm py-3">
           Some tech I'm currently working with.
@@ -183,63 +183,66 @@
     <section class="flex flex-col px-8">
       <!-- Heading -->
       <div class="self-start">
-        <h6 class="font-light tracking-wide">works</h6>
+        <h6 class="font-light tracking-wide">work</h6>
 
         <!-- Sub Heading -->
-        <p class="font-light text-sm py-3">A few noteworthy projects.</p>
+        <p class="font-light text-sm py-3">A couple noteworthy projects.</p>
       </div>
 
-      <div class="project">
-        <div className="project-inner">
-          <header>
-            <div className="project-top">
-              <div className="folder">
-                <button>Folder Icon Button</button>
-              </div>
-              <div className="project-links">
-                <!-- Github Link -->
-                <a
-                  href="{github}"
-                  aria-label="GitHub Link"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <button>Github Icon Button</button>
-                </a>
+      <!-- Icons -->
+      <div class="flex flex-col items-stretch justify-between px-10">
+        <div class="figure flex flex-row justify-between border p-2">
+          <figcaption class="flex flex-col justify-between">
+            <span class="text-sm font-light">01</span>
+            <h4 class="text-sm font-thin">SPOTIFY</h4>
+          </figcaption>
 
-                <!-- External Link -->
-                <a
-                  href="{external}"
-                  aria-label="External Link"
-                  className="external"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <button>External Icon Button</button>
-                </a>
-              </div>
-            </div>
+          <figure class="">
+            <img
+              class="h-15 w-12 object-contain relative basis-1/4 self-center bg-transparent"
+              :src="icons.spotify"
+            />
+          </figure>
 
-            <!-- Project Title -->
-            <h3 className="project-title">
-              <a href="{external}" target="_blank" rel="noreferrer">
-                Project Title
-              </a>
-            </h3>
+          <svg
+            class="case-study-list-item__icon h-3 w-4 self-center"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 10 10"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M7.31 1.57H.56V0H10v9.44H8.43V2.7L1.1 10 0 8.89l7.31-7.32z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </div>
 
-            <!-- Project Description -->
-            <div className="project-description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nulla
-              harum dolores ut architecto pariatur, illo placeat molestiae
-              animi, praesentium saepe voluptas numquam alias explicabo
-              asperiores ea officiis quia. Dolores.
-            </div>
-          </header>
-          <footer>
-            <ul className="project-tech-list">
-              <li key="{i}">Project Technology Used</li>
-            </ul>
-          </footer>
+        <div class="figure flex flex-row justify-between border p-2">
+          <figcaption class="flex flex-col justify-between">
+            <span class="text-sm font-light">02</span>
+            <h4 class="text-sm font-thin">BANKING</h4>
+          </figcaption>
+
+          <figure class="">
+            <img
+              class="h-15 w-12 object-contain relative basis-1/4 self-center"
+              :src="icons.coins"
+            />
+          </figure>
+
+          <svg
+            class="case-study-list-item__icon h-3 w-4 self-center"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 10 10"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M7.31 1.57H.56V0H10v9.44H8.43V2.7L1.1 10 0 8.89l7.31-7.32z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
         </div>
       </div>
     </section>
@@ -337,14 +340,12 @@ export default {
           react: require('../assets/images/logos/react-logo.svg'),
           aws: require('../assets/images/logos/aws-logo.png'),
           express: require('../assets/images/logos/express-logo.png'),
-          // graphQl: require('../assets/images/logos/graphql-logo.svg'),
         },
         right: {
           nuxt: require('../assets/images/logos/nuxt.png'),
           next: require('../assets/images/logos/next-logo.svg'),
           mongo: require('../assets/images/logos/mongodb-logo.svg'),
           node: require('../assets/images/logos/node-logo.svg'),
-          // redux: require('../assets/images/logos/redux-logo.svg'),
         },
       },
       icons: {
@@ -352,6 +353,8 @@ export default {
         front: require('../assets/images/icons/icon02.svg'),
         back: require('../assets/images/icons/icon03.svg'),
         ux: require('../assets/images/icons/icon04.svg'),
+        coins: require('../assets/images/icons/coins.png'),
+        spotify: require('../assets/images/icons/spotify.png'),
       },
       words: ['design', 'develop', 'innovate', 'create'],
     }
@@ -361,8 +364,8 @@ export default {
     // this.splitting()
     // this.typing()
     // this.drawing()
-    this.beforeEnter()
-    this.enter()
+    // this.beforeEnter()
+    // this.enter()
   },
   methods: {
     // Section Snapping

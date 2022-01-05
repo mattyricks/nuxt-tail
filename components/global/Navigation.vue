@@ -28,7 +28,7 @@
       </div>
 
       <!-- Main Menu -->
-      <nav class="flex items-center">
+      <nav class="flex items-center justify-center">
         <!-- Theming -->
         <div class="top-0 left-0">
           <select
@@ -44,19 +44,26 @@
 
         <ul class="flex p-2 items-center">
           <li class="text-sm p-2">
-            <a class="">
-              <router-link to="/">HOME</router-link>
-            </a>
-          </li>
-
-          <li class="text-sm p-2">
-            <a class="">
-              <router-link to="/contact">CONTACT</router-link>
-            </a>
+            PORTFOLIO - NY - TX - <small>*flexible</small>
           </li>
         </ul>
       </nav>
     </header>
+
+    <!-- TODO: Removing routing links to induce different layout TBD.. keep or na? -->
+    <!-- <ul class="flex p-2 items-center">
+      <li class="text-sm p-2">
+        <a class="">
+          <router-link to="/">HOME</router-link>
+        </a>
+      </li>
+
+      <li class="text-sm p-2">
+        <a class="">
+          <router-link to="/contact">CONTACT</router-link>
+        </a>
+      </li>
+    </ul> -->
 
     <!-- <nuxt-link v-if="prev" :to="{ name: name, params: { id: prev.slug } }">
       <div class="flex items-center">

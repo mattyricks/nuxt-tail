@@ -1,7 +1,5 @@
 <template>
-  <!-- Sidebar -->
   <div>
-    <!-- Left -->
     <div
       id="social-list"
       orientation="left"
@@ -19,4 +17,3 @@
     </div>
   </div>
 </template>
-

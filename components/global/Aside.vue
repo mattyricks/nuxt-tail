@@ -1,5 +1,4 @@
 <template>
-  <!-- Left Sidebar -->
   <div
     id="social-list"
     orientation="left"
@@ -8,7 +7,6 @@
     <ul
       class="side-email flex flex-col items-center text-center list-none p-0 m-0"
     >
-      <!-- LinkedIn -->
       <li>
         <a
           href="https://www.linkedin.com/in/matthew-ricklefs-13284a1b9"
@@ -35,7 +33,6 @@
         ></a>
       </li>
 
-      <!-- Github -->
       <li>
         <a
           href="https://github.com/matthewricklefs"
