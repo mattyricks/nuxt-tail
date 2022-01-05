@@ -4,7 +4,6 @@
     <section class="flex flex-col items-center justify-center">
       <!-- Blob -->
       <div class="blob float-right"></div>
-
       <!-- Panel 1 -->
       <div class="flex flex-col">
         <!-- Heading -->
@@ -59,63 +58,71 @@
 
       <!-- Icons -->
       <div class="flex items-stretch justify-between">
-        <figcaption class="self-center">
-          <span class="text-sm font-light mb-3">01</span>
-        </figcaption>
+        <div class="figure">
+          <figcaption class="self-center">
+            <span class="text-sm font-light mb-3">01</span>
+          </figcaption>
 
-        <figure
-          class="gsap-figure still-blob flex flex-col items-center justify-center self-end"
-        >
-          <h4 class="text-sm font-thin">UI DESIGN</h4>
-          <img
-            class="h-15 w-12 object-contain relative basis-1/4 self-center"
-            :src="icons.ui"
-          />
-        </figure>
+          <figure
+            class="still-blob flex flex-col items-center justify-center self-end"
+          >
+            <h4 class="text-sm font-thin">UI DESIGN</h4>
+            <img
+              class="h-15 w-12 object-contain relative basis-1/4 self-center"
+              :src="icons.ui"
+            />
+          </figure>
+        </div>
 
-        <figcaption class="self-center">
-          <span class="text-sm font-light">02</span>
-        </figcaption>
+        <div class="figure">
+          <figcaption class="self-center">
+            <span class="text-sm font-light">02</span>
+          </figcaption>
 
-        <figure
-          class="gsap-figure still-blob flex flex-col items-center justify-center"
-        >
-          <h4 class="text-sm font-thin">FRONT END</h4>
+          <figure
+            class="gsap-figure still-blob flex flex-col items-center justify-center"
+          >
+            <h4 class="text-sm font-thin">FRONT END</h4>
 
-          <img
-            class="h-15 w-12 object-contain basis-1/4 self-center"
-            :src="icons.front"
-          />
-        </figure>
+            <img
+              class="h-15 w-12 object-contain basis-1/4 self-center"
+              :src="icons.front"
+            />
+          </figure>
+        </div>
 
-        <figcaption class="self-center">
-          <span class="text-sm font-light">03</span>
-        </figcaption>
+        <div class="figure">
+          <figcaption class="self-center">
+            <span class="text-sm font-light">03</span>
+          </figcaption>
 
-        <figure
-          class="gsap-figure still-blob p-3 flex flex-col items-center justify-center"
-        >
-          <h4 class="text-sm font-thin">BACK END</h4>
+          <figure
+            class="gsap-figure still-blob p-3 flex flex-col items-center justify-center"
+          >
+            <h4 class="text-sm font-thin">BACK END</h4>
 
-          <img
-            class="h-15 w-12 object-contain basis-1/4 self-center"
-            :src="icons.back"
-          />
-        </figure>
+            <img
+              class="h-15 w-12 object-contain basis-1/4 self-center"
+              :src="icons.back"
+            />
+          </figure>
+        </div>
 
-        <figcaption class="self-center">
-          <span class="text-sm font-light">04</span>
-        </figcaption>
+        <div class="figure">
+          <figcaption class="self-center">
+            <span class="text-sm font-light">04</span>
+          </figcaption>
 
-        <figure
-          class="gsap-figure still-blob flex flex-col items-center justify-center"
-        >
-          <h4 class="text-sm font-thin">UX DESIGN</h4>
-          <img
-            class="h-15 w-12 object-contain relative basis-1/4 self-center"
-            :src="icons.ux"
-          />
-        </figure>
+          <figure
+            class="gsap-figure still-blob flex flex-col items-center justify-center"
+          >
+            <h4 class="text-sm font-thin">UX DESIGN</h4>
+            <img
+              class="h-15 w-12 object-contain relative basis-1/4 self-center"
+              :src="icons.ux"
+            />
+          </figure>
+        </div>
       </div>
     </section>
 
@@ -134,35 +141,39 @@
       <div class="flex flex-col">
         <div class="flex items-stretch justify-between">
           <ul v-for="(icon, i) in logos.left" :key="i" class="">
-            <figcaption class="self-center">
-              <span class="text-sm font-light mb-3">{{ i }}</span>
-            </figcaption>
+            <div class="figure">
+              <figcaption class="self-center">
+                <span class="text-sm font-light mb-3">{{ i }}</span>
+              </figcaption>
 
-            <figure
-              class="still-blob flex flex-col items-center justify-center self-end"
-            >
-              <img
-                class="h-32 w-32 object-contain relative basis-1/4 self-center"
-                :src="icon"
-              />
-            </figure>
+              <figure
+                class="still-blob flex flex-col items-center justify-center self-end"
+              >
+                <img
+                  class="h-32 w-32 object-contain relative basis-1/4 self-center"
+                  :src="icon"
+                />
+              </figure>
+            </div>
           </ul>
         </div>
 
         <div class="flex items-stretch justify-between">
           <ul v-for="(icon, i) in logos.right" :key="i" class="">
-            <figcaption class="self-center">
-              <span class="text-sm font-light mb-3">{{ i }}</span>
-            </figcaption>
+            <div class="figure">
+              <figcaption class="self-center">
+                <span class="text-sm font-light mb-3">{{ i }}</span>
+              </figcaption>
 
-            <figure
-              class="still-blob flex flex-col items-center justify-center self-end"
-            >
-              <img
-                class="h-32 w-32 object-contain relative basis-1/4 self-center"
-                :src="icon"
-              />
-            </figure>
+              <figure
+                class="still-blob flex flex-col items-center justify-center self-end"
+              >
+                <img
+                  class="h-32 w-32 object-contain relative basis-1/4 self-center"
+                  :src="icon"
+                />
+              </figure>
+            </div>
           </ul>
         </div>
       </div>
@@ -327,6 +338,8 @@ export default {
     // this.splitting()
     // this.typing()
     // this.drawing()
+    this.beforeEnter()
+    this.enter()
   },
   methods: {
     // Section Snapping
@@ -442,6 +455,33 @@ export default {
           text: word,
         })
         masterTl.add(tl)
+      })
+    },
+    staggering() {
+      // const figure = document.querySelectorAll('.figure')
+    },
+    beforeEnter() {
+      const figure = document.querySelectorAll('.figure')
+
+      this.$gsap.set(figure, {
+        x: 200,
+        opacity: 0,
+        duration: 1,
+        delay: 1,
+      })
+    },
+    enter(done) {
+      const figure = document.querySelectorAll('.figure')
+
+      this.$gsap.to(figure, {
+        x: 0,
+        scale: 1,
+        opacity: 1,
+        duration: 1.5,
+        ease: 'power2.inOut',
+        onComplete: done,
+        stagger: 0.5,
+        delay: 0.5,
       })
     },
   },
