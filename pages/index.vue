@@ -1,291 +1,458 @@
 <template>
-  <!-- TODO: Can you apply transition to entire template? -->
-  <transition
-    name="custom-classes-transition"
-    enter-active-class="animated slideInLeft"
-    leave-active-class="animated slideOutRight"
-  >
-    <div
-      class="theme-switch-wrapper xl:p-40 lg:pl-36 md:pl-32 sm:pl-24 pl-14"
-      data-theme="light"
-    >
-      <!-- Page Title -->
-      <div class="w-full mt-12">
-        <h1
-          class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-none m-0 pb-1"
-        >
-          Hello, I'm Matthew.
-          <br />
-          Full Stack Developer
-          <br />
-          based in New York
-        </h1>
+  <div class="">
+    <!-- About Intro -->
+    <section class="flex flex-col items-center">
+      <!-- Blob -->
+      <div class="blob"></div>
+
+      <!-- Panel 1 -->
+      <div class="flex flex-col">
+        <!-- Heading -->
+        <div class="flex flex-col text-left space-x-24 rounded-2xl">
+          <h3
+            class="from-neutral-500 text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl py-3"
+          >
+            Hello, my name is
+          </h3>
+
+          <h1
+            split-by="letter"
+            letter-animation="hover"
+            class="font-semibold text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl py-3"
+          >
+            Matthew Ricklefs
+            <br />
+          </h1>
+
+          <h3
+            class="from-neutral-500 text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl py-3"
+          >
+            I produce content for the web.
+            <br />
+          </h3>
+
+          <!-- Paragraph -->
+          <p class="font-light whitespace-normal py-3 basis-3/5">
+            I’m a software engineer specializing in building (and occasionally
+            designing) exceptional digital experiences. Currently, I’m focused
+            on building accessible, human-centered products at Upstatement.
+          </p>
+
+          <!-- Connect Link -->
+
+          <a
+            class="text-sm p-2"
+            href="https://www.linkedin.com/in/matthew-ricklefs-13284a1b9/"
+          >
+            connect
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills ----------------------------- -->
+    <section class="flex flex-col items-center">
+      <!-- Heading -->
+      <div class="self-start">
+        <h6 split-by="letter" letter-animation="breath" class="">skills</h6>
+
+        <!-- Sub Heading -->
+        <p class="font-light text-sm">
+          I like learning new things. Here are a few topics I am proficient
+          with.
+        </p>
       </div>
 
-      <!-- SVG Animation -->
-      <section class="w-full flex flex-wrap wave-section">
-        <svg
-          width="100%"
-          height="175"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          class="wave-top"
-        >
-          <path fill="white" data-theme="light">
-            <animate
-              repeatCount="indefinite"
-              fill="freeze"
-              attributeName="d"
-              dur="6.66s"
-              values="M0 25.9086C277 84.5821 433 65.736 720 25.9086C934.818 -3.9019 1214.06 -5.23669 1442 8.06597C2079 45.2421 2208 63.5007 2560 25.9088V171.91L0 171.91V25.9086Z;
-        
-                      M0 87.1596C316 87.1597 444 160 884 52.0001C1324 -55.9999 1320.29 34.966 1538 71.251C1814 117.251 2156 189.252 2560 87.1597V233.161L0 233.161V87.1596Z;
-        
-                      M0 53.6584C158 11.0001 213 0 363 0C513 0 855.555 115.001 1154 115.001C1440 115.001 1626 -38.0004 2560 53.6585V199.66L0 199.66V53.6584Z;
-        
-                      M0 25.9086C277 84.5821 433 65.736 720 25.9086C934.818 -3.9019 1214.06 -5.23669 1442 8.06597C2079 45.2421 2208 63.5007 2560 25.9088V171.91L0 171.91V25.9086Z;
-                     "
-            ></animate>
-          </path>
-        </svg>
+      <!-- Icons -->
+      <div class="self-start flex">
+        <figcaption class="self-center">
+          <span class="text-sm font-light mb-3">01</span>
+        </figcaption>
 
-        <figure class="w-full h-full m-0">
-          <img class="w-full h-2/5" :src="images.imageTwo" alt="" />
+        <figure
+          class="gsap-figure still-blob flex flex-col items-center justify-center self-end"
+        >
+          <h4 class="text-sm font-thin">UI DESIGN</h4>
+          <img
+            class="h-15 w-12 object-contain relative basis-1/4 self-center"
+            :src="icons.ui"
+          />
         </figure>
 
-        <svg
-          width="100%"
-          height="172"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+        <figcaption class="self-center">
+          <span class="text-sm font-light">02</span>
+        </figcaption>
+
+        <figure
+          class="gsap-figure still-blob flex flex-col items-center justify-center"
         >
-          <path fill="white" data-theme="light">
-            <animate
-              repeatCount="indefinite"
-              fill="freeze"
-              attributeName="d"
-              dur="3.33s"
-              values="M0 25.9086C277 84.5821 433 65.736 720 25.9086C934.818 -3.9019 1214.06 -5.23669 1442 8.06597C2079 45.2421 2208 63.5007 2560 25.9088V171.91L0 171.91V25.9086Z;
-        
-                      M0 87.1596C316 87.1597 444 160 884 52.0001C1324 -55.9999 1320.29 34.966 1538 71.251C1814 117.251 2156 189.252 2560 87.1597V233.161L0 233.161V87.1596Z;
-        
-                      M0 53.6584C158 11.0001 213 0 363 0C513 0 855.555 115.001 1154 115.001C1440 115.001 1626 -38.0004 2560 53.6585V199.66L0 199.66V53.6584Z;
-        
-                      M0 25.9086C277 84.5821 433 65.736 720 25.9086C934.818 -3.9019 1214.06 -5.23669 1442 8.06597C2079 45.2421 2208 63.5007 2560 25.9088V171.91L0 171.91V25.9086Z;
-                     "
-            ></animate>
-          </path>
-        </svg>
-      </section>
+          <h4 class="text-sm font-thin">FRONT END</h4>
 
-      <!-- Projects -->
-      <section class="p-12 h-full w-full pb-7">
-        <!-- See All Projects.. -->
-        <div class="flex flex-col items-start justify-end">
-          <h2
-            class="flex font-thin tracking-normal uppercase text-lg sm:text-xl"
-          >
-            Explore Projects
-          </h2>
+          <img
+            class="h-15 w-12 object-contain basis-1/4 self-center"
+            :src="icons.front"
+          />
+        </figure>
 
-          <p class="tracking-wide mb-10 font-light text-lg">
-            Check out some of my recent work.
-          </p>
-        </div>
+        <figcaption class="self-center">
+          <span class="text-sm font-light">03</span>
+        </figcaption>
 
-        <!-- Project Card -->
-        <div
-          class="p-6 m-6 flex flex-row-reverse font-sans rounded-3xl shadow-2xl hover:shadow-zinc-500"
+        <figure
+          class="gsap-figure still-blob p-3 flex flex-col items-center justify-center"
         >
-          <!-- Image -->
-          <div class="flex-none w-48 relative">
-            <img
-              :src="images.imageSix"
-              alt=""
-              class="absolute inset-0 w-full h-full object-cover rounded-lg"
-            />
-          </div>
+          <h4 class="text-sm font-thin">BACK END</h4>
 
-          <form class="flex-auto p-6">
-            <div class="flex flex-wrap">
-              <!-- Header -->
-              <h1
-                class="flex-auto text-lg font-semibold text-gray-900 font-sans"
-              >
-                Classic Spotify Example
-              </h1>
-              <!-- Body -->
-              <div class="text-lg font-thin text-gray-400 sans-serif">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Debitis laborum perspiciatis odit, pariatur alias architecto
-                impedit odio dicta fugit explicabo labore voluptas libero
-                delectus quo nihil vel iste laboriosam natus!
-              </div>
-              <!-- Tags -->
-              <div
-                class="w-full flex-none text-sm font-medium text-gray-700 mt-2"
-              >
-                Next.js
-              </div>
-            </div>
+          <img
+            class="h-15 w-12 object-contain basis-1/4 self-center"
+            :src="icons.back"
+          />
+        </figure>
 
-            <div
-              class="flex items-baseline mt-4 mb-6 pb-6 border-b border-gray-200"
-            ></div>
-            <!-- Routing Links -->
-            <div class="flex space-x-4 mb-6 text-sm font-medium">
-              <div class="flex-auto flex space-x-4">
-                <!-- View Project -->
-                <button
-                  class="h-10 px-6 font-semibold rounded-md bg-black text-white"
-                  type="submit"
-                >
-                  View Project
-                </button>
-                <!-- View Source -->
-                <button
-                  class="h-10 px-6 font-semibold rounded-md border border-gray-200 text-gray-900"
-                  type="button"
-                >
-                  View Source
-                </button>
-              </div>
-            </div>
-            <!-- Subtext -->
-            <p class="text-sm text-gray-700">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,
-              perferendis. Tempora at, accusamus aut et qui ea dolores itaque
-              velit nisi. Mollitia sapiente voluptate incidunt consectetur est
-              libero dolorum magni.
-            </p>
-          </form>
-        </div>
+        <figcaption class="self-center">
+          <span class="text-sm font-light">04</span>
+        </figcaption>
 
-        <!-- Project Card -->
-        <div
-          class="p-6 m-6 flex flex-row-reverse font-sans rounded-3xl shadow-2xl hover:shadow-zinc-500"
+        <figure
+          class="gsap-figure still-blob flex flex-col items-center justify-center"
         >
-          <!-- Image -->
-          <div class="flex-none w-48 relative">
-            <img
-              :src="images.imageSix"
-              alt=""
-              class="absolute inset-0 w-full h-full object-cover rounded-lg"
-            />
-          </div>
+          <h4 class="text-sm font-thin">UX DESIGN</h4>
+          <img
+            class="h-15 w-12 object-contain relative basis-1/4 self-center"
+            :src="icons.ux"
+          />
+        </figure>
+      </div>
+    </section>
 
-          <form class="flex-auto p-6">
-            <div class="flex flex-wrap">
-              <!-- Header -->
-              <h1 class="flex-auto text-lg font-semibold text-gray-900">
-                Classic Spotify Example
-              </h1>
-              <!-- Body -->
-              <div class="text-lg font-thin text-gray-400">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Debitis laborum perspiciatis odit, pariatur alias architecto
-                impedit odio dicta fugit explicabo labore voluptas libero
-                delectus quo nihil vel iste laboriosam natus!
+    <!-- Technology -->
+    <section class="flex flex-col items-center">
+      <!-- Heading -->
+      <div class="self-start">
+        <h6 split-by="letter" letter-animation="breath" class="">
+          technologies
+        </h6>
+
+        <p class="font-light text-sm">Some tech I'm currently working with.</p>
+      </div>
+
+      <!-- Icons -->
+      <div class="self-start">
+        <div class="flex justify-between">
+          <ul v-for="(icon, i) in logos.left" :key="i" class="">
+            <figcaption class="self-center">
+              <span class="text-sm font-light mb-3">{{ i }}</span>
+            </figcaption>
+
+            <figure
+              class="still-blob flex flex-col items-center justify-center self-end"
+            >
+              <img
+                class="h-32 w-32 object-contain relative basis-1/4 self-center"
+                :src="icon"
+              />
+            </figure>
+          </ul>
+        </div>
+
+        <div class="flex justify-between">
+          <ul v-for="(icon, i) in logos.right" :key="i" class="">
+            <figcaption class="self-center">
+              <span class="text-sm font-light mb-3">{{ i }}</span>
+            </figcaption>
+
+            <figure
+              class="still-blob flex flex-col items-center justify-center self-end"
+            >
+              <img
+                class="h-32 w-32 object-contain relative basis-1/4 self-center"
+                :src="icon"
+              />
+            </figure>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects ------------------- -->
+    <section class="flex flex-col items-center">
+      <!-- Heading -->
+      <div class="self-start">
+        <h6 split-by="letter" letter-animation="breath" class="">projects</h6>
+
+        <!-- Sub Heading -->
+        <p class="font-light text-sm">
+          If you need a developer for your next project, let's work together.
+        </p>
+      </div>
+
+      <div class="project">
+        <div className="project-inner">
+          <header>
+            <div className="project-top">
+              <div className="folder">
+                <button>Folder Icon Button</button>
               </div>
-              <!-- Tags -->
-              <div
-                class="w-full flex-none text-sm font-medium text-gray-700 mt-2"
-              >
-                Next.js
+              <div className="project-links">
+                <!-- Github Link -->
+                <a
+                  href="{github}"
+                  aria-label="GitHub Link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <button>Github Icon Button</button>
+                </a>
+
+                <!-- External Link -->
+                <a
+                  href="{external}"
+                  aria-label="External Link"
+                  className="external"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <button>External Icon Button</button>
+                </a>
               </div>
             </div>
 
-            <div
-              class="flex items-baseline mt-4 mb-6 pb-6 border-b border-gray-200"
-            ></div>
-            <!-- Routing Links -->
-            <div class="flex space-x-4 mb-6 text-sm font-medium">
-              <div class="flex-auto flex space-x-4">
-                <!-- View Project -->
-                <button
-                  class="h-10 px-6 font-semibold rounded-md bg-black text-white"
-                  type="submit"
-                >
-                  View Project
-                </button>
-                <!-- View Source -->
-                <button
-                  class="h-10 px-6 font-semibold rounded-md border border-gray-200 text-gray-900"
-                  type="button"
-                >
-                  View Source
-                </button>
-              </div>
+            <!-- Project Title -->
+            <h3 className="project-title">
+              <a href="{external}" target="_blank" rel="noreferrer">
+                Project Title
+              </a>
+            </h3>
+
+            <!-- Project Description -->
+            <div className="project-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nulla
+              harum dolores ut architecto pariatur, illo placeat molestiae
+              animi, praesentium saepe voluptas numquam alias explicabo
+              asperiores ea officiis quia. Dolores.
             </div>
-            <!-- Subtext -->
-            <p class="text-sm text-gray-700">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,
-              perferendis. Tempora at, accusamus aut et qui ea dolores itaque
-              velit nisi. Mollitia sapiente voluptate incidunt consectetur est
-              libero dolorum magni.
-            </p>
-          </form>
+          </header>
+          <footer>
+            <ul className="project-tech-list">
+              <li key="{i}">Project Technology Used</li>
+            </ul>
+          </footer>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Explore Ideas -->
-      <section class="p-12">
-        <div class="">
-          <h2
-            class="flex font-thin tracking-normal uppercase text-lg sm:text-xl"
-          >
-            EXPLORE IDEAS
-          </h2>
-          <p class="tracking-wide mb-10 font-light text-sm sm:text-lg">
-            Need a developer for your next project? Let's work together.
-          </p>
+    <!-- Ideas Section -->
+    <section class="flex flex-col items-center">
+      <!-- Blob -->
+      <div class="blob-two"></div>
 
-          <div class="custom-link form-group">
-            <button id="submit" class="rounded-lg" type="submit" name="submit">
-              <strong class="rounded-lg">
-                <router-link to="/contact"><p>Contact Me</p></router-link>
+      <!-- Heading -->
+      <div class="self-start">
+        <h6 split-by="letter" letter-animation="breath" class="">ideas</h6>
 
-                <b></b>
-                <i></i>
-              </strong>
-            </button>
-          </div>
-        </div>
-      </section>
-    </div>
-  </transition>
+        <!-- Sub Heading -->
+        <p class="font-light text-sm">
+          If you need a developer for your next project, let's work together.
+        </p>
+
+        <!-- Connect Link -->
+
+        <a
+          class="text-sm p-2"
+          href="https://www.linkedin.com/in/matthew-ricklefs-13284a1b9/"
+        >
+          <nuxt-link to="/contact">contact</nuxt-link>
+        </a>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
+import { byLetter, byWord } from '../utils/splitting'
+
 export default {
-  name: 'Home',
+  name: 'About',
+  transition: {
+    appear: true,
+    css: false,
+    beforeEnter(el) {
+      this.$gsap.set(el.children, {
+        y: -100,
+        scale: 0.1,
+        opacity: 0,
+        duration: 1,
+      })
+    },
+    enter(el, done) {
+      this.$gsap.to(el.children, {
+        y: 0,
+        scale: 1,
+        opacity: 1,
+        duration: 1.5,
+        ease: 'power2.inOut',
+        onComplete: done,
+        stagger: 0.5,
+      })
+    },
+  },
   data() {
     return {
       images: {
-        imageOne: require('../assets/images/matty4.jpeg'),
-        imageTwo: require('../assets/images/code.jpeg'),
-        imageThree: require('../assets/logo.png'),
+        imageOne: require('../assets/images/matty6.jpeg'),
+        imageThree: require('../assets/images/logos/logo.png'),
+        imageFour: require('../assets/images/logos/coder-zen.png'),
+        imageFive: require('../assets/images/matty-2.png'),
         imageSix: require('../assets/images/matty3.png'),
+        quoteLeft: require('../assets/images/tween/quote-l.png'),
+        quoteRight: require('../assets/images/tween/quote-r.png'),
       },
-      show: false,
+      logos: {
+        left: {
+          vue: require('../assets/images/logos/logo.png'),
+          react: require('../assets/images/logos/react-logo.svg'),
+          aws: require('../assets/images/logos/aws-logo.png'),
+          graphQl: require('../assets/images/logos/graphql-logo.svg'),
+          express: require('../assets/images/logos/express-logo.png'),
+        },
+        right: {
+          nuxt: require('../assets/images/logos/nuxt.png'),
+          next: require('../assets/images/logos/next-logo.svg'),
+          mongo: require('../assets/images/logos/mongodb-logo.svg'),
+          redux: require('../assets/images/logos/redux-logo.svg'),
+          node: require('../assets/images/logos/node-logo.svg'),
+        },
+      },
+      icons: {
+        ui: require('../assets/images/icons/icon01.svg'),
+        front: require('../assets/images/icons/icon02.svg'),
+        back: require('../assets/images/icons/icon03.svg'),
+        ux: require('../assets/images/icons/icon04.svg'),
+      },
+      words: ['design', 'develop', 'innovate', 'create'],
     }
   },
   mounted() {
-    this.show = true
+    // this.horizontalSnap()
+    // this.splitting()
+    // this.typing()
+    // this.drawing()
   },
   methods: {
-    toggleSwitch() {
-      const toggleSwitch = document.querySelector(
-        '.theme-switch input[type="checkbox"]'
-      )
-      function switchTheme(e) {
-        if (e.target.checked) {
-          document.documentElement.setAttribute('data-theme', 'dark')
-        } else {
-          document.documentElement.setAttribute('data-theme', 'light')
+    // Section Snapping
+    horizontalSnap() {
+      const gsap = this.$gsap
+      const sections = gsap.utils.toArray('.panel')
+
+      gsap.to(sections, {
+        yPercent: -100 * (sections.length - 1),
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.contain',
+          pin: true,
+          scrub: 1,
+          snap: 1 / (sections.length - 1),
+          // base vertical scrolling on how wide the container is so it feels more natural.
+          end: '+=3500',
+        },
+      })
+    },
+    // Text Splitting
+    splitting() {
+      const splitTargets = document.querySelectorAll('[split-by]')
+
+      splitTargets.forEach((node) => {
+        const type = node.getAttribute('split-by')
+        let nodes = null
+
+        if (type === 'letter') {
+          nodes = byLetter(node.innerText)
+        } else if (type === 'word') {
+          nodes = byWord(node.innerText)
         }
-      }
-      toggleSwitch.addEventListener('change', switchTheme, false)
+
+        if (nodes) {
+          node.firstChild.replaceWith(...nodes)
+        }
+      })
+    },
+    // SVG Path Drawing
+    drawing() {
+      const paths = document.querySelectorAll('svg path')
+
+      paths.forEach((path, index) => {
+        path.setAttribute('stroke-dasharray', path.getTotalLength(index))
+        path.setAttribute('stroke-dashoffset', path.getTotalLength(index))
+
+        if (index === 0) {
+          path.innerHTML =
+            `<animate id="a` +
+            index +
+            `" attributeName="stroke-dashoffset" begin="0s" dur="5s" to="0" fill="freeze" />`
+        } else {
+          path.innerHTML =
+            `<animate id="a` +
+            index +
+            `" attributeName="stroke-dashoffset" begin="0s" dur="5s" to="0" fill="freeze" />`
+        }
+      })
+    },
+    blobbing() {},
+    // Tween Timelines
+    tweening() {},
+    // Iterating Blobs
+    typing() {
+      this.$gsap.to('.cursor', {
+        opacity: 0,
+        ease: 'power2.inOut',
+        repeat: -1,
+      })
+
+      const boxTl = this.$gsap.timeline()
+
+      boxTl
+        .to('.box', {
+          duration: 1,
+          width: '17vw',
+          delay: 0.5,
+          ease: 'power4.inOut',
+        })
+        .from('.hi', {
+          duration: 1,
+          y: '7vw',
+          ease: 'power3.out',
+          onComplete: () => masterTl.play(),
+        })
+        .to('.box', {
+          duration: 1,
+          height: '7vw',
+          ease: 'elastic.out',
+        })
+        .to('.box', {
+          duration: 2,
+          autoAlpha: 0.5,
+          yoyo: true,
+          repeat: -1,
+        })
+
+      const masterTl = this.$gsap
+        .timeline({
+          repeat: -1,
+        })
+        .pause()
+
+      this.words.forEach((word) => {
+        const tl = this.$gsap.timeline({
+          repeat: 1,
+          yoyo: true,
+          repeatDelay: 1,
+        })
+        tl.to('.text', {
+          duration: 1,
+          text: word,
+        })
+        masterTl.add(tl)
+      })
     },
   },
 }

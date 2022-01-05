@@ -1,0 +1,256 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (min-width: 45em) {
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+
+  main section {
+    flex: 2;
+  }
+
+  main aside {
+    flex: 1;
+  }
+}
+:root {
+  --font-size-body: 16px;
+  --font-family: 'Open Sans', sans-serif;
+  --font-weight-normal: 300;
+  --font-family-secondary: 'Jost', sans-serif;
+}
+
+/* Dataset Manipulation */
+letter-animation {
+  @nest [&] > span {
+    display: inline-block;
+    white-space: break-spaces;
+  }
+
+  @nest [&='breath'] {
+    --glow-color: white;
+
+    & > span {
+      animation: breath 1500ms ease calc(var(--index) * 100 * 1ms) infinite
+        alternate;
+    }
+
+    @media (prefers-color-scheme: light) {
+      & {
+        --glow-color: black;
+      }
+    }
+  }
+
+  @nest [&='hover'] {
+    &:hover > span {
+      transform: scale(0.75) perspective(1px);
+    }
+
+    & > span {
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      will-change: transform;
+
+      &:hover {
+        transform: scale(1.25) perspective(1px);
+      }
+    }
+  }
+}
+
+word-animation {
+  @nest [&] {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 1ch;
+  }
+
+  @nest [&='trampoline'] {
+    & > span {
+      display: inline-block;
+      transform: translateY(100%);
+      animation: trampoline 3s ease calc(var(--index) * 150 * 1ms) infinite
+        alternate;
+    }
+  }
+
+  @nest [&='hover'] {
+    @media (hover) {
+      overflow: hidden;
+
+      & > span {
+        transition: transform 0.3s ease;
+        cursor: pointer;
+
+        &:not(:hover) {
+          transform: translateY(50%);
+        }
+      }
+    }
+  }
+}
+
+/* Text Splitting */
+@keyframes breath {
+  from {
+    animation-timing-function: ease-out;
+    opacity: 0.2;
+  }
+  to {
+    transform: scale(1.25) translateY(-5px) perspective(1px);
+    text-shadow: 0 0 40px var(--glow-color);
+    animation-timing-function: ease-in-out;
+  }
+}
+
+@keyframes blobBreath {
+  from {
+    animation-timing-function: ease-out;
+    filter: blur(30px);
+    opacity: 0.2;
+  }
+  to {
+    animation-timing-function: ease-in-out;
+    filter: blur(0);
+    opacity: 1;
+    transform: scale(1.25) translateY(-20px) perspective(1px);
+    text-shadow: 0 0 40px var(--glow-color);
+  }
+}
+
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes trampoline {
+  0% {
+    transform: translateY(100%) rotate(-30deg);
+    animation-timing-function: ease;
+    border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+  }
+  50% {
+  }
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-in;
+    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+  }
+}
+
+/* Glassmorphism */
+@keyframes move {
+  from {
+    transform: translate(0, 0) rotate(-90deg);
+    /* border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%; */
+    border-radius: 24% 100% 35% 100% / 27% 100% 64% 100%;
+  }
+
+  to {
+    transform: translate(1000px, 300px) rotate(-10deg);
+    border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+  }
+}
+
+@keyframes moves {
+  100% {
+    offset-path: path('M 0 100 Q 100 200 200 100 Q 300 0 400 100');
+  }
+}
+
+/* Gitty Kitty */
+.github-corner {
+  fill: CanvasText;
+  color: Canvas;
+  height: 100%;
+  &:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+}
+
+/* Blob Design */
+.blob {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(
+    180deg,
+    rgba(47, 184, 255, 0.42) 31.77%,
+    #5c9df1 100%
+  );
+  mix-blend-mode: color-dodge;
+  animation: trampoline 5s infinite alternate;
+  transition: 0.2s ease-in cubic-bezier(0.07, 0.8, 0.16, 1);
+  filter: blur(30px);
+}
+.blob:hover {
+  filter: blur(0);
+  width: 500px;
+  height: 500px;
+  box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.6),
+    inset 100px 100px 0 0px #fa709a, inset 200px 200px 0 0px #784ba8,
+    inset 300px 300px 0 0px #2b86c5;
+  transition: 0.3s ease;
+}
+
+.still-blob {
+  height: 100px;
+  width: 100px;
+  background: linear-gradient(
+    180deg,
+    rgba(47, 184, 255, 0.42) 31.77%,
+    #5c9df1 100%
+  );
+  mix-blend-mode: color-dodge;
+  /* animation: move ease-in 5s infinite alternate; */
+  transition: 0.2s ease-in cubic-bezier(0.07, 0.8, 0.16, 1);
+  border-radius: 100%;
+  filter: blur(30px);
+}
+.still-blob:hover {
+  height: 100px;
+  width: 100px;
+  background: transparent;
+  box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.6),
+    inset 100px 100px 0 0px #fa709a, inset 200px 200px 0 0px #784ba8,
+    inset 300px 300px 0 0px #2b86c5;
+  filter: blur(0);
+  transition: 0.3s ease;
+}
+
+.blob-two {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(
+    180deg,
+    rgba(47, 184, 255, 0.42) 31.77%,
+    #5c9df1 100%
+  );
+  mix-blend-mode: color-burn;
+  animation: move 12s infinite alternate-reverse;
+  transition: 1s cubic-bezier(-0.07, -0.8, -0.16, -1);
+  filter: blur(30px);
+}
+.blob-two:hover {
+  filter: blur(0);
+  width: 320px;
+  height: 320px;
+  box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.6),
+    inset 100px 100px 0 0px #fa709a, inset 200px 200px 0 0px #784ba8,
+    inset 300px 300px 0 0px #2b86c5;
+}
