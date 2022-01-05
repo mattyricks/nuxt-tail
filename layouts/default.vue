@@ -4,6 +4,14 @@
       <Navigation />
     </header>
 
+    <aside>
+      <Aside />
+    </aside>
+
+    <aside>
+      <RightAside />
+    </aside>
+
     <div class="mx-auto">
       <nuxt />
     </div>

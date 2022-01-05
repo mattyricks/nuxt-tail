@@ -1,68 +1,64 @@
 <template>
-  <!-- Sidebar -->
-  <aside class="flex items-center">
-    <ul class="flex flex-row justify-center items-center text-center">
-      <!-- Icons -->
-      <div class="flex flex-col items-center justify-center">
-        <div class="left justify-between">
-          <ul v-for="(icon, i) in logos.left" :key="i" class="">
-            <figcaption class="self-center">
-              <span class="text-sm font-light mb-3">{{ i }}</span>
-            </figcaption>
+  <!-- Left Sidebar -->
+  <div
+    id="social-list"
+    orientation="left"
+    class="w-10 fixed bottom-0 left-10 right-auto z-10"
+  >
+    <ul
+      class="side-email flex flex-col items-center text-center list-none p-0 m-0"
+    >
+      <!-- LinkedIn -->
+      <li>
+        <a
+          href="https://www.linkedin.com/in/matthew-ricklefs-13284a1b9"
+          aria-label="Linkedin"
+          target="_blank"
+          rel="noreferrer"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-linkedin"
+          >
+            <title>LinkedIn</title>
+            <path
+              d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+            ></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle></svg
+        ></a>
+      </li>
 
-            <figure
-              class="flex flex-col items-center justify-center self-end still-blob"
-            >
-              <img
-                class="h-32 w-32 object-contain relative basis-1/4 self-center"
-                :src="icon"
-              />
-            </figure>
-          </ul>
-        </div>
-
-        <div class="right justify-between">
-          <ul v-for="(icon, i) in logos.right" :key="i" class="">
-            <figcaption class="self-center">
-              <span class="text-sm font-light mb-3">{{ i }}</span>
-            </figcaption>
-
-            <figure
-              class="still-blob flex flex-col items-center justify-center self-end"
-            >
-              <img
-                class="h-32 w-32 object-contain relative basis-1/4 self-center"
-                :src="icon"
-              />
-            </figure>
-          </ul>
-        </div>
-      </div>
+      <!-- Github -->
+      <li>
+        <a
+          href="https://github.com/matthewricklefs"
+          aria-label="GitHub"
+          target="_blank"
+          rel="noreferrer"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-github"
+          >
+            <title>GitHub</title>
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+            ></path></svg
+        ></a>
+      </li>
     </ul>
-  </aside>
+  </div>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      logos: {
-        left: {
-          vue: require('../../assets/images/logos/logo.png'),
-          react: require('../../assets/images/logos/react-logo.svg'),
-          aws: require('../../assets/images/logos/aws-logo.png'),
-          graphQl: require('../../assets/images/logos/graphql-logo.svg'),
-          express: require('../../assets/images/logos/express-logo.png'),
-        },
-        right: {
-          nuxt: require('../../assets/images/logos/nuxt.png'),
-          next: require('../../assets/images/logos/next-logo.svg'),
-          mongo: require('../../assets/images/logos/mongodb-logo.svg'),
-          redux: require('../../assets/images/logos/redux-logo.svg'),
-          node: require('../../assets/images/logos/node-logo.svg'),
-        },
-      },
-    }
-  },
-}
-</script>

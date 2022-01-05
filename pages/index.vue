@@ -1,7 +1,7 @@
 <template>
   <div class="h-screen w-screen px-3">
     <!-- About Intro -->
-    <section class="flex flex-col items-center justify-center">
+    <section class="flex flex-col items-center justify-center px-8">
       <!-- Blob -->
       <div class="blob float-right"></div>
       <!-- Panel 1 -->
@@ -34,7 +34,7 @@
           </p>
           <!-- Connect Link -->
           <a
-            class="text-sm p-2"
+            class="text-sm py-6"
             href="https://www.linkedin.com/in/matthew-ricklefs-13284a1b9/"
           >
             connect
@@ -44,7 +44,7 @@
     </section>
 
     <!-- Skills ----------------------------- -->
-    <section class="flex flex-col pl-14">
+    <section class="flex flex-col px-8">
       <!-- Heading -->
       <div class="self-start">
         <h6 class="font-light tracking-wide">skills</h6>
@@ -127,7 +127,7 @@
     </section>
 
     <!-- Technology -->
-    <section class="flex flex-col pl-14">
+    <section class="flex flex-col px-8">
       <!-- Heading -->
       <div class="self-start">
         <h6 class="font-light tracking-wide">technologies</h6>
@@ -180,15 +180,13 @@
     </section>
 
     <!-- Projects ------------------- -->
-    <section class="flex flex-col pl-14">
+    <section class="flex flex-col px-8">
       <!-- Heading -->
       <div class="self-start">
-        <h6 class="font-light tracking-wide">projects</h6>
+        <h6 class="font-light tracking-wide">works</h6>
 
         <!-- Sub Heading -->
-        <p class="font-light text-sm py-3">
-          If you need a developer for your next project, let's work together.
-        </p>
+        <p class="font-light text-sm py-3">A few noteworthy projects.</p>
       </div>
 
       <div class="project">
@@ -247,24 +245,49 @@
     </section>
 
     <!-- Ideas Section -->
-    <section class="flex flex-col pl-14">
+    <section class="flex flex-col px-8">
       <!-- Heading -->
-      <div class="self-start">
-        <h6 class="font-light tracking-wide">ideas</h6>
+      <!-- Heading -->
+      <div class="flex flex-col">
+        <h3
+          class="from-neutral-500 font-light text-lg sm:text-sm md:text-lg lg:text-lg xl:text-sm"
+        >
+          connection
+        </h3>
 
-        <!-- Sub Heading -->
-        <p class="font-light text-sm py-3">
-          If you need a developer for your next project, let's work together.
+        <h1
+          split-by="letter"
+          letter-animation="hover"
+          class="font-semibold text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl py-3"
+        >
+          What's next?
+          <br />
+        </h1>
+
+        <!-- Paragraph -->
+        <p class="text-base font-light w-1/2">
+          My inbox is always open, whether you have a question or just want to
+          say hi, I’ll try my best to get back to you!
         </p>
-
         <!-- Connect Link -->
         <a
-          class="text-sm p-2"
+          class="text-sm py-6"
           href="https://www.linkedin.com/in/matthew-ricklefs-13284a1b9/"
         >
-          <nuxt-link to="/contact">contact</nuxt-link>
+          say hello
         </a>
       </div>
+
+      <!-- Social Links Needed -->
+      <!-- <ul>
+        {socialMedia && socialMedia.map(({ name, url }, i) => (
+        <li key="{i}">
+          <a href="{url}" aria-label="{name}">
+            <Icon name="{name}" />
+          </a>
+        </li>
+        ))}
+      </ul> -->
     </section>
   </div>
 </template>
@@ -313,15 +336,15 @@ export default {
           vue: require('../assets/images/logos/logo.png'),
           react: require('../assets/images/logos/react-logo.svg'),
           aws: require('../assets/images/logos/aws-logo.png'),
-          graphQl: require('../assets/images/logos/graphql-logo.svg'),
           express: require('../assets/images/logos/express-logo.png'),
+          // graphQl: require('../assets/images/logos/graphql-logo.svg'),
         },
         right: {
           nuxt: require('../assets/images/logos/nuxt.png'),
           next: require('../assets/images/logos/next-logo.svg'),
           mongo: require('../assets/images/logos/mongodb-logo.svg'),
-          redux: require('../assets/images/logos/redux-logo.svg'),
           node: require('../assets/images/logos/node-logo.svg'),
+          // redux: require('../assets/images/logos/redux-logo.svg'),
         },
       },
       icons: {
