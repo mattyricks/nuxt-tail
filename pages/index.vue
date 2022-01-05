@@ -58,7 +58,7 @@
       </div>
 
       <!-- Icons -->
-      <div class="self-start flex">
+      <div class="flex items-stretch justify-between">
         <figcaption class="self-center">
           <span class="text-sm font-light mb-3">01</span>
         </figcaption>
@@ -131,8 +131,8 @@
       </div>
 
       <!-- Icons -->
-      <div class="self-start">
-        <div class="flex justify-between">
+      <div class="flex flex-col">
+        <div class="flex items-stretch justify-between">
           <ul v-for="(icon, i) in logos.left" :key="i" class="">
             <figcaption class="self-center">
               <span class="text-sm font-light mb-3">{{ i }}</span>
@@ -149,7 +149,7 @@
           </ul>
         </div>
 
-        <div class="flex justify-between">
+        <div class="flex items-stretch justify-between">
           <ul v-for="(icon, i) in logos.right" :key="i" class="">
             <figcaption class="self-center">
               <span class="text-sm font-light mb-3">{{ i }}</span>
