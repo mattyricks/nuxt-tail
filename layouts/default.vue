@@ -1,8 +1,10 @@
 <template>
-  <div>
-    <Navigation />
+  <div class="mx-auto">
+    <header class="py-3 pl-5">
+      <Navigation />
+    </header>
 
-    <div>
+    <div class="mx-auto">
       <nuxt />
     </div>
   </div>
@@ -10,7 +12,6 @@
 
 <script>
 import { mapGetters } from 'vuex'
-
 export default {
   computed: {
     ...mapGetters({ activePage: 'getActivePage' }),
@@ -20,8 +21,8 @@ export default {
 
 <style>
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  /* font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif; */
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -30,7 +31,6 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
-
 body {
   background-color: #fff;
   color: rgba(0, 0, 0, 0.8);

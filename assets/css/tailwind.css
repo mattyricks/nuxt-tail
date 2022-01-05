@@ -2,25 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@media (min-width: 45em) {
-  main {
-    display: flex;
-    flex-direction: row;
-  }
-
-  main section {
-    flex: 2;
-  }
-
-  main aside {
-    flex: 1;
-  }
-}
 :root {
-  --font-size-body: 16px;
-  --font-family: 'Open Sans', sans-serif;
-  --font-weight-normal: 300;
-  --font-family-secondary: 'Jost', sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 /* Dataset Manipulation */

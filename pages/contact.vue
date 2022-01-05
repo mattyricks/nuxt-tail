@@ -1,6 +1,6 @@
 <template>
   <div
-    class="theme-switch-wrapper xl:p-40 lg:pl-36 md:pl-32 sm:pl-24 pl-14 h-screen w-screen overflow-scroll"
+    class="xl:p-40 lg:pl-36 md:pl-32 sm:pl-24 pl-14 h-screen w-screen overflow-scroll"
     data-theme="light"
   >
     <section class="h-screen flex">

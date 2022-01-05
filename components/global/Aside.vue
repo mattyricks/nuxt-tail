@@ -1,6 +1,6 @@
 <template>
   <!-- Sidebar -->
-  <aside class="flex items-center sticky top-0">
+  <aside class="flex items-center">
     <ul class="flex flex-row justify-center items-center text-center">
       <!-- Icons -->
       <div class="flex flex-col items-center justify-center">
@@ -66,5 +66,3 @@ export default {
   },
 }
 </script>
-
-<style scoped></style>

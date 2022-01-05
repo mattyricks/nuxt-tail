@@ -278,7 +278,7 @@ body {
   text-align: center;
   line-height: 18rem;
   font-size: 2rem;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   background-color: transparent;
   position: absolute;
   top: 0;
@@ -315,7 +315,7 @@ button {
   -moz-border-radius: 4;
   border-radius: 4px;
   padding: 12px 25px;
-  font-family: 'Signika Negative', sans-serif;
+  /* font-family: 'Signika Negative', sans-serif; */
   text-transform: uppercase;
   font-weight: 600;
   cursor: pointer;

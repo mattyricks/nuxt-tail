@@ -1,20 +1,19 @@
 <template>
-  <div class="">
+  <div class="h-screen w-screen px-3">
     <!-- About Intro -->
-    <section class="flex flex-col items-center">
+    <section class="flex flex-col items-center justify-center">
       <!-- Blob -->
-      <div class="blob"></div>
+      <div class="blob float-right"></div>
 
       <!-- Panel 1 -->
       <div class="flex flex-col">
         <!-- Heading -->
-        <div class="flex flex-col text-left space-x-24 rounded-2xl">
+        <div class="flex flex-col">
           <h3
-            class="from-neutral-500 text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl py-3"
+            class="from-neutral-500 font-light text-sm sm:text-sm md:text-sm lg:text-sm xl:text-sm"
           >
             Hello, my name is
           </h3>
-
           <h1
             split-by="letter"
             letter-animation="hover"
@@ -23,23 +22,18 @@
             Matthew Ricklefs
             <br />
           </h1>
-
           <h3
             class="from-neutral-500 text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl py-3"
           >
             I produce content for the web.
             <br />
           </h3>
-
           <!-- Paragraph -->
-          <p class="font-light whitespace-normal py-3 basis-3/5">
-            I’m a software engineer specializing in building (and occasionally
-            designing) exceptional digital experiences. Currently, I’m focused
-            on building accessible, human-centered products at Upstatement.
+          <p class="text-base font-light w-1/2">
+            I'm a result-driven and customer-focused front-end developer
+            specializing in building interfaces and application of web.
           </p>
-
           <!-- Connect Link -->
-
           <a
             class="text-sm p-2"
             href="https://www.linkedin.com/in/matthew-ricklefs-13284a1b9/"
@@ -51,13 +45,13 @@
     </section>
 
     <!-- Skills ----------------------------- -->
-    <section class="flex flex-col items-center">
+    <section class="flex flex-col pl-14">
       <!-- Heading -->
       <div class="self-start">
-        <h6 split-by="letter" letter-animation="breath" class="">skills</h6>
+        <h6 class="font-light tracking-wide">skills</h6>
 
         <!-- Sub Heading -->
-        <p class="font-light text-sm">
+        <p class="font-light text-sm py-3">
           I like learning new things. Here are a few topics I am proficient
           with.
         </p>
@@ -126,14 +120,14 @@
     </section>
 
     <!-- Technology -->
-    <section class="flex flex-col items-center">
+    <section class="flex flex-col pl-14">
       <!-- Heading -->
       <div class="self-start">
-        <h6 split-by="letter" letter-animation="breath" class="">
-          technologies
-        </h6>
+        <h6 class="font-light tracking-wide">technologies</h6>
 
-        <p class="font-light text-sm">Some tech I'm currently working with.</p>
+        <p class="font-light text-sm py-3">
+          Some tech I'm currently working with.
+        </p>
       </div>
 
       <!-- Icons -->
@@ -175,13 +169,13 @@
     </section>
 
     <!-- Projects ------------------- -->
-    <section class="flex flex-col items-center">
+    <section class="flex flex-col pl-14">
       <!-- Heading -->
       <div class="self-start">
-        <h6 split-by="letter" letter-animation="breath" class="">projects</h6>
+        <h6 class="font-light tracking-wide">projects</h6>
 
         <!-- Sub Heading -->
-        <p class="font-light text-sm">
+        <p class="font-light text-sm py-3">
           If you need a developer for your next project, let's work together.
         </p>
       </div>
@@ -242,21 +236,17 @@
     </section>
 
     <!-- Ideas Section -->
-    <section class="flex flex-col items-center">
-      <!-- Blob -->
-      <div class="blob-two"></div>
-
+    <section class="flex flex-col pl-14">
       <!-- Heading -->
       <div class="self-start">
-        <h6 split-by="letter" letter-animation="breath" class="">ideas</h6>
+        <h6 class="font-light tracking-wide">ideas</h6>
 
         <!-- Sub Heading -->
-        <p class="font-light text-sm">
+        <p class="font-light text-sm py-3">
           If you need a developer for your next project, let's work together.
         </p>
 
         <!-- Connect Link -->
-
         <a
           class="text-sm p-2"
           href="https://www.linkedin.com/in/matthew-ricklefs-13284a1b9/"
