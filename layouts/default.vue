@@ -31,13 +31,25 @@ export default {
 body {
   background-color: #fff;
   color: rgba(0, 0, 0, 0.8);
+
+  .svg-icon {
+    fill: #121212;
+  }
 }
 .dark-mode body {
   background-color: #121212;
   color: #fff;
+
+  .svg-icon {
+    fill: #fff;
+  }
 }
 .sepia-mode body {
   background-color: #f1e7d0;
   color: #433422;
+
+  .svg-icon {
+    fill: #433422;
+  }
 }
 </style>

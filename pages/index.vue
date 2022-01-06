@@ -206,9 +206,7 @@
             <h4 class="font-thin text-xs sm:text-sm">TRACKING FUNDS</h4>
           </figcaption>
 
-          <figure class="self-center mr-3">
-            <img class="h-10 w-8 object-contain" :src="icons.coins" />
-          </figure>
+          <figure class="self-center mr-3"></figure>
 
           <a href="https://pensive-jackson-2a7810.netlify.app">
             <svg
@@ -233,7 +231,47 @@
           </figcaption>
 
           <figure class="self-center">
-            <img class="h-10 w-8 object-contain" :src="icons.spotify" />
+            <svg
+              class="h-10 w-10 sm:h-16 sm:w-16 md:h-24 md:w-24"
+              version="1.0"
+              xmlns="http://www.w3.org/2000/svg"
+              width="880.000000pt"
+              height="920.000000pt"
+              viewBox="0 0 880.000000 920.000000"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <g
+                class="svg-icon"
+                transform="translate(0.000000,920.000000) scale(0.100000,-0.100000)"
+                fill="#000000"
+                stroke="none"
+              >
+                <path
+                  d="M4235 8793 c-784 -34 -1516 -288 -2168 -751 -372 -264 -732 -637
+-994 -1032 -626 -941 -822 -2084 -547 -3183 120 -479 296 -867 585 -1293 276
+-406 671 -793 1089 -1069 511 -337 1042 -534 1705 -632 174 -26 813 -26 995 0
+652 93 1197 298 1725 650 386 257 757 617 1027 997 411 580 647 1208 723 1925
+19 176 22 581 5 755 -70 741 -341 1446 -784 2036 -178 238 -466 537 -693 718
+-576 462 -1244 748 -1977 846 -134 18 -511 42 -591 38 -16 -1 -61 -3 -100 -5z
+m-60 -2113 c1032 -60 1963 -298 2860 -730 157 -75 216 -124 261 -212 28 -56
+42 -150 33 -223 -14 -113 -117 -252 -229 -311 -48 -25 -66 -29 -140 -29 -94 0
+-78 -5 -370 130 -717 332 -1532 539 -2340 595 -188 13 -764 13 -950 0 -328
+-24 -689 -76 -1007 -147 -227 -51 -319 -52 -415 -5 -148 73 -226 226 -199 392
+22 134 108 257 214 306 95 43 529 131 879 178 171 23 479 52 628 59 163 8 621
+6 775 -3z m-62 -1600 c851 -52 1679 -270 2397 -630 155 -78 204 -116 245 -191
+27 -49 30 -63 30 -145 0 -88 -2 -95 -43 -175 -59 -117 -134 -206 -202 -242
+-80 -42 -116 -34 -340 73 -604 288 -1109 435 -1810 527 -113 15 -213 18 -610
+18 -476 0 -517 -2 -795 -41 -148 -21 -389 -68 -559 -110 -185 -45 -259 -46
+-344 -3 -97 48 -152 124 -173 235 -28 153 61 382 175 449 137 80 918 216 1366
+238 162 8 506 6 663 -3z m200 -1520 c630 -74 1239 -260 1745 -533 126 -68 155
+-98 194 -205 18 -47 22 -80 22 -187 1 -128 0 -131 -30 -185 -35 -61 -101 -113
+-167 -131 -81 -22 -129 -8 -363 104 -530 253 -934 372 -1486 434 -215 24 -714
+24 -923 0 -259 -30 -489 -74 -718 -138 -167 -46 -229 -49 -302 -15 -55 25
+-119 90 -141 142 -53 126 0 375 102 476 41 42 109 67 309 117 301 75 585 120
+920 145 28 2 187 2 355 1 231 -3 348 -9 483 -25z"
+                />
+              </g>
+            </svg>
           </figure>
 
           <a href="https://spotify-1-seven.vercel.app/">
@@ -260,11 +298,11 @@
       <!-- Heading -->
       <!-- Heading -->
       <div class="flex flex-col">
-        <h3
+        <h6
           class="from-neutral-500 font-light text-lg sm:text-sm md:text-lg lg:text-lg xl:text-sm"
         >
           connection
-        </h3>
+        </h6>
 
         <h1
           split-by="letter"
@@ -290,10 +328,8 @@
 </template>
 
 <script>
-import { byLetter, byWord } from '../utils/splitting'
-
 export default {
-  name: 'About',
+  name: 'Home',
   transition: {
     appear: true,
     css: false,
@@ -347,139 +383,17 @@ export default {
         front: require('../assets/images/icons/icon02.svg'),
         back: require('../assets/images/icons/icon03.svg'),
         ux: require('../assets/images/icons/icon04.svg'),
-        coins: require('../assets/images/icons/coins.png'),
-        spotify: require('../assets/images/icons/spotify.png'),
+        coins: require('../assets/images/icons/coins.svg'),
+        spotify: require('../assets/images/icons/spotify.svg'),
       },
       words: ['design', 'develop', 'innovate', 'create'],
     }
   },
   mounted() {
-    // this.horizontalSnap()
-    this.splitting()
-    this.typing()
-    // this.drawing()
     this.beforeEnter()
     this.enter()
   },
   methods: {
-    // Section Snapping
-    horizontalSnap() {
-      const gsap = this.$gsap
-      const sections = gsap.utils.toArray('.panel')
-
-      gsap.to(sections, {
-        yPercent: -100 * (sections.length - 1),
-        ease: 'none',
-        scrollTrigger: {
-          trigger: '.contain',
-          pin: true,
-          scrub: 1,
-          snap: 1 / (sections.length - 1),
-          // base vertical scrolling on how wide the container is so it feels more natural.
-          end: '+=3500',
-        },
-      })
-    },
-    // Text Splitting
-    splitting() {
-      const splitTargets = document.querySelectorAll('[split-by]')
-
-      splitTargets.forEach((node) => {
-        const type = node.getAttribute('split-by')
-        let nodes = null
-
-        if (type === 'letter') {
-          nodes = byLetter(node.innerText)
-        } else if (type === 'word') {
-          nodes = byWord(node.innerText)
-        }
-
-        if (nodes) {
-          node.firstChild.replaceWith(...nodes)
-        }
-      })
-    },
-    // SVG Path Drawing
-    drawing() {
-      const paths = document.querySelectorAll('svg path')
-
-      paths.forEach((path, index) => {
-        path.setAttribute('stroke-dasharray', path.getTotalLength(index))
-        path.setAttribute('stroke-dashoffset', path.getTotalLength(index))
-
-        if (index === 0) {
-          path.innerHTML =
-            `<animate id="a` +
-            index +
-            `" attributeName="stroke-dashoffset" begin="0s" dur="5s" to="0" fill="freeze" />`
-        } else {
-          path.innerHTML =
-            `<animate id="a` +
-            index +
-            `" attributeName="stroke-dashoffset" begin="0s" dur="5s" to="0" fill="freeze" />`
-        }
-      })
-    },
-    blobbing() {},
-    // Tween Timelines
-    tweening() {},
-    // Iterating Blobs
-    typing() {
-      this.$gsap.to('.cursor', {
-        opacity: 0,
-        ease: 'power2.inOut',
-        repeat: -1,
-      })
-
-      const boxTl = this.$gsap.timeline()
-
-      boxTl
-        .to('.box', {
-          duration: 1,
-          width: '17vw',
-          delay: 0.5,
-          ease: 'power4.inOut',
-        })
-        .from('.hi', {
-          duration: 1,
-          y: '7vw',
-          ease: 'power3.out',
-          onComplete: () => masterTl.play(),
-        })
-        .to('.box', {
-          duration: 1,
-          height: '7vw',
-          ease: 'elastic.out',
-        })
-        .to('.box', {
-          duration: 2,
-          autoAlpha: 0.5,
-          yoyo: true,
-          repeat: -1,
-        })
-
-      const masterTl = this.$gsap
-        .timeline({
-          repeat: -1,
-        })
-        .pause()
-
-      this.words.forEach((word) => {
-        const tl = this.$gsap.timeline({
-          repeat: 1,
-          yoyo: true,
-          repeatDelay: 1,
-        })
-        tl.to('.text', {
-          duration: 1,
-          text: word,
-        })
-        masterTl.add(tl)
-      })
-    },
-    staggering() {
-      // const figure = document.querySelectorAll('.figure')
-    },
     beforeEnter() {
       const figure = document.querySelectorAll('.figure')
 

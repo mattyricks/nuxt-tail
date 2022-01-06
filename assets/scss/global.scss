@@ -12,7 +12,7 @@ html {
 
 /* Provide basic, default focus styles.*/
 :focus {
-  outline: 2px dashed var(--green);
+  outline: 2px dashed var(--color--text-secondary);
   outline-offset: 3px;
 }
 /*
@@ -29,7 +29,7 @@ html {
   focus.
 */
 :focus-visible {
-  outline: 2px dashed var(--green);
+  outline: 2px dashed var(--color--text-secondary);
   outline-offset: 3px;
 }
 
@@ -157,7 +157,7 @@ a {
   transition: var(--transition);
   &:hover,
   &:focus {
-    color: var(--green);
+    color: var(--color--text-secondary);
   }
   &.inline-link {
     display: inline-block;
@@ -169,13 +169,13 @@ a {
     &:hover,
     &:focus,
     &:active {
-      color: var(--green);
+      color: var(--color--text-secondary);
       outline: 0;
       &:after {
         width: 100%;
       }
       & > * {
-        color: var(--green) !important;
+        color: var(--color--text-secondary) !important;
         transition: var(--transition);
       }
     }
