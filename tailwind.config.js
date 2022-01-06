@@ -8,8 +8,10 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'hero-pattern': "url('/assets/images/matty-3.png')",
+      colors: {
+        primary: {
+          
+        }
       },
     },
     FontFamily: {

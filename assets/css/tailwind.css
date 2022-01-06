@@ -8,16 +8,16 @@
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 :root {
-  --color--text-primary: #202527;
-  --color--text-secondary: #637279;
-  --color--background: whitesmoke;
-  --color--contrast: whitesmoke;
-  --color--mag-background: #e2dfdf;
+  --color--bg-primary: #d7ccc8;
+  --color--bg-secondary: #fce4ec;
+  --color--text-primary: #263238;
+  --color--text-secondary: #ff9e80;
 }
 :root[dark] {
-  --color--mag-background: #2c3235;
-  --color--text-primary: #dfdad8;
-  --color--background: #202527;
+  --color--bg-primary: #000a12;
+  --color--bg-secondary: #fce4ec;
+  --color--text-primary: #263238;
+  --color--text-secondary: #ff9e80;
 }
 
 /* Dataset Manipulation */
@@ -165,7 +165,7 @@ word-animation {
 
 /* Gitty Kitty */
 .github-corner {
-  fill: CanvasText;
+  fill: #121212;
   color: Canvas;
   height: 100%;
   &:hover .octo-arm {
@@ -201,11 +201,7 @@ word-animation {
 .still-blob {
   height: 100px;
   width: 100px;
-  background: linear-gradient(
-    180deg,
-    rgba(47, 184, 255, 0.42) 31.77%,
-    #5c9df1 100%
-  );
+  background: linear-gradient(180deg, #6200ee, #03dac6 100%);
   filter: blur(30px);
   transition: 0.2s ease-in cubic-bezier(0.07, 0.8, 0.16, 1);
   border-radius: 100%;
@@ -214,33 +210,12 @@ word-animation {
 .still-blob:hover {
   height: 100px;
   width: 100px;
-  background: transparent;
+  border-color: 1px dashed #bb86fc;
+  background: linear-gradient(120deg, #cf6679, #fff 100%);
   box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.6),
-    inset 100px 100px 0 0px #fa709a, inset 200px 200px 0 0px #784ba8,
+    inset 100px 100px 0 0px #fa709a, inset 200px 200px 0 0px var(--glow-color),
     inset 300px 300px 0 0px #2b86c5;
+
   filter: blur(0);
   transition: 0.3s ease;
-}
-
-.blob-two {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background: linear-gradient(
-    180deg,
-    rgba(47, 184, 255, 0.42) 31.77%,
-    #5c9df1 100%
-  );
-  mix-blend-mode: color-burn;
-  animation: move 12s infinite alternate-reverse;
-  transition: 1s cubic-bezier(-0.07, -0.8, -0.16, -1);
-  filter: blur(30px);
-}
-.blob-two:hover {
-  filter: blur(0);
-  width: 320px;
-  height: 320px;
-  box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.6),
-    inset 100px 100px 0 0px #fa709a, inset 200px 200px 0 0px #784ba8,
-    inset 300px 300px 0 0px #2b86c5;
 }

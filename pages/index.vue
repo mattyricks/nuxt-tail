@@ -2,8 +2,6 @@
   <div class="h-screen w-screen px-6">
     <!-- About Intro -->
     <section class="flex flex-col items-center justify-center px-12">
-      <!-- Blob -->
-      <div class="blob float-right"></div>
       <!-- Panel 1 -->
       <div class="flex flex-col">
         <!-- Heading -->
@@ -201,20 +199,44 @@
       </div>
 
       <!-- Icons -->
-      <div class="flex flex-col items-stretch justify-between px-10">
-        <div class="figure flex flex-row justify-between border p-2">
+      <div class="w-full flex flex-col items-evenly justify-evenly px-10">
+        <div class="figure flex justify-between items-center border-b-2">
           <figcaption class="flex flex-col justify-between">
             <span class="text-sm font-light">01</span>
-            <h4 class="text-sm font-thin">TRACKING EXPENSES</h4>
+            <h4 class="font-thin text-xs sm:text-sm">TRACKING FUNDS</h4>
+          </figcaption>
+
+          <figure class="self-center mr-3">
+            <img class="h-10 w-8 object-contain" :src="icons.coins" />
+          </figure>
+
+          <a href="https://pensive-jackson-2a7810.netlify.app">
+            <svg
+              class="h-3 w-4 justify-self-center"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 10 10"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M7.31 1.57H.56V0H10v9.44H8.43V2.7L1.1 10 0 8.89l7.31-7.32z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="figure flex justify-between items-center border-b-2">
+          <figcaption class="flex flex-col justify-between">
+            <span class="text-sm font-light">02</span>
+            <h4 class="font-thin text-xs sm:text-sm">SPOTIFY OAUTH</h4>
           </figcaption>
 
           <figure class="self-center">
-            <img
-              class="h-15 w-12 object-contain relative basis-1/4 self-center"
-              :src="icons.coins"
-            />
+            <img class="h-10 w-8 object-contain" :src="icons.spotify" />
           </figure>
-          <a href="https://pensive-jackson-2a7810.netlify.app">
+
+          <a href="https://spotify-1-seven.vercel.app/">
             <svg
               class="case-study-list-item__icon h-3 w-4 self-center"
               xmlns="http://www.w3.org/2000/svg"
@@ -229,29 +251,8 @@
             </svg>
           </a>
         </div>
-
-        <div class="figure flex flex-row justify-between border p-2">
-          <figcaption class="flex flex-col justify-between">
-            <span class="text-sm font-light">??</span>
-            <h4 class="text-sm font-thin">???</h4>
-          </figcaption>
-
-          <figure></figure>
-
-          <svg
-            class="case-study-list-item__icon h-3 w-4 self-center"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 10 10"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M7.31 1.57H.56V0H10v9.44H8.43V2.7L1.1 10 0 8.89l7.31-7.32z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-        </div>
       </div>
+      <!--  -->
     </section>
 
     <!-- Ideas Section -->
@@ -499,8 +500,8 @@ export default {
         duration: 1.5,
         ease: 'power2.inOut',
         onComplete: done,
-        stagger: 0.5,
-        delay: 0.5,
+        stagger: 0.3,
+        delay: 0.3,
       })
     },
   },
