@@ -65,16 +65,17 @@
         <div class="col">
           <div class="figure">
             <figcaption class="self-center">
-              <span class="text-sm font-light mb-3">01</span>
+              <span class="text-sm font-light">01</span>
             </figcaption>
 
             <figure
-              class="still-blob flex flex-col items-center justify-center self-end"
+              class="still-blob flex flex-col items-center justify-center"
             >
-              <h4 class="text-sm font-thin">UI DESIGN</h4>
+              <h4 class="text-sm font-light">FRONT END</h4>
+
               <img
-                class="h-15 w-12 object-contain relative basis-1/4 self-center"
-                :src="icons.ui"
+                class="h-15 w-12 object-contain basis-1/4 self-center"
+                :src="icons.front"
               />
             </figure>
           </div>
@@ -85,13 +86,12 @@
             </figcaption>
 
             <figure
-              class="gsap-figure still-blob flex flex-col items-center justify-center"
+              class="still-blob flex flex-col items-center justify-center self-end"
             >
-              <h4 class="text-sm font-thin">FRONT END</h4>
-
+              <h4 class="text-sm font-light">UI DESIGN</h4>
               <img
-                class="h-15 w-12 object-contain basis-1/4 self-center"
-                :src="icons.front"
+                class="h-15 w-12 object-contain relative basis-1/4 self-center"
+                :src="icons.ui"
               />
             </figure>
           </div>
@@ -104,9 +104,9 @@
             </figcaption>
 
             <figure
-              class="gsap-figure still-blob p-3 flex flex-col items-center justify-center"
+              class="still-blob flex flex-col items-center justify-center"
             >
-              <h4 class="text-sm font-thin">BACK END</h4>
+              <h4 class="text-sm font-light">BACK END</h4>
 
               <img
                 class="h-15 w-12 object-contain basis-1/4 self-center"
@@ -123,7 +123,7 @@
             <figure
               class="gsap-figure still-blob flex flex-col items-center justify-center"
             >
-              <h4 class="text-sm font-thin">UX DESIGN</h4>
+              <h4 class="text-sm font-light">UX DESIGN</h4>
               <img
                 class="h-15 w-12 object-contain relative basis-1/4 self-center"
                 :src="icons.ux"
