@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto">
+  <div class="">
     <header class="py-3 pl-5">
       <Navigation />
     </header>

@@ -7,7 +7,6 @@
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
-
 :root {
   --color--text-primary: #202527;
   --color--text-secondary: #637279;
@@ -164,12 +163,6 @@ word-animation {
   }
 }
 
-@keyframes moves {
-  100% {
-    offset-path: path('M 0 100 Q 100 200 200 100 Q 300 0 400 100');
-  }
-}
-
 /* Gitty Kitty */
 .github-corner {
   fill: CanvasText;
@@ -206,8 +199,8 @@ word-animation {
 }
 
 .still-blob {
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 50px;
   background: linear-gradient(
     180deg,
     rgba(47, 184, 255, 0.42) 31.77%,
@@ -220,8 +213,8 @@ word-animation {
   filter: blur(30px);
 }
 .still-blob:hover {
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 50px;
   background: transparent;
   box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.6),
     inset 100px 100px 0 0px #fa709a, inset 200px 200px 0 0px #784ba8,
@@ -251,22 +244,4 @@ word-animation {
   box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.6),
     inset 100px 100px 0 0px #fa709a, inset 200px 200px 0 0px #784ba8,
     inset 300px 300px 0 0px #2b86c5;
-}
-
-.still-rect {
-  height: 100px;
-  width: 75vw;
-
-  transition: 0.2s ease-in cubic-bezier(0.07, 0.8, 0.16, 1);
-  filter: blur(30px);
-}
-.still-rect:hover {
-  height: 100px;
-  width: 75vw;
-  background: transparent;
-  box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.6),
-    inset 100px 100px 0 0px #fa709a, inset 200px 200px 0 0px #784ba8,
-    inset 300px 300px 0 0px #2b86c5;
-  transition: 0.3s ease;
-  filter: blur(0);
 }

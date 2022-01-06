@@ -33,7 +33,7 @@
         <div class="top-0 left-0">
           <select
             v-model="$colorMode.preference"
-            class="bg-slate-400 h-20 w-20 rounded-full text-center"
+            class="bg-slate-400 h-10 w-20 rounded-full text-center"
           >
             <option value="system">System</option>
             <option value="light">Light</option>

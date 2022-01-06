@@ -1,7 +1,7 @@
 <template>
-  <div class="h-screen w-screen px-3">
+  <div class="h-screen w-screen px-6">
     <!-- About Intro -->
-    <section class="flex flex-col items-center justify-center px-8">
+    <section class="flex flex-col items-center justify-center px-12">
       <!-- Blob -->
       <div class="blob float-right"></div>
       <!-- Panel 1 -->
@@ -28,9 +28,13 @@
             <br />
           </h3>
           <!-- Paragraph -->
-          <p class="text-base font-light w-1/2">
-            I'm a result-driven and customer-focused front-end developer
-            specializing in building interfaces and application of web.
+          <p class="text-sm font-normal w-full">
+            I'm motivated by the results gained through prioritizing customers
+            needs, so I strive to build web applications that mirror a specific
+            vision. It would be a gift to come into sync with a team of
+            individuals creating meaningful content with consideration of the
+            lasting impact over the long-term. People that are driven by
+            solutions architecture. Simply, looking for a good fit.
           </p>
           <!-- Connect Link -->
           <a
@@ -44,113 +48,117 @@
     </section>
 
     <!-- Skills ----------------------------- -->
-    <section class="flex flex-col px-8">
+    <section class="flex flex-col px-12">
       <!-- Heading -->
       <div class="self-start">
         <h6 class="font-light tracking-wide">skill</h6>
 
         <!-- Sub Heading -->
-        <p class="font-light text-sm py-3">
+        <p class="font-light text-sm p-3">
           I like learning new things. Here are a few topics I am proficient
           with.
         </p>
       </div>
 
       <!-- Icons -->
-      <div class="flex items-stretch justify-between">
-        <div class="figure">
-          <figcaption class="self-center">
-            <span class="text-sm font-light mb-3">01</span>
-          </figcaption>
+      <div class="flex items-center justify-around">
+        <div class="col">
+          <div class="figure">
+            <figcaption class="self-center">
+              <span class="text-sm font-light mb-3">01</span>
+            </figcaption>
 
-          <figure
-            class="still-blob flex flex-col items-center justify-center self-end"
-          >
-            <h4 class="text-sm font-thin">UI DESIGN</h4>
-            <img
-              class="h-15 w-12 object-contain relative basis-1/4 self-center"
-              :src="icons.ui"
-            />
-          </figure>
+            <figure
+              class="still-blob flex flex-col items-center justify-center self-end"
+            >
+              <h4 class="text-sm font-thin">UI DESIGN</h4>
+              <img
+                class="h-15 w-12 object-contain relative basis-1/4 self-center"
+                :src="icons.ui"
+              />
+            </figure>
+          </div>
+
+          <div class="figure">
+            <figcaption class="self-center">
+              <span class="text-sm font-light">02</span>
+            </figcaption>
+
+            <figure
+              class="gsap-figure still-blob flex flex-col items-center justify-center"
+            >
+              <h4 class="text-sm font-thin">FRONT END</h4>
+
+              <img
+                class="h-15 w-12 object-contain basis-1/4 self-center"
+                :src="icons.front"
+              />
+            </figure>
+          </div>
         </div>
 
-        <div class="figure">
-          <figcaption class="self-center">
-            <span class="text-sm font-light">02</span>
-          </figcaption>
+        <div class="col">
+          <div class="figure">
+            <figcaption class="self-center">
+              <span class="text-sm font-light">03</span>
+            </figcaption>
 
-          <figure
-            class="gsap-figure still-blob flex flex-col items-center justify-center"
-          >
-            <h4 class="text-sm font-thin">FRONT END</h4>
+            <figure
+              class="gsap-figure still-blob p-3 flex flex-col items-center justify-center"
+            >
+              <h4 class="text-sm font-thin">BACK END</h4>
 
-            <img
-              class="h-15 w-12 object-contain basis-1/4 self-center"
-              :src="icons.front"
-            />
-          </figure>
-        </div>
+              <img
+                class="h-15 w-12 object-contain basis-1/4 self-center"
+                :src="icons.back"
+              />
+            </figure>
+          </div>
 
-        <div class="figure">
-          <figcaption class="self-center">
-            <span class="text-sm font-light">03</span>
-          </figcaption>
+          <div class="figure">
+            <figcaption class="self-center">
+              <span class="text-sm font-light">04</span>
+            </figcaption>
 
-          <figure
-            class="gsap-figure still-blob p-3 flex flex-col items-center justify-center"
-          >
-            <h4 class="text-sm font-thin">BACK END</h4>
-
-            <img
-              class="h-15 w-12 object-contain basis-1/4 self-center"
-              :src="icons.back"
-            />
-          </figure>
-        </div>
-
-        <div class="figure">
-          <figcaption class="self-center">
-            <span class="text-sm font-light">04</span>
-          </figcaption>
-
-          <figure
-            class="gsap-figure still-blob flex flex-col items-center justify-center"
-          >
-            <h4 class="text-sm font-thin">UX DESIGN</h4>
-            <img
-              class="h-15 w-12 object-contain relative basis-1/4 self-center"
-              :src="icons.ux"
-            />
-          </figure>
+            <figure
+              class="gsap-figure still-blob flex flex-col items-center justify-center"
+            >
+              <h4 class="text-sm font-thin">UX DESIGN</h4>
+              <img
+                class="h-15 w-12 object-contain relative basis-1/4 self-center"
+                :src="icons.ux"
+              />
+            </figure>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Technology -->
-    <section class="flex flex-col px-8">
+    <section class="flex flex-col px-12">
       <!-- Heading -->
       <div class="self-start">
         <h6 class="font-light tracking-wide">technology</h6>
 
-        <p class="font-light text-sm py-3">
+        <p class="font-light text-sm p-3">
           Some tech I'm currently working with.
         </p>
       </div>
 
       <!-- Icons -->
-      <div class="flex flex-col">
-        <div class="flex items-stretch justify-between">
-          <ul v-for="(icon, i) in logos.left" :key="i" class="">
+      <div class="flex items-center justify-around">
+        <div class="flex flex-col items-stretch justify-between">
+          <ul v-for="(icon, i) in logos.left" :key="i" class="flex">
             <div class="figure">
               <figcaption class="self-center">
                 <span class="text-sm font-light mb-3">{{ i }}</span>
               </figcaption>
 
               <figure
-                class="still-blob flex flex-col items-center justify-center self-end"
+                class="still-blob flex items-center justify-center self-end"
               >
                 <img
-                  class="h-32 w-32 object-contain relative basis-1/4 self-center"
+                  class="h-16 w-16 object-contain relative basis-1/4 self-center"
                   :src="icon"
                 />
               </figure>
@@ -158,7 +166,7 @@
           </ul>
         </div>
 
-        <div class="flex items-stretch justify-between">
+        <div class="flex flex-col items-stretch justify-between">
           <ul v-for="(icon, i) in logos.right" :key="i" class="">
             <div class="figure">
               <figcaption class="self-center">
@@ -166,7 +174,7 @@
               </figcaption>
 
               <figure
-                class="still-blob flex flex-col items-center justify-center self-end"
+                class="still-blob flex items-center justify-center self-end"
               >
                 <img
                   class="h-32 w-32 object-contain relative basis-1/4 self-center"
@@ -180,13 +188,16 @@
     </section>
 
     <!-- Projects ------------------- -->
-    <section class="flex flex-col px-8">
+    <section class="flex flex-col px-12">
       <!-- Heading -->
       <div class="self-start">
         <h6 class="font-light tracking-wide">work</h6>
 
         <!-- Sub Heading -->
-        <p class="font-light text-sm py-3">A couple noteworthy projects.</p>
+        <p class="font-light text-sm p-3">
+          I am a bit busy finishing up an apprenticeship (01/2022) but I'll be
+          adding so much more to this section throughout the month. Stay tuned!
+        </p>
       </div>
 
       <!-- Icons -->
@@ -194,42 +205,38 @@
         <div class="figure flex flex-row justify-between border p-2">
           <figcaption class="flex flex-col justify-between">
             <span class="text-sm font-light">01</span>
-            <h4 class="text-sm font-thin">SPOTIFY</h4>
+            <h4 class="text-sm font-thin">TRACKING EXPENSES</h4>
           </figcaption>
 
-          <figure class="">
-            <img
-              class="h-15 w-12 object-contain relative basis-1/4 self-center bg-transparent"
-              :src="icons.spotify"
-            />
-          </figure>
-
-          <svg
-            class="case-study-list-item__icon h-3 w-4 self-center"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 10 10"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M7.31 1.57H.56V0H10v9.44H8.43V2.7L1.1 10 0 8.89l7.31-7.32z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-        </div>
-
-        <div class="figure flex flex-row justify-between border p-2">
-          <figcaption class="flex flex-col justify-between">
-            <span class="text-sm font-light">02</span>
-            <h4 class="text-sm font-thin">BANKING</h4>
-          </figcaption>
-
-          <figure class="">
+          <figure class="self-center">
             <img
               class="h-15 w-12 object-contain relative basis-1/4 self-center"
               :src="icons.coins"
             />
           </figure>
+          <a href="https://pensive-jackson-2a7810.netlify.app">
+            <svg
+              class="case-study-list-item__icon h-3 w-4 self-center"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 10 10"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M7.31 1.57H.56V0H10v9.44H8.43V2.7L1.1 10 0 8.89l7.31-7.32z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="figure flex flex-row justify-between border p-2">
+          <figcaption class="flex flex-col justify-between">
+            <span class="text-sm font-light">??</span>
+            <h4 class="text-sm font-thin">???</h4>
+          </figcaption>
+
+          <figure></figure>
 
           <svg
             class="case-study-list-item__icon h-3 w-4 self-center"
@@ -248,7 +255,7 @@
     </section>
 
     <!-- Ideas Section -->
-    <section class="flex flex-col px-8">
+    <section class="flex flex-col px-12">
       <!-- Heading -->
       <!-- Heading -->
       <div class="flex flex-col">
@@ -268,29 +275,15 @@
         </h1>
 
         <!-- Paragraph -->
-        <p class="text-base font-light w-1/2">
+        <p class="text-sm font-normal w-full">
           My inbox is always open, whether you have a question or just want to
           say hi, I’ll try my best to get back to you!
         </p>
         <!-- Connect Link -->
-        <a
-          class="text-sm py-6"
-          href="https://www.linkedin.com/in/matthew-ricklefs-13284a1b9/"
+        <a class="text-sm py-6" href="mailto:ricklefsmatthew1003@gmail.com"
+          >say hello</a
         >
-          say hello
-        </a>
       </div>
-
-      <!-- Social Links Needed -->
-      <!-- <ul>
-        {socialMedia && socialMedia.map(({ name, url }, i) => (
-        <li key="{i}">
-          <a href="{url}" aria-label="{name}">
-            <Icon name="{name}" />
-          </a>
-        </li>
-        ))}
-      </ul> -->
     </section>
   </div>
 </template>
@@ -361,11 +354,11 @@ export default {
   },
   mounted() {
     // this.horizontalSnap()
-    // this.splitting()
-    // this.typing()
+    this.splitting()
+    this.typing()
     // this.drawing()
-    // this.beforeEnter()
-    // this.enter()
+    this.beforeEnter()
+    this.enter()
   },
   methods: {
     // Section Snapping
