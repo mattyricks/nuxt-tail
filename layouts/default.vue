@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="max-h-screen overscroll-none">
     <header class="py-3 pl-5">
       <Navigation />
     </header>
