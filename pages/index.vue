@@ -56,12 +56,11 @@
       </div>
 
       <!-- Selfie -->
-      <div class="p-3">
+      <div class="">
         <svg
+          class="xl:hidden"
           version="1.0"
           xmlns="http://www.w3.org/2000/svg"
-          width="300.000000pt"
-          height="200.000000pt"
           viewBox="0 0 300.000000 200.000000"
           preserveAspectRatio="xMidYMid meet"
         >
