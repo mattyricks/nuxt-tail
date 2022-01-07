@@ -32,17 +32,20 @@
           <p class="text-sm font-normal w-full will-change-transform">
             I'm motivated by the results gained through prioritizing customers
             needs, so I strive to build web applications that mirror a specific
-            vision. It would be a gift to come into sync with a team of
-            individuals creating meaningful content with consideration of the
-            lasting impact over the long-term. People that are driven by
-            solutions architecture. Simply, looking for a good fit.
+            vision. I want to personalize the imagination of another person,
+            vicariously through my implementation of content design. I want to
+            consider lasting impacts and begin creating foresight ahead of time.
+            I want to be a part of something greater while standing beside
+            individuals driven by solutions architecture. Simply, looking for a
+            good fit.
           </p>
           <!-- Connect Link -->
+
           <a
             class="text-sm py-6"
             href="https://www.linkedin.com/in/matthew-ricklefs-13284a1b9/"
           >
-            connect
+            let's connect
           </a>
         </div>
       </div>
@@ -75,7 +78,7 @@
             <figure
               class="still-blob flex flex-col items-center justify-center"
             >
-              <h4 class="text-xs font-light p-1">FRONT END</h4>
+              <h4 class="text-xs font-light p-1 text-[#121212]">FRONT END</h4>
 
               <img
                 class="h-15 w-12 object-contain basis-1/4 self-center"
@@ -92,7 +95,7 @@
             <figure
               class="still-blob flex flex-col items-center justify-center self-end"
             >
-              <h4 class="text-xs font-light p-1">UI DESIGN</h4>
+              <h4 class="text-xs font-light p-1 text-[#121212]">UI DESIGN</h4>
               <img
                 class="h-15 w-12 object-contain relative basis-1/4 self-center"
                 :src="icons.ui"
@@ -110,7 +113,7 @@
             <figure
               class="still-blob flex flex-col items-center justify-center"
             >
-              <h4 class="text-xs font-light p-1">BACK END</h4>
+              <h4 class="text-xs font-light p-1 text-[#121212]">BACK END</h4>
 
               <img
                 class="h-15 w-12 object-contain basis-1/4 self-center"
@@ -127,7 +130,7 @@
             <figure
               class="gsap-figure still-blob flex flex-col items-center justify-center"
             >
-              <h4 class="text-xs font-light p-1">UX DESIGN</h4>
+              <h4 class="text-xs font-light p-1 text-[#121212]">UX DESIGN</h4>
               <img
                 class="h-15 w-12 object-contain relative basis-1/4 self-center"
                 :src="icons.ux"
