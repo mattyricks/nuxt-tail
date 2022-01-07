@@ -1,4 +1,5 @@
 module.exports = {
+  mode: 'jit',
   content: [
     './components/**/*.{js,vue,ts}',
     './layouts/**/*.vue',
@@ -9,9 +10,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          
-        }
+        primary: {},
       },
     },
     FontFamily: {

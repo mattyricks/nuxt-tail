@@ -2,15 +2,9 @@
   <div class="max-h-screen overscroll-none">
     <header class="py-3 pl-5">
       <Navigation />
-    </header>
-
-    <aside>
       <Aside />
-    </aside>
-
-    <aside>
       <RightAside />
-    </aside>
+    </header>
 
     <div class="mx-auto">
       <nuxt />
