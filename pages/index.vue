@@ -1,11 +1,14 @@
 <template>
-  <div class="h-screen w-screen px-6">
+  <div class="h-screen w-screen px-16">
+    <!-- TODO: Must figure out a way to implement a proper responsive layout. The rows and columns are not cooperating with the breakpoints I need the lg and xl screens to be rows and the md, sm, xs devices to be columns -->
     <!-- About Intro -->
     <section class="flex flex-col items-center justify-center px-12">
       <!-- Panel 1 -->
-      <div class="flex flex-col">
+      <div
+        class="flex flex-col max-w-xl self-start xl:self-center xl:max-w-3xl"
+      >
         <!-- Heading -->
-        <div class="flex flex-col">
+        <div>
           <h3
             class="from-neutral-500 font-light text-sm sm:text-sm md:text-sm lg:text-sm xl:text-sm"
           >
@@ -14,19 +17,19 @@
           <h1
             split-by="letter"
             letter-animation="hover"
-            class="font-bold text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl py-3"
+            class="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl py-3"
           >
             Matthew Ricklefs
             <br />
           </h1>
           <h3
-            class="from-neutral-500 text-[#ff9e80] text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl py-3 font-serif"
+            class="from-neutral-500 text-[#ff9e80] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl py-3 font-serif"
           >
             I produce content for the web.
             <br />
           </h3>
           <!-- Paragraph -->
-          <p class="text-sm font-normal w-full">
+          <p class="text-sm font-normal w-full will-change-transform">
             I'm motivated by the results gained through prioritizing customers
             needs, so I strive to build web applications that mirror a specific
             vision. It would be a gift to come into sync with a team of
@@ -48,7 +51,7 @@
     <!-- Skills ----------------------------- -->
     <section class="flex flex-col px-12">
       <!-- Heading -->
-      <div class="self-start">
+      <div>
         <h6 class="font-light font-serif tracking-wide">skill</h6>
 
         <!-- Sub Heading -->
@@ -58,10 +61,13 @@
         </p>
       </div>
 
-      <!-- Icons -->
-      <div class="flex items-center justify-around">
-        <div class="col">
-          <div class="figure">
+      <!-- Panel 2 -->
+      <div
+        class="flex xl:flex-row lg:flex-row md:flex-col sm:flex-col flex-col justify-evenly items-center"
+      >
+        <!-- Icons -->
+        <div class="flex gap-12">
+          <div class="figure max-w-md">
             <figcaption class="self-center">
               <span class="text-sm font-light">01</span>
             </figcaption>
@@ -69,7 +75,7 @@
             <figure
               class="still-blob flex flex-col items-center justify-center"
             >
-              <h4 class="text-sm font-light">FRONT END</h4>
+              <h4 class="text-xs font-light p-1">FRONT END</h4>
 
               <img
                 class="h-15 w-12 object-contain basis-1/4 self-center"
@@ -78,7 +84,7 @@
             </figure>
           </div>
 
-          <div class="figure">
+          <div class="figure max-w-md">
             <figcaption class="self-center">
               <span class="text-sm font-light">02</span>
             </figcaption>
@@ -86,7 +92,7 @@
             <figure
               class="still-blob flex flex-col items-center justify-center self-end"
             >
-              <h4 class="text-sm font-light">UI DESIGN</h4>
+              <h4 class="text-xs font-light p-1">UI DESIGN</h4>
               <img
                 class="h-15 w-12 object-contain relative basis-1/4 self-center"
                 :src="icons.ui"
@@ -95,8 +101,8 @@
           </div>
         </div>
 
-        <div class="col">
-          <div class="figure">
+        <div class="flex gap-12">
+          <div class="figure max-w-md">
             <figcaption class="self-center">
               <span class="text-sm font-light">03</span>
             </figcaption>
@@ -104,7 +110,7 @@
             <figure
               class="still-blob flex flex-col items-center justify-center"
             >
-              <h4 class="text-sm font-light">BACK END</h4>
+              <h4 class="text-xs font-light p-1">BACK END</h4>
 
               <img
                 class="h-15 w-12 object-contain basis-1/4 self-center"
@@ -113,7 +119,7 @@
             </figure>
           </div>
 
-          <div class="figure">
+          <div class="figure max-w-md">
             <figcaption class="self-center">
               <span class="text-sm font-light">04</span>
             </figcaption>
@@ -121,7 +127,7 @@
             <figure
               class="gsap-figure still-blob flex flex-col items-center justify-center"
             >
-              <h4 class="text-sm font-light">UX DESIGN</h4>
+              <h4 class="text-xs font-light p-1">UX DESIGN</h4>
               <img
                 class="h-15 w-12 object-contain relative basis-1/4 self-center"
                 :src="icons.ux"
@@ -135,7 +141,7 @@
     <!-- Technology -->
     <section class="flex flex-col px-12">
       <!-- Heading -->
-      <div class="self-start">
+      <div>
         <h6 class="font-light font-serif tracking-wide">technology</h6>
 
         <p class="font-light text-sm p-3">
@@ -143,10 +149,11 @@
         </p>
       </div>
 
-      <!-- Icons -->
-      <div class="flex items-center justify-around">
-        <div class="flex flex-col items-stretch justify-between">
-          <ul v-for="(icon, i) in logos.left" :key="i" class="flex">
+      <!-- Panel 3 -->
+      <div class="flex xl:flex-row lg:flex-row justify-evenly items-center">
+        <!-- Icons -->
+        <div class="flex flex-col lg:flex-row xl:flex-row gap-6">
+          <ul v-for="(icon, i) in logos.left" :key="i">
             <div class="figure">
               <figcaption class="self-center">
                 <span class="text-sm font-light mb-3">{{ i }}</span>
@@ -156,7 +163,7 @@
                 class="still-blob flex items-center justify-center self-end"
               >
                 <img
-                  class="h-16 w-16 object-contain relative basis-1/4 self-center"
+                  class="h-14 w-14 sm:h-14 sm:w-14 md:h-16 md:h-16 object-contain relative basis-1/4 self-center"
                   :src="icon"
                 />
               </figure>
@@ -164,9 +171,9 @@
           </ul>
         </div>
 
-        <div class="flex flex-col items-stretch justify-between">
-          <ul v-for="(icon, i) in logos.right" :key="i" class="">
-            <div class="figure">
+        <div class="flex flex-col lg:flex-row xl:flex-row gap-6">
+          <ul v-for="(icon, i) in logos.right" :key="i">
+            <li class="figure">
               <figcaption class="self-center">
                 <span class="text-sm font-light mb-3">{{ i }}</span>
               </figcaption>
@@ -175,18 +182,20 @@
                 class="still-blob flex items-center justify-center self-end"
               >
                 <img
-                  class="h-32 w-32 object-contain relative basis-1/4 self-center"
+                  class="h-14 w-14 sm:h-14 sm:w-14 md:h-16 md:h-16 object-contain relative basis-1/4 self-center"
                   :src="icon"
                 />
               </figure>
-            </div>
+            </li>
           </ul>
         </div>
       </div>
     </section>
 
     <!-- Projects ------------------- -->
-    <section class="flex flex-col px-12">
+    <section
+      class="flex flex-col max-w-md self-start px-12 sm:px-4 md:self-center md:max-w-3xl sm:max-w-3xl"
+    >
       <!-- Heading -->
       <div class="self-start">
         <h6 class="font-light font-serif tracking-wide">work</h6>
@@ -200,7 +209,7 @@
       </div>
 
       <!-- Icons -->
-      <div class="w-full flex flex-col items-evenly justify-evenly px-10">
+      <div class="w-full min-h-max flex flex-col items-evenly justify-evenly">
         <div class="figure flex justify-between items-center border-b-2">
           <figcaption class="flex flex-col justify-between">
             <span class="text-sm font-light">01</span>
@@ -364,7 +373,9 @@ m-60 -2113 c1032 -60 1963 -298 2860 -730 157 -75 216 -124 261 -212 28 -56
     </section>
 
     <!-- Ideas Section -->
-    <section class="flex flex-col px-12">
+    <section
+      class="flex flex-col max-w-md self-start px-12 sm:px-4 md:self-center md:max-w-3xl"
+    >
       <!-- Heading -->
       <!-- Heading -->
       <div class="flex flex-col">
@@ -375,6 +386,8 @@ m-60 -2113 c1032 -60 1963 -298 2860 -730 157 -75 216 -124 261 -212 28 -56
         </h6>
 
         <h1
+          split-by="letter"
+          letter-animation="hover"
           class="text-[#ff9e80] font-light font-thin font-serif text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl py-3"
         >
           What's next?
@@ -414,7 +427,7 @@ export default {
         y: 0,
         scale: 1,
         opacity: 1,
-        duration: 1.5,
+        duration: 0.75,
         ease: 'power2.inOut',
         onComplete: done,
         stagger: 0.5,
@@ -423,15 +436,6 @@ export default {
   },
   data() {
     return {
-      images: {
-        imageOne: require('../assets/images/matty6.jpeg'),
-        imageThree: require('../assets/images/logos/logo.png'),
-        imageFour: require('../assets/images/logos/coder-zen.png'),
-        imageFive: require('../assets/images/matty-2.png'),
-        imageSix: require('../assets/images/matty3.png'),
-        quoteLeft: require('../assets/images/tween/quote-l.png'),
-        quoteRight: require('../assets/images/tween/quote-r.png'),
-      },
       logos: {
         left: {
           vue: require('../assets/images/logos/logo.png'),
@@ -454,12 +458,11 @@ export default {
         coins: require('../assets/images/icons/coins.svg'),
         spotify: require('../assets/images/icons/spotify.svg'),
       },
-      words: ['design', 'develop', 'innovate', 'create'],
     }
   },
   mounted() {
-    this.beforeEnter()
-    this.enter()
+    // this.beforeEnter()
+    // this.enter()
   },
   methods: {
     beforeEnter() {
