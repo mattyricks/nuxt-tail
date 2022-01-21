@@ -6,7 +6,7 @@
       <RightAside />
     </header>
 
-    <div class="mx-auto">
+    <div class="">
       <nuxt />
     </div>
   </div>
@@ -30,6 +30,7 @@ body {
     fill: #121212;
   }
 }
+
 .dark-mode body {
   background-color: #121212;
   color: #fff;

@@ -1,6 +1,4 @@
 export default {
-  target: 'static',
-  components: true,
   head: {
     title: "Matthew's Portfolio",
     htmlAttrs: {
@@ -19,7 +17,9 @@ export default {
     '~assets/scss/global',
     '~assets/scss/variables',
     '~assets/scss/mixins',
+    'vue-preloaders/dist/vue-preloaders.css',
   ],
+  components: true,
   router: {
     middleware: 'pages',
   },
@@ -48,4 +48,8 @@ export default {
     '@nuxtjs/color-mode',
     'nuxt-gsap-module',
   ],
+  plugins: ['~plugins/preloaders.js'],
+  build: {
+    transpile: ['vue-preloaders'],
+  },
 }

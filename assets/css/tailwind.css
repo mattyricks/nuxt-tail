@@ -201,9 +201,10 @@ word-animation {
 .still-blob {
   height: 88px;
   width: 88px;
-  background: linear-gradient(180deg, #6200ee, #03dac6 100%);
-  filter: blur(30px);
+  background: linear-gradient(120deg, #ff9e80, #fff 100%);
+
   transition: 0.3s ease-in cubic-bezier(0.07, 0.8, 0.16, 1);
+  filter: blur(0);
   border-radius: 100%;
   mix-blend-mode: color-dodge;
 }
@@ -211,11 +212,12 @@ word-animation {
   height: 88px;
   width: 88px;
   border-color: 1px dashed #bb86fc;
-  background: linear-gradient(120deg, #ff9e80, #fff 100%);
+  background: linear-gradient(180deg, #6200ee, #03dac6 100%);
+
   box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.6),
     inset 100px 100px 0 0px #fa709a, inset 200px 200px 0 0px var(--glow-color),
     inset 300px 300px 0 0px #2b86c5;
 
-  filter: blur(0);
+  filter: blur(30px);
   transition: 0.3s ease;
 }

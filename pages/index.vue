@@ -3,7 +3,15 @@
     <!-- TODO: Must figure out a way to implement a proper responsive layout. The rows and columns are not cooperating with the breakpoints I need the lg and xl screens to be rows and the md, sm, xs devices to be columns -->
     <!-- About Intro -->
     <section
-      class="flex flex-col md:flex-row lg:flex-row xl:flex-row items-center justify-center px-12"
+      class="
+        flex flex-col
+        md:flex-row
+        lg:flex-row
+        xl:flex-row
+        items-center
+        justify-center
+        px-12
+      "
     >
       <!-- Panel 1 -->
       <div
@@ -12,7 +20,15 @@
         <!-- Heading -->
         <div>
           <h3
-            class="from-neutral-500 font-light text-sm sm:text-sm md:text-sm lg:text-sm xl:text-sm"
+            class="
+              from-neutral-500
+              font-light
+              text-sm
+              sm:text-sm
+              md:text-sm
+              lg:text-sm
+              xl:text-sm
+            "
           >
             hello, my name is
           </h3>
@@ -20,14 +36,31 @@
           <h1
             split-by="letter"
             letter-animation="hover"
-            class="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl py-3"
+            class="
+              font-bold
+              text-3xl
+              sm:text-4xl
+              md:text-5xl
+              lg:text-6xl
+              xl:text-7xl
+              py-3
+            "
           >
             Matthew Ricklefs
             <br />
           </h1>
 
           <h3
-            class="from-neutral-500 text-[#ff9e80] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl py-3 font-serif"
+            class="
+              from-neutral-500
+              text-[#ff9e80] text-2xl
+              sm:text-3xl
+              md:text-4xl
+              lg:text-5xl
+              xl:text-6xl
+              py-3
+              font-serif
+            "
           >
             I produce content for the web.
             <br />
@@ -56,7 +89,7 @@
       </div>
 
       <!-- Selfie -->
-      <div class="">
+      <div>
         <svg
           class="xl:hidden"
           version="1.0"
@@ -65,6 +98,7 @@
           preserveAspectRatio="xMidYMid meet"
         >
           <g
+            class="svg-icon"
             transform="translate(0.000000,200.000000) scale(0.100000,-0.100000)"
             fill="#000000"
             stroke="none"
@@ -276,6 +310,10 @@ m35 -26 c0 -5 -4 -10 -10 -10 -5 0 -10 5 -10 10 0 6 5 10 10 10 6 0 10 -4 10
       </div>
     </section>
 
+    <!-- TODO
+      Start visible, pop out, change color
+      Add the resume via the content API....
+     -->
     <!-- Skills ----------------------------- -->
     <section class="flex flex-col px-12">
       <!-- Heading -->
@@ -284,14 +322,22 @@ m35 -26 c0 -5 -4 -10 -10 -10 -5 0 -10 5 -10 10 0 6 5 10 10 10 6 0 10 -4 10
 
         <!-- Sub Heading -->
         <p class="font-light text-sm p-3">
-          I like learning new things. Here are a few topics I am proficient
-          with.
+          Here are a few topics I am proficient with.
         </p>
       </div>
 
       <!-- Panel 2 -->
       <div
-        class="flex xl:flex-row lg:flex-row md:flex-col sm:flex-col flex-col justify-evenly items-center"
+        class="
+          flex
+          xl:flex-row
+          lg:flex-row
+          md:flex-col
+          sm:flex-col
+          flex-col
+          justify-evenly
+          items-center
+        "
       >
         <!-- Icons -->
         <div class="flex gap-12">
@@ -318,12 +364,18 @@ m35 -26 c0 -5 -4 -10 -10 -10 -5 0 -10 5 -10 10 0 6 5 10 10 10 6 0 10 -4 10
             </figcaption>
 
             <figure
-              class="still-blob flex flex-col items-center justify-center self-end"
+              class="
+                still-blob
+                flex flex-col
+                items-center
+                justify-center
+                self-end
+              "
             >
-              <h4 class="text-xs font-light p-1 text-[#121212]">UI DESIGN</h4>
+              <h4 class="text-xs font-light p-1 text-[#121212]">BACK END</h4>
               <img
                 class="h-15 w-12 object-contain relative basis-1/4 self-center"
-                :src="icons.ui"
+                :src="icons.back"
               />
             </figure>
           </div>
@@ -338,11 +390,11 @@ m35 -26 c0 -5 -4 -10 -10 -10 -5 0 -10 5 -10 10 0 6 5 10 10 10 6 0 10 -4 10
             <figure
               class="still-blob flex flex-col items-center justify-center"
             >
-              <h4 class="text-xs font-light p-1 text-[#121212]">BACK END</h4>
+              <h4 class="text-xs font-light p-1 text-[#121212]">UI DESIGN</h4>
 
               <img
                 class="h-15 w-12 object-contain basis-1/4 self-center"
-                :src="icons.back"
+                :src="icons.ui"
               />
             </figure>
           </div>
@@ -353,7 +405,13 @@ m35 -26 c0 -5 -4 -10 -10 -10 -5 0 -10 5 -10 10 0 6 5 10 10 10 6 0 10 -4 10
             </figcaption>
 
             <figure
-              class="gsap-figure still-blob flex flex-col items-center justify-center"
+              class="
+                still-blob
+                gsap-figure
+                flex flex-col
+                items-center
+                justify-center
+              "
             >
               <h4 class="text-xs font-light p-1 text-[#121212]">UX DESIGN</h4>
               <img
@@ -391,7 +449,17 @@ m35 -26 c0 -5 -4 -10 -10 -10 -5 0 -10 5 -10 10 0 6 5 10 10 10 6 0 10 -4 10
                 class="still-blob flex items-center justify-center self-end"
               >
                 <img
-                  class="h-14 w-14 sm:h-14 sm:w-14 md:h-16 md:h-16 object-contain relative basis-1/4 self-center"
+                  class="
+                    h-14
+                    w-14
+                    sm:h-14 sm:w-14
+                    md:h-16 md:w-16
+                    object-contain
+                    relative
+                    basis-1/4
+                    self-center
+                    fill-black
+                  "
                   :src="icon"
                 />
               </figure>
@@ -410,7 +478,16 @@ m35 -26 c0 -5 -4 -10 -10 -10 -5 0 -10 5 -10 10 0 6 5 10 10 10 6 0 10 -4 10
                 class="still-blob flex items-center justify-center self-end"
               >
                 <img
-                  class="h-14 w-14 sm:h-14 sm:w-14 md:h-16 md:h-16 object-contain relative basis-1/4 self-center"
+                  class="
+                    h-14
+                    w-14
+                    sm:h-14 sm:w-14
+                    md:h-16 md:w-16
+                    object-contain
+                    relative
+                    basis-1/4
+                    self-center
+                  "
                   :src="icon"
                 />
               </figure>
@@ -422,7 +499,15 @@ m35 -26 c0 -5 -4 -10 -10 -10 -5 0 -10 5 -10 10 0 6 5 10 10 10 6 0 10 -4 10
 
     <!-- Projects ------------------- -->
     <section
-      class="flex flex-col max-w-md self-start px-12 sm:px-4 md:self-center md:max-w-3xl sm:max-w-3xl"
+      class="
+        flex flex-col
+        max-w-md
+        self-start
+        px-12
+        sm:px-4
+        md:self-center md:max-w-3xl
+        sm:max-w-3xl
+      "
     >
       <!-- Heading -->
       <div class="self-start">
@@ -438,7 +523,55 @@ m35 -26 c0 -5 -4 -10 -10 -10 -5 0 -10 5 -10 10 0 6 5 10 10 10 6 0 10 -4 10
 
       <!-- Icons -->
       <div class="w-full min-h-max flex flex-col items-evenly justify-evenly">
-        <div class="figure flex justify-between items-center border-b-2">
+        <div class="figure flex justify-between items-center">
+          <figcaption class="flex flex-col justify-between">
+            <span class="text-sm font-light">01</span>
+            <h4 class="font-thin text-xs sm:text-sm">GEOLOCATION</h4>
+          </figcaption>
+
+          <figure class="self-center">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="map-marker-alt"
+              class="
+                svg-inline--fa
+                fa-map-marker-alt fa-w-12
+                svg-icon
+                h-10
+                w-10
+                sm:h-16 sm:w-16
+                md:h-24 md:w-24
+              "
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 384 512"
+            >
+              <path
+                fill="currentColor"
+                d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"
+              ></path>
+            </svg>
+          </figure>
+
+          <a href="https://shrouded-brushlands-38087.herokuapp.com/">
+            <svg
+              class="h-3 w-4 justify-self-center"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 10 10"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M7.31 1.57H.56V0H10v9.44H8.43V2.7L1.1 10 0 8.89l7.31-7.32z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="figure flex justify-between items-center">
           <figcaption class="flex flex-col justify-between">
             <span class="text-sm font-light">01</span>
             <h4 class="font-thin text-xs sm:text-sm">TRACKING FUNDS</h4>
@@ -531,7 +664,7 @@ m35 -26 c0 -5 -4 -10 -10 -10 -5 0 -10 5 -10 10 0 6 5 10 10 10 6 0 10 -4 10
           </a>
         </div>
 
-        <div class="figure flex justify-between items-center border-b-2">
+        <div class="figure flex justify-between items-center">
           <figcaption class="flex flex-col justify-between">
             <span class="text-sm font-light">02</span>
             <h4 class="font-thin text-xs sm:text-sm">SPOTIFY OAUTH</h4>
@@ -597,18 +730,31 @@ m-60 -2113 c1032 -60 1963 -298 2860 -730 157 -75 216 -124 261 -212 28 -56
           </a>
         </div>
       </div>
-      <!--  -->
     </section>
 
     <!-- Ideas Section -->
     <section
-      class="flex flex-col max-w-md self-start px-12 sm:px-4 md:self-center md:max-w-3xl"
+      class="
+        flex flex-col
+        max-w-md
+        self-start
+        px-12
+        sm:px-4
+        md:self-center md:max-w-3xl
+      "
     >
-      <!-- Heading -->
       <!-- Heading -->
       <div class="flex flex-col">
         <h6
-          class="from-neutral-500 font-light font-serif text-lg sm:text-sm md:text-lg lg:text-lg xl:text-sm"
+          class="
+            from-neutral-500
+            font-light font-serif
+            text-lg
+            sm:text-sm
+            md:text-lg
+            lg:text-lg
+            xl:text-sm
+          "
         >
           connection
         </h6>
@@ -616,7 +762,16 @@ m-60 -2113 c1032 -60 1963 -298 2860 -730 157 -75 216 -124 261 -212 28 -56
         <h1
           split-by="letter"
           letter-animation="hover"
-          class="text-[#ff9e80] font-light font-thin font-serif text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl py-3"
+          class="
+            text-[#ff9e80]
+            font-ligh font-serif
+            text-4xl
+            sm:text-4xl
+            md:text-5xl
+            lg:text-6xl
+            xl:text-7xl
+            py-3
+          "
         >
           What's next?
           <br />
@@ -692,8 +847,8 @@ export default {
     }
   },
   mounted() {
-    // this.beforeEnter()
-    // this.enter()
+    this.beforeEnter()
+    this.enter()
   },
   methods: {
     beforeEnter() {
