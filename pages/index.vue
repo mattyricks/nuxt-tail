@@ -13,6 +13,8 @@
         px-12
       "
     >
+      <ThemeSwitch />
+
       <!-- Panel 1 -->
       <div
         class="flex flex-col max-w-xl self-start xl:self-center xl:max-w-3xl"
