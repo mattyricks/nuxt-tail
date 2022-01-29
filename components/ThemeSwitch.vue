@@ -1,5 +1,5 @@
 <template>
-  <div v-if="localStorageReady">
+  <div>
     <button
       id="theme-toggle"
       class="theme-toggle"
@@ -42,8 +42,6 @@
 </template>
 
 <script>
-import '../utils/themeToggle.js'
-
 export default {
   data() {
     return {
@@ -55,37 +53,37 @@ export default {
   //   TODO: I need to use the Vuex Store because this is a Node.js environment.
   //   Window & Document objects do not exist.
   //   However, Vuex allows the browser and node envs to be in sync
-  mounted() {
-    if (window.localStorage) {
-      this.localStorageReady = true
-    }
+  // mounted() {
+  //   if (window.localStorage) {
+  //     this.localStorageReady = true
+  //   }
 
-    this.storageKey = 'theme-preference'
-    this.theme = {
-      value: this.getColorPreference(),
-    }
+  //   this.storageKey = 'theme-preference'
+  //   this.theme = {
+  //     value: this.getColorPreference(),
+  //   }
 
-    // set early so no page flashes // CSS is made aware
-    this.reflectPreference()
+  //   // set early so no page flashes // CSS is made aware
+  //   this.reflectPreference()
 
-    window.onload = () => {
-      // set on load so that screen readers can see this value;
-      this.reflectPreference()
+  //   window.onload = () => {
+  //     // set on load so that screen readers can see this value;
+  //     this.reflectPreference()
 
-      // now this script can find and listen for clicks on the control
-      document
-        .querySelector('#theme-toggle')
-        .addEventListener('click', this.onClick)
-    }
+  //     // now this script can find and listen for clicks on the control
+  //     document
+  //       .querySelector('#theme-toggle')
+  //       .addEventListener('click', this.onClick)
+  //   }
 
-    // sync with system changes
-    window
-      .matchMedia(`(prefers-color-scheme: dark)`)
-      .addEventListener('change', ({ matches: isDark }) => {
-        this.theme.value = isDark ? 'dark' : 'light'
-        this.setPreference()
-      })
-  },
+  //   // sync with system changes
+  //   window
+  //     .matchMedia(`(prefers-color-scheme: dark)`)
+  //     .addEventListener('change', ({ matches: isDark }) => {
+  //       this.theme.value = isDark ? 'dark' : 'light'
+  //       this.setPreference()
+  //     })
+  // },
   methods: {
     onClick() {
       // flipping current value

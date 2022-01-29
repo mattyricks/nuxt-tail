@@ -51,20 +51,6 @@
     </header>
 
     <!-- TODO: Removing routing links to induce different layout TBD.. keep or na? -->
-    <!-- <ul class="flex p-2 items-center">
-      <li class="text-sm p-2">
-        <a class="">
-          <router-link to="/">HOME</router-link>
-        </a>
-      </li>
-
-      <li class="text-sm p-2">
-        <a class="">
-          <router-link to="/contact">CONTACT</router-link>
-        </a>
-      </li>
-    </ul> -->
-
     <!-- <nuxt-link v-if="prev" :to="{ name: name, params: { id: prev.slug } }">
       <div class="flex items-center">
         <div

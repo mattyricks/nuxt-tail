@@ -13,8 +13,6 @@
         px-12
       "
     >
-      <ThemeSwitch />
-
       <!-- Panel 1 -->
       <div
         class="flex flex-col max-w-xl self-start xl:self-center xl:max-w-3xl"
@@ -525,6 +523,7 @@ m35 -26 c0 -5 -4 -10 -10 -10 -5 0 -10 5 -10 10 0 6 5 10 10 10 6 0 10 -4 10
 
       <!-- Icons -->
       <div class="w-full min-h-max flex flex-col items-evenly justify-evenly">
+        <!-- 1 -->
         <div class="figure flex justify-between items-center">
           <figcaption class="flex flex-col justify-between">
             <span class="text-sm font-light">01</span>
@@ -572,10 +571,10 @@ m35 -26 c0 -5 -4 -10 -10 -10 -5 0 -10 5 -10 10 0 6 5 10 10 10 6 0 10 -4 10
             </svg>
           </a>
         </div>
-
+        <!-- 2 -->
         <div class="figure flex justify-between items-center">
           <figcaption class="flex flex-col justify-between">
-            <span class="text-sm font-light">01</span>
+            <span class="text-sm font-light">02</span>
             <h4 class="font-thin text-xs sm:text-sm">TRACKING FUNDS</h4>
           </figcaption>
 
@@ -665,10 +664,10 @@ m35 -26 c0 -5 -4 -10 -10 -10 -5 0 -10 5 -10 10 0 6 5 10 10 10 6 0 10 -4 10
             </svg>
           </a>
         </div>
-
+        <!-- 3 -->
         <div class="figure flex justify-between items-center">
           <figcaption class="flex flex-col justify-between">
-            <span class="text-sm font-light">02</span>
+            <span class="text-sm font-light">03</span>
             <h4 class="font-thin text-xs sm:text-sm">SPOTIFY OAUTH</h4>
           </figcaption>
 
@@ -717,6 +716,60 @@ m-60 -2113 c1032 -60 1963 -298 2860 -730 157 -75 216 -124 261 -212 28 -56
           </figure>
 
           <a href="https://spotify-1-seven.vercel.app/">
+            <svg
+              class="case-study-list-item__icon h-3 w-4 self-center"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 10 10"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M7.31 1.57H.56V0H10v9.44H8.43V2.7L1.1 10 0 8.89l7.31-7.32z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </a>
+        </div>
+        <!-- 4 -->
+        <div class="figure flex justify-between items-center">
+          <figcaption class="flex flex-col justify-between">
+            <span class="text-sm font-light">04</span>
+            <h4 class="font-thin text-xs sm:text-sm">AUTHENTICATED FEED</h4>
+          </figcaption>
+
+          <figure class="self-center">
+            <svg
+              class="h-10 w-10 sm:h-16 sm:w-16 md:h-24 md:w-24 mr-4"
+              version="1.0"
+              xmlns="http://www.w3.org/2000/svg"
+              width="225.000000pt"
+              height="225.000000pt"
+              viewBox="0 0 225.000000 225.000000"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <g
+                class="svg-icon"
+                transform="translate(0.000000,225.000000) scale(0.100000,-0.100000)"
+                fill="#000000"
+                stroke="none"
+              >
+                <path
+                  d="M1485 2039 c-232 -27 -405 -214 -422 -456 l-6 -83 -51 6 c-79 10
+-223 50 -306 84 -157 65 -339 193 -441 311 -69 78 -88 78 -122 2 -35 -81 -51
+-165 -43 -241 8 -77 44 -180 80 -226 34 -45 33 -50 -5 -31 -50 26 -73 17 -77
+-30 -10 -108 55 -252 154 -344 61 -58 63 -60 36 -63 -21 -2 -28 -9 -30 -30 -5
+-42 54 -146 119 -210 55 -53 166 -118 203 -118 35 0 13 -21 -56 -54 -124 -59
+-206 -78 -362 -82 -77 -2 -144 -8 -149 -13 -30 -30 71 -100 238 -165 173 -66
+291 -87 485 -87 197 1 364 33 523 102 442 193 736 629 773 1143 l7 99 74 70
+c80 76 143 156 143 180 0 30 -31 36 -82 16 -63 -25 -74 -24 -54 4 36 48 78
+146 71 167 -9 28 -35 25 -115 -15 -37 -19 -95 -42 -128 -51 l-59 -16 -54 41
+c-95 72 -217 104 -344 90z"
+                />
+              </g>
+            </svg>
+          </figure>
+
+          <a href="https://my-storybook-posts.netlify.app">
             <svg
               class="case-study-list-item__icon h-3 w-4 self-center"
               xmlns="http://www.w3.org/2000/svg"
