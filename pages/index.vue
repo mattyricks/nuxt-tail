@@ -329,6 +329,7 @@ m35 -26 c0 -5 -4 -10 -10 -10 -5 0 -10 5 -10 10 0 6 5 10 10 10 6 0 10 -4 10
       <!-- Panel 2 -->
       <div
         class="
+          figure
           flex
           xl:flex-row
           lg:flex-row
@@ -340,14 +341,20 @@ m35 -26 c0 -5 -4 -10 -10 -10 -5 0 -10 5 -10 10 0 6 5 10 10 10 6 0 10 -4 10
         "
       >
         <!-- Icons -->
-        <div class="flex gap-12">
+        <div class="figure flex gap-12">
           <div class="figure max-w-md">
-            <figcaption class="self-center">
+            <figcaption class="figure self-center">
               <span class="text-sm font-light">01</span>
             </figcaption>
 
             <figure
-              class="still-blob flex flex-col items-center justify-center"
+              class="
+                figure
+                still-blob
+                flex flex-col
+                items-center
+                justify-center
+              "
             >
               <h4 class="text-xs font-light p-1 text-[#121212]">FRONT END</h4>
 
@@ -405,13 +412,7 @@ m35 -26 c0 -5 -4 -10 -10 -10 -5 0 -10 5 -10 10 0 6 5 10 10 10 6 0 10 -4 10
             </figcaption>
 
             <figure
-              class="
-                still-blob
-                gsap-figure
-                flex flex-col
-                items-center
-                justify-center
-              "
+              class="still-blob flex flex-col items-center justify-center"
             >
               <h4 class="text-xs font-light p-1 text-[#121212]">UX DESIGN</h4>
               <img
@@ -526,6 +527,85 @@ m35 -26 c0 -5 -4 -10 -10 -10 -5 0 -10 5 -10 10 0 6 5 10 10 10 6 0 10 -4 10
         <!-- 1 -->
         <div class="figure flex justify-between items-center">
           <figcaption class="flex flex-col justify-between">
+            <span class="text-sm font-light">00</span>
+            <h4 class="font-thin text-xs sm:text-sm">E-COMMERCE</h4>
+          </figcaption>
+
+          <figure class="self-center">
+            <svg
+              version="1.0"
+              xmlns="http://www.w3.org/2000/svg"
+              width="255.000000pt"
+              height="300.000000pt"
+              viewBox="0 0 255.000000 300.000000"
+              preserveAspectRatio="xMidYMid meet"
+              class="svg-icon h-10 w-10 sm:h-16 sm:w-16 md:h-24 md:w-24"
+            >
+              <g
+                transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)"
+                fill="currentColor"
+                stroke="none"
+              >
+                <path
+                  d="M461 2982 c-19 -10 -43 -34 -52 -53 -10 -19 -33 -137 -54 -269 -20
+-129 -45 -289 -55 -355 -103 -637 -292 -1849 -293 -1882 -2 -32 3 -48 21 -65
+22 -23 23 -23 332 -23 200 0 310 -4 310 -10 0 -33 -24 -175 -30 -175 -3 0 -5
+-13 -2 -30 3 -18 0 -30 -7 -30 -17 0 -13 -17 11 -45 l22 -25 267 0 c169 0 277
+4 292 11 35 16 46 41 59 129 6 44 14 80 18 80 4 0 5 13 2 30 -3 19 0 30 7 30
+7 0 9 5 6 10 -7 12 35 304 45 308 3 1 4 16 2 32 -2 17 0 30 4 30 5 0 9 17 9
+39 1 46 24 85 68 112 28 17 47 19 145 17 61 -2 112 0 112 5 0 4 18 7 39 7 50
+0 158 23 235 49 32 12 62 19 66 16 5 -3 10 -1 12 3 1 5 29 23 60 41 155 88
+274 230 339 406 12 33 25 62 28 65 3 3 7 14 8 25 0 11 8 55 17 98 59 290 1
+520 -156 622 -26 17 -48 37 -50 45 -2 8 1 50 5 93 32 288 -122 524 -403 616
+-162 53 -174 54 -810 58 -568 4 -597 3 -629 -15z m1836 -814 c-3 -7 -5 -2 -5
+12 0 14 2 19 5 13 2 -7 2 -19 0 -25z m-10 -50 c-3 -7 -5 -2 -5 12 0 14 2 19 5
+13 2 -7 2 -19 0 -25z m-17 -68 c-6 -23 -13 -40 -15 -38 -2 2 1 23 7 46 6 24
+13 41 15 38 2 -2 -1 -23 -7 -46z m-54 -147 c-8 -15 -15 -25 -16 -21 0 12 23
+58 27 54 3 -2 -2 -17 -11 -33z m-56 -113 c-6 -11 -13 -20 -16 -20 -2 0 0 9 6
+20 6 11 13 20 16 20 2 0 0 -9 -6 -20z m-29 -47 c-19 -37 -128 -157 -171 -191
+-33 -26 -28 -20 15 20 33 31 82 85 110 122 50 66 64 81 46 49z m-226 -233 c-3
+-5 -16 -15 -28 -21 -19 -9 -19 -8 3 10 28 23 34 26 25 11z m-55 -35 c0 -2 -13
+-11 -30 -20 -38 -19 -40 -11 -2 9 31 17 32 18 32 11z m-100 -54 c-19 -10 -46
+-21 -60 -25 -14 -3 -2 5 25 18 58 28 87 34 35 7z m-123 -47 c-3 -3 -12 -4 -19
+-1 -8 3 -5 6 6 6 11 1 17 -2 13 -5z m-52 -14 c-11 -5 -29 -8 -40 -8 -16 0 -15
+2 5 8 34 11 60 11 35 0z m-72 -17 c-7 -2 -21 -2 -30 0 -10 3 -4 5 12 5 17 0
+24 -2 18 -5z m-65 -10 c-10 -2 -28 -2 -40 0 -13 2 -5 4 17 4 22 1 32 -1 23 -4z
+m-180 -10 c-65 -2 -171 -2 -235 0 -65 1 -12 3 117 3 129 0 182 -2 118 -3z
+m-405 -35 c-11 -13 -25 -32 -31 -43 -6 -11 -12 -15 -12 -8 0 12 48 73 58 73 3
+0 -4 -10 -15 -22z m-46 -105 c-3 -10 -5 -4 -5 12 0 17 2 24 5 18 2 -7 2 -21 0
+-30z m-10 -60 c-3 -10 -5 -4 -5 12 0 17 2 24 5 18 2 -7 2 -21 0 -30z m-12 -88
+c-4 -31 -9 -54 -12 -51 -3 2 -1 30 2 61 4 31 9 54 12 51 3 -2 1 -30 -2 -61z
+m-18 -102 c-3 -10 -5 -4 -5 12 0 17 2 24 5 18 2 -7 2 -21 0 -30z m-10 -65 c-3
+-7 -5 -2 -5 12 0 14 2 19 5 13 2 -7 2 -19 0 -25z m-10 -65 c-3 -10 -5 -4 -5
+12 0 17 2 24 5 18 2 -7 2 -21 0 -30z m-10 -60 c-3 -10 -5 -4 -5 12 0 17 2 24
+5 18 2 -7 2 -21 0 -30z m-12 -88 c-4 -31 -9 -54 -12 -51 -3 2 -1 30 2 61 4 31
+9 54 12 51 3 -2 1 -30 -2 -61z m-18 -102 c-3 -10 -5 -4 -5 12 0 17 2 24 5 18
+2 -7 2 -21 0 -30z m-10 -65 c-3 -7 -5 -2 -5 12 0 14 2 19 5 13 2 -7 2 -19 0
+-25z m-10 -65 c-3 -10 -5 -4 -5 12 0 17 2 24 5 18 2 -7 2 -21 0 -30z m-10 -65
+c-3 -7 -5 -2 -5 12 0 14 2 19 5 13 2 -7 2 -19 0 -25z"
+                />
+              </g>
+            </svg>
+          </figure>
+
+          <a href="https://next-sanity-shop.vercel.app/">
+            <svg
+              class="h-3 w-4 justify-self-center"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 10 10"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M7.31 1.57H.56V0H10v9.44H8.43V2.7L1.1 10 0 8.89l7.31-7.32z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </a>
+        </div>
+        <!-- 2 -->
+        <div class="figure flex justify-between items-center">
+          <figcaption class="flex flex-col justify-between">
             <span class="text-sm font-light">01</span>
             <h4 class="font-thin text-xs sm:text-sm">GEOLOCATION</h4>
           </figcaption>
@@ -571,7 +651,7 @@ m35 -26 c0 -5 -4 -10 -10 -10 -5 0 -10 5 -10 10 0 6 5 10 10 10 6 0 10 -4 10
             </svg>
           </a>
         </div>
-        <!-- 2 -->
+        <!-- 3 -->
         <div class="figure flex justify-between items-center">
           <figcaption class="flex flex-col justify-between">
             <span class="text-sm font-light">02</span>
@@ -664,7 +744,7 @@ m35 -26 c0 -5 -4 -10 -10 -10 -5 0 -10 5 -10 10 0 6 5 10 10 10 6 0 10 -4 10
             </svg>
           </a>
         </div>
-        <!-- 3 -->
+        <!-- 4 -->
         <div class="figure flex justify-between items-center">
           <figcaption class="flex flex-col justify-between">
             <span class="text-sm font-light">03</span>
@@ -730,7 +810,7 @@ m-60 -2113 c1032 -60 1963 -298 2860 -730 157 -75 216 -124 261 -212 28 -56
             </svg>
           </a>
         </div>
-        <!-- 4 -->
+        <!-- 5 -->
         <div class="figure flex justify-between items-center">
           <figcaption class="flex flex-col justify-between">
             <span class="text-sm font-light">04</span>
